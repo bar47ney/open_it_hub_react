@@ -1,16 +1,18 @@
 import headerScript from "./HeaderScript";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   useEffect(() => {
     headerScript();
   }, []);
 
-  const [viewSubMobileMenu, setViewSubMobileMenu] = useState(false)
+  const [viewSubMobileMenu, setViewSubMobileMenu] = useState(false);
 
   const mobileMenuView = () => {
-    setViewSubMobileMenu(!viewSubMobileMenu)
-  }
+    setViewSubMobileMenu(!viewSubMobileMenu);
+  };
 
   return (
     <>
@@ -26,7 +28,7 @@ const Header = () => {
           </div>
           <div class="">
             <button class="orange-button orange-button-hover">
-              <a href="rent.html">Арендовать</a>
+              <Link to={"/rent"}>Арендовать</Link>
             </button>
           </div>
           <div class="scroll-mobile-menu">
@@ -43,8 +45,11 @@ const Header = () => {
                 <a href="index.html#services-block">Услуги</a>
               </div>
               <div class="mobile-menu-item" onClick={mobileMenuView}>
-                Мероприятия
-                <svg className={`${viewSubMobileMenu ? "mobile-menu-svg-rotate" : ""}`}
+                <Link to={"/rent"}>Мероприятия</Link>
+                <svg
+                  className={`${
+                    viewSubMobileMenu ? "mobile-menu-svg-rotate" : ""
+                  }`}
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -54,7 +59,11 @@ const Header = () => {
                   <path d="M15 11L11.8571 13L9 11" stroke="#8D8D8D" />
                 </svg>
               </div>
-              <div class={`sub-mobile-items ${viewSubMobileMenu ? "" : "sub-mobile-items-none"}`}>
+              <div
+                class={`sub-mobile-items ${
+                  viewSubMobileMenu ? "" : "sub-mobile-items-none"
+                }`}
+              >
                 <div class="mobile-menu-item sub-mobile-item">
                   <a href="index.html#events-block">Ближайшие</a>
                 </div>
@@ -82,53 +91,113 @@ const Header = () => {
           <div class="header-item">
             <div class="menu-item">
               <button class="orange-button orange-button-hover">
-                <a href="rent.html">Будь в курсе</a>
+                <HashLink
+                  to="/#subscribe-email"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
+                >
+                  Будь в курсе
+                </HashLink>
               </button>
             </div>
+
+            <HashLink
+              to="/#services-block"
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
+            >
+              <div class="menu-item">Услуги</div>
+            </HashLink>
+
+            <HashLink
+              to="/#advantage-block"
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
+            >
+              <div class="menu-item">Преимущества</div>
+            </HashLink>
             <div class="menu-item">
-              <a href="index.html#services-block">Услуги</a>
-            </div>
-            <div class="menu-item">
-              <a href="index.html#advantage-block">Преимущества</a>
-            </div>
-            <div class="menu-item">
-              <a href="events.html">Мероприятия</a>
+              <HashLink to={"/events#top"}>Мероприятия</HashLink>
               <div class="arrow-default"></div>
               <div class="arrow-hover"></div>
               <div class="sub-menu">
                 <ul>
-                  <li>
-                    <a href="index.html#events-block">Ближайшие</a>
-                  </li>
-                  <li>
-                    <a href="events.html#events-feature">Все будущие</a>
-                  </li>
-                  <li>
-                    <a href="events.html#events-past">Все прошедшие</a>
-                  </li>
+                    <HashLink
+                      to="/#events-block"
+                      scroll={(el) =>
+                        el.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        })
+                      }
+                    >
+                      
+                  <li>Ближайшие</li>
+                    </HashLink>
+                    {/* ;<a href="index.html#events-block">Ближайшие</a> */}
+                  
+                  
+                  <HashLink
+                      to="/events#events-feature"
+                      scroll={(el) =>
+                        el.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        })
+                      }
+                    >
+                      <li>Все будущие</li>
+                    </HashLink>
+                  
+
+                    <HashLink
+                      to="/events#events-past"
+                      scroll={(el) =>
+                        el.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        })
+                      }
+                    >
+                      <li>Все прошедшие</li>
+                    </HashLink>
                   {/* <!-- <li><a href="form-page.html">Регистрация</a></li> --> */}
                 </ul>
               </div>
             </div>
           </div>
           <div class="header-logo">
-            <a href="index.html">
+            <HashLink to={"/#top"}>
               <img src="/img/logo.svg" alt="logo" />
-            </a>
+            </HashLink>
           </div>
           <div class="header-item">
             <div class="menu-item">
               <a href="index.html#reviews">Фотогалерея</a>
             </div>
-            <div class="menu-item">
-              <a href="index.html#reviews">Отзывы</a>
-            </div>
-            <div class="menu-item">
-              <a href="index.html#contacts-block">Контакты</a>
-            </div>
+
+            <HashLink
+              to="/#reviews"
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
+            >
+              <div class="menu-item">Отзывы</div>
+            </HashLink>
+            <HashLink
+              to="/#contacts-block"
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
+            >
+              <div class="menu-item">Контакты</div>
+            </HashLink>
             <div class="menu-item">
               <button class="orange-button orange-button-hover">
-                <a href="rent.html">Арендовать</a>
+                <HashLink to="/rent#top">Арендовать</HashLink>
               </button>
             </div>
           </div>

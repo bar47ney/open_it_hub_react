@@ -56,7 +56,7 @@ const Main = () => {
             <div class="slider-shadow"></div>
           </div>
         </div>
-        <div id="services-block" class="hab-description">
+        <div class="hab-description">
           <div class="slider-nav">
             <img class="slider-nav-active" src="img/slider-circle.svg" alt="" />
             <img src="img/slider-circle.svg" alt="" />
@@ -81,7 +81,7 @@ const Main = () => {
             ваше мероприятие прошло на высшем уровне.
           </p>
         </div>
-        <div class="services-block">
+        <div id="services-block" class="services-block">
           <h2 class="services-block-header">Наши услуги</h2>
           <div class="services-items">
             <div class="services-item">
@@ -121,7 +121,7 @@ const Main = () => {
                 помещения
               </p>
             </div>
-            <div id="advantage-block" class="services-item">
+            <div class="services-item">
               <div class="services-item-gray"></div>
               <div class="services-item-icons">
                 <img
@@ -140,7 +140,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div class="advantage-block">
+        <div id="advantage-block" class="advantage-block">
           <h3 class="advantage-block-header">Наши преимущества</h3>
           <ul>
             <li>центр города (Скрыганова, 14)</li>
@@ -165,7 +165,7 @@ const Main = () => {
             <br />
             свяжется с вами, чтобы рассказать все подробности
           </p>
-          <div id="events-block" class="book-block-form">
+          <div class="book-block-form">
             <input type="text" placeholder="Номер телефона" value="" />
             <button class="btn-slider margin-none orange-button-hover">
               Отправить
@@ -175,7 +175,7 @@ const Main = () => {
             <img src="img/slider-decoration.png" alt="image-decoration" />
           </div>
         </div>
-        <div class="events-block">
+        <div id="events-block" class="events-block">
           <h4 class="events-block-head">Посетите уникальные мероприятия</h4>
           <p class="events-block-p desktop-visibility">
             Мы проводим уникальные мероприятия в сфере бизнес-обучения,
@@ -261,7 +261,7 @@ const Main = () => {
             <a href="events.html">Весь список мероприятий</a>
           </button>
         </div>
-        <div id="reviews" class="subscribe-email">
+        <div id="subscribe-email" class="subscribe-email">
           <h4 class="subscribe-email-heading">Будь в курсе!</h4>
           <p class="desktop-visibility">
             Будем сообщать о предстоящих мероприятиях, делиться отчетами
@@ -279,7 +279,7 @@ const Main = () => {
             </button>
           </div>
         </div>
-        <div class="reviews">
+        <div id="reviews" class="reviews">
           <div class="slider-decoration reviews-decoration">
             <img src="img/slider-decoration.png" alt="image-decoration" />
           </div>
@@ -327,44 +327,27 @@ const Main = () => {
               <p>
                 <img
                   class="reviews-slider-item-photo"
-                  src="img/reviews/reviews1.jpg"
+                  src="img/reviews/reviews2.jpg"
                   alt=""
                 />
               </p>
               <p class="reviwer-info">
-                Дмитрий Будилович,
+                Алёна Романова
                 <br />
-                Организатор форума «Товарный бизнес в Беларуси»
+                Партнёр IHCA, руководитель проекта iHackathon IT
               </p>
               <p class="reviwer-text">
-                Добрый день!
+                Тем, кто ищет локацию для поведения мероприятий: мастер классов,
                 <br />
-                От лица всей нашей команды хочу поблагодарить вас и вашу
-                компанию
+                семинаров и конференций, — рекомендую обратить внимание на
                 <br />
-                за предоставленную площадку! Все прошло на высшем уровне!
-              </p>
-            </div>
-            <div class="reviews-slider-item">
-              <p>
-                <img
-                  class="reviews-slider-item-photo"
-                  src="img/reviews/reviews1.jpg"
-                  alt=""
-                />
-              </p>
-              <p class="reviwer-info">
-                Дмитрий Будилович,
+                OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
+                необходимым
                 <br />
-                Организатор форума «Товарный бизнес в Беларуси»
-              </p>
-              <p class="reviwer-text">
-                Добрый день!
+                для проведения подобных ивентов и вмещающее в себя
                 <br />
-                От лица всей нашей команды хочу поблагодарить вас и вашу
-                компанию
-                <br />
-                за предоставленную площадку! Все прошло на высшем уровне!
+                до 120 человек. Нам все понравилось, совсем скоро вернёмся сюда
+                снова!
               </p>
             </div>
           </div>
