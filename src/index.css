@@ -429,7 +429,7 @@ body {
   transition: 0.3s;
 }
 
-.services-item img {
+.services-item svg {
   margin-top: 62px;
   margin-bottom: 40px;
 }
@@ -458,6 +458,10 @@ body {
   position: absolute;
   left: 136px;
   z-index: 1;
+}
+
+.services-item:hover svg stop{
+  stop-color: #8d8d8d;
 }
 
 .services-item:hover .services-item-icon-default {
@@ -817,9 +821,10 @@ button:hover {
 /* reviews */
 .reviews {
   width: 100%;
-  height: 623px;
+  /* height: 623px; */
   background: white;
   padding-top: 64px;
+  padding-bottom: 40px;
   text-align: center;
   color: #231f20;
   position: relative;
@@ -1839,7 +1844,7 @@ button:hover {
     height: 74px;
   }
 
-  .services-item img {
+  .services-item svg {
     margin-top: 16.5px;
     margin-bottom: 10.85px;
   }
@@ -1848,8 +1853,9 @@ button:hover {
     left: 36.5px;
   }
 
-  .services-item-icons img {
+  .services-item-icons svg {
     width: 20px;
+    height: 20px;
   }
 
   .services-item p {
@@ -2002,8 +2008,9 @@ button:hover {
   }
   /* reviews */
   .reviews {
-    height: 274px;
+    /* height: 274px; */
     padding-top: 16px;
+    padding-bottom: 20px;
   }
   .reviews-slider {
     margin-top: 24px;

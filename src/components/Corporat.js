@@ -1,3 +1,5 @@
+import { HashLink } from "react-router-hash-link";
+
 const Corporat = () => {
   return (
     <main class="main">
@@ -7,9 +9,11 @@ const Corporat = () => {
             Предлагаем IT-компаниям корпоративное сотрудничество{" "}
           </h1>
           <p>Вы можете выбрать одну из опций или несколько</p>{" "}
-          <button class="btn-slider orange-button-hover btn-slider-bottom">
-            <a href="#book-block-form">Узнать больше</a>
-          </button>
+          <HashLink smooth to={"#book-block-form"}>
+            <button class="btn-slider orange-button-hover btn-slider-bottom">
+              Узнать больше
+            </button>
+          </HashLink>
           <div class="slider-decoration">
             <img src="img/slider-decoration.png" alt="image-decoration" />
           </div>

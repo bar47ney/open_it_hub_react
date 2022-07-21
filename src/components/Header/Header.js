@@ -42,10 +42,17 @@ const Header = () => {
             </div>
             <div class="mobile-menu">
               <div class="mobile-menu-item">
-                <a href="index.html#services-block">Услуги</a>
+                <HashLink
+                  to="/#services-block"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
+                >
+                  Услуги
+                </HashLink>
               </div>
               <div class="mobile-menu-item" onClick={mobileMenuView}>
-                <Link to={"/rent"}>Мероприятия</Link>
+                <HashLink to={"/events#top"}>Мероприятия</HashLink>
                 <svg
                   className={`${
                     viewSubMobileMenu ? "mobile-menu-svg-rotate" : ""
@@ -65,23 +72,67 @@ const Header = () => {
                 }`}
               >
                 <div class="mobile-menu-item sub-mobile-item">
-                  <a href="index.html#events-block">Ближайшие</a>
+                  <HashLink
+                    to="/#events-block"
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                    }
+                  >
+                    Ближайшие
+                  </HashLink>
                 </div>
                 <div class="mobile-menu-item sub-mobile-item">
-                  <a href="events.html#events-feature">Все будущие</a>
+                  <HashLink
+                    to="/events#events-feature"
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                    }
+                  >
+                    Все будущие
+                  </HashLink>
                 </div>
                 <div class="mobile-menu-item sub-mobile-item">
-                  <a href="events.html#events-past">Все прошедшие</a>
+                  <HashLink
+                    to="/events#events-past"
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                    }
+                  >
+                    Все прошедшие
+                  </HashLink>
                 </div>
-                <div class="mobile-menu-item sub-mobile-item">
+                {/* <div class="mobile-menu-item sub-mobile-item">
                   <a href="form-page.html">Регистрация</a>
-                </div>
+                </div> */}
               </div>
               <div class="mobile-menu-item">
-                <a href="index.html#reviews">Отзывы</a>
+                <HashLink
+                  to="/#reviews"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
+                >
+                  Отзывы
+                </HashLink>
               </div>
               <div class="mobile-menu-item">
-                <a href="index.html#contacts-block">Контакты</a>
+                <HashLink
+                  to="/#contacts-block"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
+                >
+                  Контакты
+                </HashLink>
               </div>
             </div>
           </div>
@@ -90,16 +141,16 @@ const Header = () => {
         <div className="header desktop-visibility">
           <div class="header-item">
             <div class="menu-item">
-              <button class="orange-button orange-button-hover">
-                <HashLink
-                  to="/#subscribe-email"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "center" })
-                  }
-                >
+              <HashLink
+                to="/#subscribe-email"
+                scroll={(el) =>
+                  el.scrollIntoView({ behavior: "smooth", block: "center" })
+                }
+              >
+                <button class="orange-button orange-button-hover">
                   Будь в курсе
-                </HashLink>
-              </button>
+                </button>
+              </HashLink>
             </div>
 
             <HashLink
@@ -125,45 +176,42 @@ const Header = () => {
               <div class="arrow-hover"></div>
               <div class="sub-menu">
                 <ul>
-                    <HashLink
-                      to="/#events-block"
-                      scroll={(el) =>
-                        el.scrollIntoView({
-                          behavior: "smooth",
-                          block: "center",
-                        })
-                      }
-                    >
-                      
-                  <li>Ближайшие</li>
-                    </HashLink>
-                    {/* ;<a href="index.html#events-block">Ближайшие</a> */}
-                  
-                  
                   <HashLink
-                      to="/events#events-feature"
-                      scroll={(el) =>
-                        el.scrollIntoView({
-                          behavior: "smooth",
-                          block: "center",
-                        })
-                      }
-                    >
-                      <li>Все будущие</li>
-                    </HashLink>
-                  
+                    to="/#events-block"
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                    }
+                  >
+                    <li>Ближайшие</li>
+                  </HashLink>
+                  {/* ;<a href="index.html#events-block">Ближайшие</a> */}
 
-                    <HashLink
-                      to="/events#events-past"
-                      scroll={(el) =>
-                        el.scrollIntoView({
-                          behavior: "smooth",
-                          block: "center",
-                        })
-                      }
-                    >
-                      <li>Все прошедшие</li>
-                    </HashLink>
+                  <HashLink
+                    to="/events#events-feature"
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                    }
+                  >
+                    <li>Все будущие</li>
+                  </HashLink>
+
+                  <HashLink
+                    to="/events#events-past"
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                    }
+                  >
+                    <li>Все прошедшие</li>
+                  </HashLink>
                   {/* <!-- <li><a href="form-page.html">Регистрация</a></li> --> */}
                 </ul>
               </div>
@@ -196,9 +244,11 @@ const Header = () => {
               <div class="menu-item">Контакты</div>
             </HashLink>
             <div class="menu-item">
-              <button class="orange-button orange-button-hover">
-                <HashLink to="/rent#top">Арендовать</HashLink>
-              </button>
+              <HashLink to="/rent#top">
+                <button class="orange-button orange-button-hover">
+                  Арендовать
+                </button>
+              </HashLink>
             </div>
           </div>
         </div>

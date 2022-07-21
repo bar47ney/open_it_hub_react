@@ -1,3 +1,5 @@
+import { HashLink } from "react-router-hash-link";
+
 const Rent = () => {
   return (
     <main class="main rent-page">
@@ -11,9 +13,11 @@ const Rent = () => {
             Идеальный вариант для студийной съемки,
             <br class="mobile-visibility" /> мероприятий и онлайн-трансляций
           </p>{" "}
-          <button class="btn-slider orange-button-hover btn-slider-bottom">
-            <a href="#advantage-block">Забронировать</a>
-          </button>
+          <HashLink smooth to={"#advantage-block"}>
+            <button class="btn-slider orange-button-hover btn-slider-bottom">
+              Забронировать
+            </button>
+          </HashLink>
           <div class="slider-decoration">
             <img src="img/slider-decoration.png" alt="image-decoration" />
           </div>
@@ -33,7 +37,7 @@ const Rent = () => {
           <p class="price-rent price-nds">*цена с учетом НДС</p>
         </div>
 
-        <div id="advantage-block" class="advantage-block">
+        <div class="advantage-block">
           <h3 class="advantage-block-header ">Наши преимущества</h3>
           <ul>
             <li>центр города (Скрыганова, 14)</li>
@@ -45,7 +49,7 @@ const Rent = () => {
           </ul>
         </div>
 
-        <div class="book-block block-form">
+        <div id="advantage-block" class="book-block block-form">
           <h3 class="advantage-block-header">Забронируйте площадку сейчас</h3>
           <p class="">
             Оставьте свои контактные данные, и наш менеджер
