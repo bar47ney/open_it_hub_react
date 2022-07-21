@@ -16,7 +16,8 @@ const AppRouter = () => {
     {
       path: "/corporat",
       Component: Corporat,
-    },{
+    },
+    {
       path: "/rent",
       Component: Rent,
     },
@@ -37,9 +38,15 @@ const AppRouter = () => {
 
   return (
     <Routes>
-      {routes.map(({ path, Component }) => {
+      {/* {routes.map(({ path, Component }) => {
         <Route key={path} path={path} element={Component} />;
-      })}
+      })} */}
+      <Route exact path="/" element={<Main />} />
+      <Route path="/corporat" element={<Corporat />} />
+      <Route path="/events" element={<EventsList />} />
+      <Route path="/event/:id" element={<Event />} />
+      <Route path="/rent" element={<Rent />} />
+      <Route path="*" element={<Main />} /> */
     </Routes>
   );
 };

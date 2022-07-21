@@ -22,14 +22,16 @@ const Header = () => {
             <img src="/img/Mobile-Menu.svg" alt="logo" />
           </div>
           <div class="header-logo">
-            <a href="/">
+            <HashLink to="/#top">
               <img src="/img/logo.svg" alt="logo" />
-            </a>
+            </HashLink>
           </div>
           <div class="">
-            <button class="orange-button orange-button-hover">
-              <Link to={"/rent"}>Арендовать</Link>
-            </button>
+            <HashLink to="/rent#top">
+              <button class="orange-button orange-button-hover">
+                Арендовать
+              </button>
+            </HashLink>
           </div>
           <div class="scroll-mobile-menu">
             <div class="menu-exit">
