@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/open_it_hub_react/static/css/main.b2c9ffab.css",
+    "main.js": "/open_it_hub_react/static/js/main.63db749d.js",
+    "static/js/787.ecb441b3.chunk.js": "/open_it_hub_react/static/js/787.ecb441b3.chunk.js",
+    "static/media/2.jpg": "/open_it_hub_react/static/media/2.3eade3fb7ca6d3c5eb0e.jpg",
+    "static/media/1.jpg": "/open_it_hub_react/static/media/1.afe8f8b7613d75d9ad1b.jpg",
+    "static/media/NotoSans-SemiBold.ttf": "/open_it_hub_react/static/media/NotoSans-SemiBold.54d203ce3bb70b87d8a6.ttf",
+    "static/media/NotoSans-Light.ttf": "/open_it_hub_react/static/media/NotoSans-Light.c9290d4cf465782379eb.ttf",
+    "static/media/Montserrat-Medium.ttf": "/open_it_hub_react/static/media/Montserrat-Medium.c186643a46afb123cf6a.ttf",
+    "static/media/Montserrat-SemiBold.ttf": "/open_it_hub_react/static/media/Montserrat-SemiBold.9d6004c6aab2eee5c70e.ttf",
+    "static/media/ofont.ru_Montserrat.ttf": "/open_it_hub_react/static/media/ofont.ru_Montserrat.9d6004c6aab2eee5c70e.ttf",
+    "static/media/NotoSansDisplay-SemiBold.ttf": "/open_it_hub_react/static/media/NotoSansDisplay-SemiBold.035f26c71b33d70ffddb.ttf",
+    "static/media/NotoSansDisplay-Medium.ttf": "/open_it_hub_react/static/media/NotoSansDisplay-Medium.d6f25adb1e3e9c999284.ttf",
+    "static/media/NotoSansDisplay-Regular.ttf": "/open_it_hub_react/static/media/NotoSansDisplay-Regular.1e52e060f6c09a21c05b.ttf",
+    "static/media/Montserrat-ExtraBold.ttf": "/open_it_hub_react/static/media/Montserrat-ExtraBold.e132ddbed1663d744574.ttf",
+    "static/media/monts-bold.ttf": "/open_it_hub_react/static/media/monts-bold.762081826406b019c89c.ttf",
+    "static/media/Roboto-Regular.ttf": "/open_it_hub_react/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/3.jpg": "/open_it_hub_react/static/media/3.8a5afae81650ad0250ff.jpg",
+    "index.html": "/open_it_hub_react/index.html",
+    "static/media/menu-arrow-active.svg": "/open_it_hub_react/static/media/menu-arrow-active.7a44ddfb084490a51322.svg",
+    "static/media/menu-arrow-default.svg": "/open_it_hub_react/static/media/menu-arrow-default.8345e40bb3c4734113b9.svg",
+    "main.b2c9ffab.css.map": "/open_it_hub_react/static/css/main.b2c9ffab.css.map",
+    "main.63db749d.js.map": "/open_it_hub_react/static/js/main.63db749d.js.map",
+    "787.ecb441b3.chunk.js.map": "/open_it_hub_react/static/js/787.ecb441b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2c9ffab.css",
+    "static/js/main.63db749d.js"
+  ]
+}
