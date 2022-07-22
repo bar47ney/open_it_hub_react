@@ -230,6 +230,7 @@ body {
 
 .main {
   /* header fixed */
+  position: relative;
   padding-top: 88px;
   /* header fixed */
   flex: 1 1 auto;
@@ -252,6 +253,31 @@ body {
   width: 300%;
   display: flex;
   position: relative;
+  transition: 1s;
+}
+
+.main-slider-arrows-block {
+  position: absolute;
+  top: 350px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  z-index: 3;
+}
+
+.main-slider-arrows {
+  opacity: 0.5;
+}
+
+.main-slider-arrows:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.main-slider-arrows-right {
+  transform: scale(-1, 1);
 }
 
 .main-slider-to-right {
@@ -1289,6 +1315,10 @@ button:hover {
   gap: 63px;
 }
 
+.event .block-list-events-item::after{
+  display: none;
+}
+
 .about-specker {
   background: #231f20;
   color: white;
@@ -1797,6 +1827,15 @@ button:hover {
     line-height: 12px;
   }
 
+  .main-slider-arrows-block {
+    top: 120px;
+    padding: 0 5px;
+  }
+
+  .main-slider-arrows-block img{
+    width: 20px;
+  }
+
   .btn-slider {
     width: 94px;
     height: 20px;
@@ -2190,14 +2229,14 @@ button:hover {
     padding-left: 2px;
     gap: 2px;
   }
-  .event-arrow{
+  .event-arrow {
     right: 4px;
   }
   .filter-item svg {
     width: 12px;
     height: 12px;
   }
-  .filter-item .event-arrow{
+  .filter-item .event-arrow {
     width: 8px;
     height: 8px;
   }

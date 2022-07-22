@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { eventsFeature } from "./eventsFeature";
 
 const EventsList = () => {
   const [month, setMonth] = useState("Месяц");
@@ -7,6 +9,8 @@ const EventsList = () => {
 
   const [pastMonth, setPastMonth] = useState("Месяц");
   const [pastYear, setPastYear] = useState("Год");
+
+  console.log(eventsFeature);
 
   const monthChoose = (e) => {
     setMonth(e.target.innerText);
@@ -289,10 +293,12 @@ const EventsList = () => {
               </p>
               <div class="events-buttons">
                 <button class="btn-slider margin-none btn-black orange-button-hover">
-                  <a href="form-page.html">Регистрация</a>
+                  <a href={eventsFeature[0].bezKassira} target="_blank">Регистрация</a>
                 </button>
                 <button class="more-info-event">
-                  <a href="event-1.html">О мероприятии</a>
+                  <Link to={`/event/${eventsFeature[0].id}`}>
+                    О мероприятии
+                  </Link>
                 </button>
               </div>
             </div>

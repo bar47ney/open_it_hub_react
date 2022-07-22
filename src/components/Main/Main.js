@@ -1,15 +1,52 @@
 import mainScript from "./MainScript";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 
 const Main = () => {
   useEffect(() => {
     mainScript();
   }, []);
+
+  const [positionMainSlider, setPositionMainSlider] = useState(0);
+  const [currentSlider, setCurrentSlider] = useState(1);
+
+  const toLeftMainSlider = () => {
+    setPositionMainSlider(positionMainSlider + 100);
+    setCurrentSlider(currentSlider - 1);
+    console.log(currentSlider);
+    if (currentSlider <= 1) {
+      setCurrentSlider(3);
+      setPositionMainSlider(-200);
+    }
+  };
+  const toRigthMainSlider = () => {
+    setPositionMainSlider(positionMainSlider - 100);
+    setCurrentSlider(currentSlider + 1);
+    console.log(currentSlider);
+    if (currentSlider >= 3) {
+      setCurrentSlider(1);
+      setPositionMainSlider(0);
+    }
+  };
+
   return (
     <>
       <main class="main">
-        <div class="main-slider">
+        <div className="main-slider-arrows-block">
+          <div
+            className="main-slider-arrows main-slider-arrows-left"
+            onClick={toLeftMainSlider}
+          >
+            <img src="img/arrow.png" alt=""></img>
+          </div>
+          <div
+            className="main-slider-arrows main-slider-arrows-right"
+            onClick={toRigthMainSlider}
+          >
+            <img src="img/arrow.png" alt=""></img>
+          </div>
+        </div>
+        <div class="main-slider" style={{ left: positionMainSlider + "%" }}>
           <div id="slider-1" class="slider-item">
             <h1 class="slider-title">
               OPEN IT ХАБ — новое event-пространство
@@ -74,9 +111,21 @@ const Main = () => {
         </div>
         <div class="hab-description">
           <div class="slider-nav">
-            <img class="slider-nav-active" src="img/slider-circle.svg" alt="" />
-            <img src="img/slider-circle.svg" alt="" />
-            <img src="img/slider-circle.svg" alt="" />
+            <img
+              className={`${currentSlider === 1 ? "slider-nav-active" : ""}`}
+              src="img/slider-circle.svg"
+              alt=""
+            />
+            <img
+              className={`${currentSlider === 2 ? "slider-nav-active" : ""}`}
+              src="img/slider-circle.svg"
+              alt=""
+            />
+            <img
+              className={`${currentSlider === 3 ? "slider-nav-active" : ""}`}
+              src="img/slider-circle.svg"
+              alt=""
+            />
           </div>
           <p class="desktop-visibility">
             <img src="img/Horizontal-logo.png" alt="" />— новое пространство в

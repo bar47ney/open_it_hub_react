@@ -1,34 +1,34 @@
 const mainScript = () => {
-  //main-slider
-  const btnSlider = document.querySelector(".btn-slider");
-  const slider = document.querySelector(".main-slider");
-  const sliderNav = document.querySelectorAll(".slider-nav img");
+  // //main-slider
+  // const btnSlider = document.querySelector(".btn-slider");
+  // const slider = document.querySelector(".main-slider");
+  // const sliderNav = document.querySelectorAll(".slider-nav img");
 
-  const timeSliderAll = 12000;
-  const valueSlider = 3;
-  const timeOneSlider = timeSliderAll / valueSlider;
+  // const timeSliderAll = 12000;
+  // const valueSlider = 3;
+  // const timeOneSlider = timeSliderAll / valueSlider;
 
-  const sliderLogic = () => {
-    slider.classList.remove("main-slider-to-start");
-    slider.classList.add("main-slider-to-right");
-    sliderNav[0].classList.remove("slider-nav-active");
-    sliderNav[1].classList.add("slider-nav-active");
-    setTimeout(() => {
-      slider.classList.add("main-slider-to-right-right");
-      sliderNav[1].classList.remove("slider-nav-active");
-      sliderNav[2].classList.add("slider-nav-active");
-      setTimeout(() => {
-        slider.classList.remove("main-slider-to-right");
-        slider.classList.remove("main-slider-to-right-right");
-        slider.classList.add("main-slider-to-start");
-        sliderNav[2].classList.remove("slider-nav-active");
-        sliderNav[0].classList.add("slider-nav-active");
-      }, timeOneSlider);
-    }, timeOneSlider);
-  };
+  // const sliderLogic = () => {
+  //   slider.classList.remove("main-slider-to-start");
+  //   slider.classList.add("main-slider-to-right");
+  //   sliderNav[0].classList.remove("slider-nav-active");
+  //   sliderNav[1].classList.add("slider-nav-active");
+  //   setTimeout(() => {
+  //     slider.classList.add("main-slider-to-right-right");
+  //     sliderNav[1].classList.remove("slider-nav-active");
+  //     sliderNav[2].classList.add("slider-nav-active");
+  //     setTimeout(() => {
+  //       slider.classList.remove("main-slider-to-right");
+  //       slider.classList.remove("main-slider-to-right-right");
+  //       slider.classList.add("main-slider-to-start");
+  //       sliderNav[2].classList.remove("slider-nav-active");
+  //       sliderNav[0].classList.add("slider-nav-active");
+  //     }, timeOneSlider);
+  //   }, timeOneSlider);
+  // };
 
-  setTimeout(() => sliderLogic(), timeOneSlider);
-  setInterval(() => sliderLogic(), timeSliderAll + timeOneSlider * 2);
+  // setTimeout(() => sliderLogic(), timeOneSlider);
+  // setInterval(() => sliderLogic(), timeSliderAll + timeOneSlider * 2);
 
   //events-slider
 
