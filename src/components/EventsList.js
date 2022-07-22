@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { eventsFeature } from "./eventsFeature";
+import { HashLink } from "react-router-hash-link";
 
 const EventsList = () => {
   const [month, setMonth] = useState("Месяц");
@@ -292,14 +293,14 @@ const EventsList = () => {
                 <br />и быть замотивированным, нужно...
               </p>
               <div class="events-buttons">
-                <button class="btn-slider margin-none btn-black orange-button-hover">
-                  <a href={eventsFeature[0].bezKassira} target="_blank">Регистрация</a>
-                </button>
-                <button class="more-info-event">
-                  <Link to={`/event/${eventsFeature[0].id}`}>
-                    О мероприятии
-                  </Link>
-                </button>
+                <a href={eventsFeature[0].bezKassira} target="_blank">
+                  <button class="btn-slider margin-none btn-black orange-button-hover">
+                    Регистрация
+                  </button>
+                </a>
+                <HashLink to={`/event/${eventsFeature[0].id}#top`}>
+                  <button class="more-info-event">О мероприятии</button>
+                </HashLink>
               </div>
             </div>
           </div>
@@ -456,150 +457,29 @@ const EventsList = () => {
             </div> --> */}
         </div>
         <div class="block-list-events">
-          <div class="block-list-events-item">
-            <div class="event-iamge">
-              <img src="img/speackers/Занкович.jpg" alt="" />
-            </div>
+          {eventsFeature.map((event) => {
+            if (event.was) {
+              return (
+                <div class="block-list-events-item">
+                  <div class="event-iamge">
+                    <img src={event.photo} alt="" />
+                  </div>
 
-            <div class="events-item-info">
-              {/* <!-- <div class="type-event-list">
-                        <div class="type-event-item"><img src="img/events-feature/day.svg" alt=""/>
-                            <p>14 июля</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/time.svg" alt=""/>
-                            <p>18:30</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/price-price.svg" alt=""/>
-                            <p>платное</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/info.svg" alt=""/>
-                            <p>очно/онлайн</p>
-                        </div>
-                    </div> --> */}
-              <p class="events-item-info-name black-text">
-                От идеи к стратегии:
-                <br />с чего начать свой бизнес
-              </p>
-              <p class="events-item-info-preview">
-                Что делать, если идея стартапа сформирована,
-                <br />
-                но как к ней подступить — непонятно?
-              </p>
-              <div class="events-buttons">
-                <button class="events-block-button button-black-hover">
-                  <a href="event-2.html">О мероприятии</a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="block-list-events-item">
-            <div class="event-iamge">
-              <img src="img/speackers/Занкович.jpg" alt="" />
-            </div>
-
-            <div class="events-item-info">
-              {/* <!-- <div class="type-event-list">
-                        <div class="type-event-item"><img src="img/events-feature/day.svg" alt=""/>
-                            <p>14 июля</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/time.svg" alt=""/>
-                            <p>18:30</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/price-price.svg" alt=""/>
-                            <p>платное</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/info.svg" alt=""/>
-                            <p>очно/онлайн</p>
-                        </div>
-                    </div> --> */}
-              <p class="events-item-info-name black-text">
-                От идеи к стратегии:
-                <br />с чего начать свой бизнес
-              </p>
-              <p class="events-item-info-preview">
-                Что делать, если идея стартапа сформирована,
-                <br />
-                но как к ней подступить — непонятно?
-              </p>
-              <div class="events-buttons">
-                <button class="events-block-button button-black-hover">
-                  <a href="event-2.html">О мероприятии</a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="block-list-events-item">
-            <div class="event-iamge">
-              <img src="img/speackers/Занкович.jpg" alt="" />
-            </div>
-
-            <div class="events-item-info">
-              {/* <!-- <div class="type-event-list">
-                        <div class="type-event-item"><img src="img/events-feature/day.svg" alt=""/>
-                            <p>14 июля</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/time.svg" alt=""/>
-                            <p>18:30</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/price-price.svg" alt=""/>
-                            <p>платное</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/info.svg" alt=""/>
-                            <p>очно/онлайн</p>
-                        </div>
-                    </div> --> */}
-              <p class="events-item-info-name black-text">
-                От идеи к стратегии:
-                <br />с чего начать свой бизнес
-              </p>
-              <p class="events-item-info-preview">
-                Что делать, если идея стартапа сформирована,
-                <br />
-                но как к ней подступить — непонятно?
-              </p>
-              <div class="events-buttons">
-                <button class="events-block-button button-black-hover">
-                  <a href="event-2.html">О мероприятии</a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="block-list-events-item">
-            <div class="event-iamge">
-              <img src="img/speackers/Занкович.jpg" alt="" />
-            </div>
-
-            <div class="events-item-info">
-              {/* <!-- <div class="type-event-list">
-                        <div class="type-event-item"><img src="img/events-feature/day.svg" alt=""/>
-                            <p>14 июля</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/time.svg" alt=""/>
-                            <p>18:30</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/price-price.svg" alt=""/>
-                            <p>платное</p>
-                        </div>
-                        <div class="type-event-item"><img src="img/events-feature/info.svg" alt=""/>
-                            <p>очно/онлайн</p>
-                        </div>
-                    </div> --> */}
-              <p class="events-item-info-name black-text">
-                От идеи к стратегии:
-                <br />с чего начать свой бизнес
-              </p>
-              <p class="events-item-info-preview">
-                Что делать, если идея стартапа сформирована,
-                <br />
-                но как к ней подступить — непонятно?
-              </p>
-              <div class="events-buttons">
-                <button class="events-block-button button-black-hover">
-                  <a href="event-2.html">О мероприятии</a>
-                </button>
-              </div>
-            </div>
-          </div>
+                  <div class="events-item-info">
+                    <p class="events-item-info-name black-text">{event.name}</p>
+                    <p class="events-item-info-preview">{event.intro}</p>
+                    <div class="events-buttons">
+                      <HashLink to={`/event/${event.id}#top`}>
+                        <button class="events-block-button button-black-hover">
+                          О мероприятии
+                        </button>
+                      </HashLink>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     </main>

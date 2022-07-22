@@ -1,6 +1,7 @@
 import mainScript from "./MainScript";
 import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
+import { eventsFeature } from "../eventsFeature";
 
 const Main = () => {
   useEffect(() => {
@@ -454,57 +455,28 @@ const Main = () => {
               <div class="events-slider-gray-block-item events-slider-gray-block-item-right"></div>
             </div>
             <div class="events-block-slider slider-to-center">
-              <div class="events-block-slider-item">
-                <div class="event-info">
-                  <div class="event-info-item">
-                    <p>03 августа</p>
-                  </div>
-                  <div class="event-info-item">
-                    <p>очно</p>
-                  </div>
-                </div>
-                <h5 class="event-name">
-                  Материальная мотивация
-                  <br />и принципы ее построения
-                </h5>
-                <button class="more-info-event">
-                  <a href="event-1.html">О мероприятии и регистрация</a>
-                </button>
-              </div>
-              <div class="events-block-slider-item">
-                <div class="event-info">
-                  <div class="event-info-item">
-                    <p>03 августа</p>
-                  </div>
-                  <div class="event-info-item">
-                    <p>очно</p>
-                  </div>
-                </div>
-                <h5 class="event-name">
-                  Материальная мотивация
-                  <br />и принципы ее построения
-                </h5>
-                <button class="more-info-event">
-                  <a href="event-1.html">О мероприятии и регистрация</a>
-                </button>
-              </div>
-              <div class="events-block-slider-item">
-                <div class="event-info">
-                  <div class="event-info-item">
-                    <p>03 августа</p>
-                  </div>
-                  <div class="event-info-item">
-                    <p>очно</p>
-                  </div>
-                </div>
-                <h5 class="event-name">
-                  Материальная мотивация
-                  <br />и принципы ее построения
-                </h5>
-                <button class="more-info-event">
-                  <a href="event-1.html">О мероприятии и регистрация</a>
-                </button>
-              </div>
+              {eventsFeature.map((event) => {
+                if (!event.was) {
+                  return (
+                    <div class="events-block-slider-item">
+                      <div class="event-info">
+                        <div class="event-info-item">
+                          <p>{event.date}</p>
+                        </div>
+                        <div class="event-info-item">
+                          <p>{event.place}</p>
+                        </div>
+                      </div>
+                      <h5 class="event-name">{event.name}</h5>
+                      <HashLink to={`/event/${event.id}#top`}>
+                        <button class="more-info-event">
+                          О мероприятии и регистрация
+                        </button>
+                      </HashLink>
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
 
@@ -524,11 +496,14 @@ const Main = () => {
             делиться отчетами и другой полезной информацией
           </p>
           <div class="book-block-form">
-            <input type="email" placeholder="Ваш Email" />
+            <input type="email" placeholder="Ваш Email*" />
             <button class="btn-slider margin-none btn-black button-black-hover">
               Отправить
             </button>
           </div>
+          <p id="email-acept-text">
+            *согласен на обработку личных данных
+          </p>
         </div>
         <div id="reviews" class="reviews">
           <div class="slider-decoration reviews-decoration">

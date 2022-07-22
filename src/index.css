@@ -122,7 +122,7 @@ body {
   /* justify-content: space-between; */
   align-items: center;
   /* width: 447px; */
-  gap: 55px;
+  gap: calc(5% + 10px);
   width: 40%;
   height: 100%;
 }
@@ -777,6 +777,7 @@ input::-moz-placeholder {
   line-height: 28px;
   font-family: "Montserrat-ExtraBold";
   margin-top: 62.81px;
+  padding: 0 30px;
 }
 
 .more-info-event {
@@ -863,6 +864,12 @@ input::-moz-placeholder {
 
 .subscribe-email button {
   background: #231f20;
+}
+
+
+#email-acept-text{
+  opacity: 0.7;
+  font-size: 1em;
 }
 
 button {
@@ -1184,6 +1191,12 @@ button:hover {
   /* height: 276px; */
   position: relative;
 }
+#events-feature .block-list-events-item:last-child::after {
+  display: none;
+}
+.events-past .block-list-events-item:last-child::after {
+  display: none;
+}
 
 .block-list-events-item::after {
   content: "";
@@ -1315,7 +1328,7 @@ button:hover {
   gap: 63px;
 }
 
-.event .block-list-events-item::after{
+.event .block-list-events-item::after {
   display: none;
 }
 
@@ -1832,7 +1845,7 @@ button:hover {
     padding: 0 5px;
   }
 
-  .main-slider-arrows-block img{
+  .main-slider-arrows-block img {
     width: 20px;
   }
 
@@ -2078,6 +2091,9 @@ button:hover {
     text-align: center;
     padding-left: 0;
   }
+  #email-acept-text{
+    font-size: 0.5em;
+  }
   /* reviews */
   .reviews {
     /* height: 274px; */
@@ -2195,6 +2211,11 @@ button:hover {
     margin: 0 56px 0 47px;
   }
   /* events */
+  .block-list-events-item::after{
+    bottom: -8px;
+    left: -8px;
+  }
+
   .main-slider-events {
     height: 168px;
     padding-top: 60px;
@@ -2280,7 +2301,7 @@ button:hover {
   .events-item-info-name {
     font-size: 7px;
     line-height: 9px;
-    margin-top: 12px;
+    margin-top: 0px;
   }
   .events-item-info-preview {
     font-size: 6px;
@@ -2335,12 +2356,12 @@ button:hover {
   }
   .about-specker .event-iamge img {
     width: 130px;
-    height: 124px;
+    /* height: 124px; */
     position: relative;
     right: 21px;
   }
   .about-specker .event-gap {
-    gap: 0px;
+    gap: 10px;
   }
   .block-video {
     height: 169px;
