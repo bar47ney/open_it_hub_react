@@ -13,12 +13,12 @@ const Footer = () => {
         <div class="social">
           <div class="social-item">
             <a href="https://vk.com/openithub/" title="" target="_blank">
-              <img src="/img/vk.svg" />
+              <img src="img/vk.svg" />
             </a>
           </div>
           <div class="social-item">
             <a href="https://t.me/openithub/" title="" target="_blank">
-              <img src="/img/tg.svg" />
+              <img src="img/tg.svg" />
             </a>
           </div>
           <div class="social-item">
@@ -26,8 +26,8 @@ const Footer = () => {
               href=" https://instagram.com/openhub.by/"
               title=""
               target="_blank"
-            >
-              <img src="/img/inst.svg" />
+            > 
+              <img src="img/inst.svg" />
             </a>
           </div>
           <div class="social-item">
@@ -36,7 +36,7 @@ const Footer = () => {
               title=""
               target="_blank"
             >
-              <img src="/img/facebook.svg" />
+              <img src="img/facebook.svg" />
             </a>
           </div>
           <div class="social-item">
@@ -45,7 +45,7 @@ const Footer = () => {
               title=""
               target="_blank"
             >
-              <img src="/img/linken.svg" />
+              <img src="img/linken.svg" />
             </a>
           </div>
         </div>

@@ -29,19 +29,19 @@ const Event = () => {
               ) : (
                 <div class="type-event-list type-event-list-event">
                   <div class="type-event-item">
-                    <img src="/img/events-feature/day.svg" alt="" />
+                    <img src="img/events-feature/day.svg" alt="" />
                     <p>{eventsFeature[id - 1].date}</p>
                   </div>
                   <div class="type-event-item">
-                    <img src="/img/events-feature/time.svg" alt="" />
+                    <img src="img/events-feature/time.svg" alt="" />
                     <p>{eventsFeature[id - 1].time}</p>
                   </div>
                   <div class="type-event-item">
-                    <img src="/img/events-feature/price-price.svg" alt="" />
+                    <img src="img/events-feature/price-price.svg" alt="" />
                     <p>{eventsFeature[id - 1].pay}</p>
                   </div>
                   <div class="type-event-item">
-                    <img src="/img/events-feature/info.svg" alt="" />
+                    <img src="img/events-feature/info.svg" alt="" />
                     <p>{eventsFeature[id - 1].place}</p>
                   </div>
                 </div>

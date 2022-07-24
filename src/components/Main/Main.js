@@ -67,7 +67,7 @@ const Main = () => {
             </HashLink>
 
             <div class="slider-decoration">
-              <img src="/img/slider-decoration.png" alt="image-decoration" />
+              <img src="/slider-decoration.png" alt="image-decoration" />
             </div>
             <div class="slider-shadow"></div>
           </div>
@@ -86,7 +86,7 @@ const Main = () => {
             </HashLink>
 
             <div class="slider-decoration">
-              <img src="/img/slider-decoration.png" alt="image-decoration" />
+              <img src="img/slider-decoration.png" alt="image-decoration" />
             </div>
             <div class="slider-shadow"></div>
           </div>
@@ -105,7 +105,7 @@ const Main = () => {
             </HashLink>
 
             <div class="slider-decoration">
-              <img src="/img/slider-decoration.png" alt="image-decoration" />
+              <img src="img/slider-decoration.png" alt="image-decoration" />
             </div>
             <div class="slider-shadow"></div>
           </div>
@@ -502,7 +502,10 @@ const Main = () => {
             </button>
           </div>
           <p id="email-acept-text">
-            *согласен на обработку личных данных
+            *Отправляя свой Email, вы даёте согласие на обработку
+            персональных данных согласно Политике обработки персональных данных
+            в ООО «Образовательный центр программирования и высоких технологий»
+            :
           </p>
         </div>
         <div id="reviews" class="reviews">

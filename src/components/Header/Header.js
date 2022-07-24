@@ -19,11 +19,11 @@ const Header = () => {
       <header>
         <div className="header mobily-visibility">
           <div class="burger-mobile">
-            <img src="/img/Mobile-Menu.svg" alt="logo" />
+            <img src="img/Mobile-Menu.svg" alt="logo" />
           </div>
           <div class="header-logo">
             <HashLink to="/#top">
-              <img src="/img/logo.svg" alt="logo" />
+              <img src="img/logo.svg" alt="logo" />
             </HashLink>
           </div>
           <div class="">
@@ -221,7 +221,7 @@ const Header = () => {
           </div>
           <div class="header-logo">
             <HashLink to={"/#top"}>
-              <img src="/img/logo.svg" alt="logo" />
+              <img src="img/logo.svg" alt="logo" />
             </HashLink>
           </div>
           <div class="header-item">

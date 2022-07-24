@@ -37,8 +37,8 @@ export const eventsFeature = [
     place: "Очно",
     bezKassira:
       "https://bezkassira.by/biznes-vstrecha-materialnaya-motivaciya-i-principy-ee-postroeniy-18347/",
-    photo: "/img/speackers/Авраменко.jpg",
-    aboutSpeakerPhoto: "/img/speackers/Авраменко.jpg",
+    photo: "img/speackers/Авраменко.jpg",
+    aboutSpeakerPhoto: "img/speackers/Авраменко.jpg",
     was: false,
   },
   {
@@ -71,8 +71,8 @@ export const eventsFeature = [
     pay: "платное",
     place: "очно/онлайн",
     bezKassira: "",
-    photo: "/img/speackers/Занкович.jpg",
-    aboutSpeakerPhoto: "/img/speackers/Занкович.jpg",
+    photo: "img/speackers/Занкович.jpg",
+    aboutSpeakerPhoto: "img/speackers/Занкович.jpg",
     was: true,
   },
   {
@@ -108,8 +108,8 @@ export const eventsFeature = [
     pay: "платное",
     place: "очно",
     bezKassira: "",
-    photo: "/img/speackers/Товарныйфорум.jpg",
-    aboutSpeakerPhoto: "/img/speackers/Товарныйфорум.jpg",
+    photo: "img/speackers/Товарныйфорум.jpg",
+    aboutSpeakerPhoto: "img/speackers/Товарныйфорум.jpg",
     was: true,
   },
   {
@@ -156,8 +156,8 @@ export const eventsFeature = [
     pay: "платное",
     place: "очно/онлайн",
     bezKassira: "",
-    aboutSpeakerPhoto: "/img/speackers/evgeniy-galai — копия.png",
-    photo: "/img/feature-events/event.jpg",
+    aboutSpeakerPhoto: "img/speackers/evgeniy-galai — копия.png",
+    photo: "img/feature-events/event.jpg",
     was: true,
   },
   {
@@ -184,8 +184,8 @@ export const eventsFeature = [
     pay: "платное",
     place: "очно/онлайн",
     bezKassira: "",
-    aboutSpeakerPhoto: "/img/speackers/ITalk.jpg",
-    photo: "/img/speackers/ITalk.jpg",
+    aboutSpeakerPhoto: "img/speackers/ITalk.jpg",
+    photo: "img/speackers/ITalk.jpg",
     was: true,
     video: `  <iframe src="https://www.youtube.com/embed/OxoCRjl0_iY?controls=0" title="YouTube video player"
     frameborder="0"
@@ -228,8 +228,8 @@ export const eventsFeature = [
     pay: "бесплатное",
     place: "очно",
     bezKassira: "",
-    aboutSpeakerPhoto: "/img/speackers/Студенты.jpg",
-    photo: "/img/speackers/Студенты.jpg",
+    aboutSpeakerPhoto: "img/speackers/Студенты.jpg",
+    photo: "img/speackers/Студенты.jpg",
     was: true,
     video: ` 
     <iframe src="https://www.youtube.com/embed/5_mH4ulSxrw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
@@ -260,8 +260,8 @@ export const eventsFeature = [
     pay: "бесплатное",
     place: "очно/онлайн",
     bezKassira: "",
-    aboutSpeakerPhoto: "/img/speackers/Дизайн движуха.jpg",
-    photo: "/img/speackers/Дизайн движуха.jpg",
+    aboutSpeakerPhoto: "img/speackers/Дизайн движуха.jpg",
+    photo: "img/speackers/Дизайн движуха.jpg",
     was: true,
     video: ` 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/cmF3Ww7hpWc?controls=0"
@@ -306,8 +306,8 @@ export const eventsFeature = [
     pay: "бесплатное",
     place: "очно/онлайн",
     bezKassira: "",
-    aboutSpeakerPhoto: "/img/speackers/Стоп паника.jpg",
-    photo: "/img/speackers/Стоп паника.jpg",
+    aboutSpeakerPhoto: "img/speackers/stop.jpg",
+    photo: "img/speackers/stop.jpg",
     was: true,
     video: ``,
   },
