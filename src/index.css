@@ -605,6 +605,7 @@ input::-moz-placeholder {
   display: flex;
   justify-content: center;
   margin-top: 64px;
+  margin-top: 32px;
   position: relative;
   z-index: 2;
 }
@@ -1989,6 +1990,7 @@ button:hover {
   }
   .book-block-form {
     margin-top: 24px;
+    margin-top: 10px;
   }
   .book-block-form input,
   .book-block-form button {
@@ -2104,7 +2106,7 @@ button:hover {
     padding-left: 0;
   }
   #email-acept-text {
-    font-size: 0.5em;
+    font-size: 0.3em;
     width: 300px;
     margin-top: 10px;
   }
