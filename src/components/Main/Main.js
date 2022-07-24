@@ -502,7 +502,7 @@ const Main = () => {
             </button>
           </div>
           <p id="email-acept-text">
-            *согласен на обработку личных данных
+            *согласен на обработку12121221122121 личных данных
           </p>
         </div>
         <div id="reviews" class="reviews">
