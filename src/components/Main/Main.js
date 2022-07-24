@@ -502,7 +502,15 @@ const Main = () => {
             </button>
           </div>
           <p id="email-acept-text">
-            *согласен на обработку12121221122121 личных данных
+            *Отправляя свой email, вы даёте согласие на обработку персональных
+            данных согласно
+            <a
+              href="https://www.it-academy.by/politika-konfidentsialnosti-personalnykh-dannykh/"
+              target="_blank"
+            >
+              &nbsp;Политике обработки персональных данных&nbsp;
+            </a>
+            в ООО «Образовательный центр программирования и высоких технологий»
           </p>
         </div>
         <div id="reviews" class="reviews">
