@@ -814,7 +814,7 @@ const Main = () => {
               href="https://www.it-academy.by/politika-konfidentsialnosti-personalnykh-dannykh/"
               target="_blank"
             >
-              &nbsp;Политике обработки персональных данных&nbsp;
+              <br/>Политике обработки персональных данных&nbsp;
             </a>
             в ООО «Образовательный центр программирования и высоких технологий»
           </p>

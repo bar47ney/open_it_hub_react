@@ -622,9 +622,9 @@ body {
 
 .book-block {
   width: 100%;
-  height: 397px;
+  /* height: 397px; */
   background: #231f20;
-  padding-top: 64px;
+  padding: 48px 0 80px;
   text-align: center;
   position: relative;
 }
@@ -667,8 +667,7 @@ input::-moz-placeholder {
 .book-block-form {
   display: flex;
   justify-content: center;
-  margin-top: 64px;
-  margin-top: 32px;
+  margin-top: 80px;
   position: relative;
   z-index: 2;
 }
@@ -907,9 +906,12 @@ input::-moz-placeholder {
     #e67f13 88.66%
   );
   text-align: center;
-  padding-top: 48px;
-  padding-bottom: 30px;
+  padding: 48px 0 32px;
   color: white;
+}
+
+.subscribe-email .book-block-form {
+  margin-top: 64px;
 }
 
 .subscribe-email-heading {
@@ -936,10 +938,12 @@ input::-moz-placeholder {
 }
 
 #email-acept-text {
-  opacity: 0.7;
-  font-size: 1em;
-  width: 800px;
-  margin: 24px auto 0;
+  font-family: "Montserrat-Regular";
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  margin: 32px auto 0;
 }
 
 #email-acept-text a {
@@ -1055,7 +1059,7 @@ button:hover {
 /* contacts-block */
 .contacts-block {
   width: 100%;
-  height: 434px;
+  /* height: 434px; */
   background: linear-gradient(
     270.5deg,
     rgba(131, 131, 151, 0.3498) -2.81%,
@@ -1063,11 +1067,11 @@ button:hover {
     rgba(85, 85, 100, 0) 99.23%
   );
   text-align: center;
-  padding-top: 48px;
+  padding: 45px 0 48px;
 }
 
 .contacts-list {
-  margin-top: 44px;
+  margin-top: 54px;
   display: flex;
   justify-content: center;
   gap: 20%;
@@ -1084,9 +1088,8 @@ button:hover {
   font-family: "Montserrat-Medium";
   font-size: 21px;
   line-height: 26px;
-  position: relative;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 12px;
 }
@@ -1152,7 +1155,7 @@ button:hover {
 }
 
 .copyright {
-  font-family: "Noto Sans Regular";
+  font-family: "Noto Sans Regular Regular";
   font-size: 12px;
   line-height: 123.6%;
   margin-top: 41px;
@@ -1464,8 +1467,9 @@ button:hover {
 }
 
 .corporat-job .about-events {
-  height: 397px;
+  height: unset;
   position: relative;
+  padding: 64px 0 78px;
 }
 
 .corporat-job .about-events .slider-decoration {
