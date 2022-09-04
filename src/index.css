@@ -113,7 +113,13 @@ body {
   position: fixed;
   z-index: 5;
 
+  transition: .5s;
+
   /* header fixed */
+}
+
+.header-hidden{
+  transform: translateY(-98px);
 }
 
 .header-logo {
@@ -972,11 +978,31 @@ button:hover {
   width: 100%;
   /* height: 623px; */
   background: white;
-  padding-top: 64px;
-  padding-bottom: 40px;
+  padding: 48px 0 75px;
   text-align: center;
   color: #231f20;
   position: relative;
+}
+
+.reviews-block-white {
+  width: 689px;
+  height: 100%;
+  background: linear-gradient(
+    270deg,
+    #ffffff 50%,
+    rgba(255, 255, 255, 0) 97.67%
+  );
+  position: absolute;
+  left: -206px;
+  top: 0px;
+  z-index: 1;
+  transform: rotate(180deg);
+}
+
+.reviews-block-white:nth-child(2) {
+  left: unset;
+  right: -206px;
+  transform: rotate(0deg);
 }
 
 .reviews-decoration {
@@ -989,7 +1015,7 @@ button:hover {
 
 .reviews-nav {
   top: unset;
-  bottom: 138px;
+  bottom: 369px;
 }
 
 .reviews-nav-left {
@@ -1008,17 +1034,31 @@ button:hover {
 .reviews-slider {
   /* width: min-content; */
   /* background: green; */
-  margin-top: 64px;
+  margin-top: 109px;
+  /* margin-left: auto;
+  margin-right: auto; */
   display: flex;
+  gap: 16px;
   position: relative;
   transition: 1s;
+  margin-left: calc(50% - 268px);
 }
 
 .reviews-slider-item {
-  width: 100%;
+  /* width: 100%; */
+  width: 536px;
+  /* height: 648px; */
+  border: 1px solid #000000;
+  padding: 135px 98px 43px 93px;
+  position: relative;
+  /* margin-right: 16px; */
 }
 
 .reviews-slider-item-photo {
+  position: absolute;
+  /* margin: 0 auto; */
+  top: -75px;
+  left: calc(50% - 75px);
   width: 150px;
   height: 150px;
   background: #d9d9d9;
@@ -1028,16 +1068,36 @@ button:hover {
 .reviwer-info {
   font-family: "Noto Sans Regular";
   font-size: 20px;
-  line-height: 27px;
+  line-height: 23px;
   color: #8d8d8d;
-  margin-top: 8px;
+  margin-top: 89px;
+}
+
+.reviwer-text-block {
+  height: 335px;
+  overflow-y: scroll;
+  position: relative;
+}
+.reviews-slider-item::after {
+  content: "";
+  position: absolute;
+  bottom: 178px;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  opacity: 0.9;
+}
+
+.reviwer-text-block::-webkit-scrollbar {
+  width: 0;
 }
 
 .reviwer-text {
   font-family: "Montserrat-Medium";
   font-size: 21px;
   line-height: 26px;
-  margin-top: 28px;
+  padding-bottom: 35px;
 }
 
 /* footer */
@@ -1075,6 +1135,10 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 20%;
+}
+
+.contacts-list .reviews-slider-item-photo {
+  position: unset;
 }
 
 .contact-name {

@@ -4,9 +4,28 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
+
+
+  const [oldScrollTopPosition, setOldScrollTopPosition] = useState(0);
+
   useEffect(() => {
     headerScript();
+
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
   }, []);
+
+
+  const isSticky = (e) => {
+    const header = document.querySelectorAll(".header")[1];
+    const scrollTop = window.scrollY;
+    scrollTop <= 250
+      ? header.classList.remove("header-hidden")
+      : header.classList.add("header-hidden");
+      return scrollTop
+  };
 
   const [viewSubMobileMenu, setViewSubMobileMenu] = useState(false);
 
@@ -17,7 +36,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="header mobily-visibility">
+        <div className="header mobile-visibility">
           <div class="burger-mobile">
             <img src="/img/Mobile-Menu.svg" alt="logo" />
           </div>

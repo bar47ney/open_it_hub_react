@@ -181,38 +181,54 @@ const mainScript = () => {
     );
   }
 
-  const reviewsSliderStep = 100;
+  // let eventsSliderPositionChange = 0;
+  // const eventsSliderCenterItem = Math.round(masEventsSliderItems.length / 2);
+  // let eventsSliderCurrentItem = eventsSliderCenterItem;
+  // console.log(masEventsSliderItems.length);
+
   let reviewsSliderPositionChange = 0;
-  let reviewsSliderCurrentItem = 1;
+  const reviewsSliderCenterItem = Math.round(masReviewsSliderItems.length / 2);
+  let reviewsSliderCurrentItem = reviewsSliderCenterItem;
+  const reviewsSliderStep = 552;
+
+  const centerReviewsSlider = () => {
+    reviewsSliderPositionChange =
+      -reviewsSliderStep * (reviewsSliderCurrentItem - 1);
+      reviewsSlider.style = `left: ${reviewsSliderPositionChange}px`;
+    reviewsSliderCurrentItem = reviewsSliderCurrentItem;
+    return reviewsSliderPositionChange;
+  };
+
+  reviewsSliderPositionChange = centerReviewsSlider()
 
   const startReviewsSlider = () => {
     if (reviewsSliderCurrentItem > masReviewsSliderItems.length) {
       reviewsSliderPositionChange = 0;
       reviewsSliderCurrentItem = 1;
-      reviewsSlider.style = `left: ${reviewsSliderPositionChange}%; width: ${
-        masReviewsSliderItems.length * 100
-      }%`;
+      reviewsSlider.style = `left: ${reviewsSliderPositionChange}px; width: ${
+        masReviewsSliderItems.length * reviewsSliderStep
+      }px`;
     }
 
     if (reviewsSliderCurrentItem < 1) {
-      reviewsSliderPositionChange = (-masReviewsSliderItems.length + 1) * 100;
+      reviewsSliderPositionChange = (-masReviewsSliderItems.length + 1) * reviewsSliderStep;
       reviewsSliderCurrentItem = masReviewsSliderItems.length;
-      reviewsSlider.style = `left: ${reviewsSliderPositionChange}%; width: ${
-        masReviewsSliderItems.length * 100
-      }%`;
+      reviewsSlider.style = `left: ${reviewsSliderPositionChange}px; width: ${
+        masReviewsSliderItems.length * reviewsSliderStep
+      }px`;
     }
   };
 
-  reviewsSlider.style = `left: ${reviewsSliderPositionChange}%; width: ${
-    masReviewsSliderItems.length * 100
-  }%`;
+  reviewsSlider.style = `left: ${reviewsSliderPositionChange}px; width: ${
+    masReviewsSliderItems.length * reviewsSliderStep
+  }px`;
   startReviewsSlider();
 
   reviewsSliderArrowLeft.addEventListener("click", () => {
     reviewsSliderPositionChange += reviewsSliderStep;
-    reviewsSlider.style = `left: ${reviewsSliderPositionChange}%; width: ${
-      masReviewsSliderItems.length * 100
-    }%`;
+    reviewsSlider.style = `left: ${reviewsSliderPositionChange}px; width: ${
+      masReviewsSliderItems.length * reviewsSliderStep
+    }px`;
     reviewsSliderCurrentItem--;
     startReviewsSlider();
     console.log(`${reviewsSliderPositionChange} - reviewsSliderPositionChange`);
@@ -221,9 +237,9 @@ const mainScript = () => {
   });
   reviewsSliderArrowRight.addEventListener("click", () => {
     reviewsSliderPositionChange -= reviewsSliderStep;
-    reviewsSlider.style = `left: ${reviewsSliderPositionChange}%; width: ${
-      masReviewsSliderItems.length * 100
-    }%`;
+    reviewsSlider.style = `left: ${reviewsSliderPositionChange}px; width: ${
+      masReviewsSliderItems.length * reviewsSliderStep
+    }px`;
     reviewsSliderCurrentItem++;
     startReviewsSlider();
     console.log(`${reviewsSliderPositionChange} - reviewsSliderPositionChange`);

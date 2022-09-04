@@ -814,12 +814,15 @@ const Main = () => {
               href="https://www.it-academy.by/politika-konfidentsialnosti-personalnykh-dannykh/"
               target="_blank"
             >
-              <br/>Политике обработки персональных данных&nbsp;
+              <br />
+              Политике обработки персональных данных&nbsp;
             </a>
             в ООО «Образовательный центр программирования и высоких технологий»
           </p>
         </div>
         <div id="reviews" class="reviews">
+          <div className="reviews-block-white"></div>
+          <div className="reviews-block-white"></div>
           <div class="slider-decoration reviews-decoration">
             <img src="img/slider-decoration.png" alt="image-decoration" />
           </div>
@@ -849,18 +852,20 @@ const Main = () => {
                   alt=""
                 />
               </p>
+              <div className="reviwer-text-block">
+                <p class="reviwer-text">
+                  Добрый день!
+                  <br />
+                  От лица всей нашей команды хочу поблагодарить вас и вашу
+                  компанию
+                  <br />
+                  за предоставленную площадку! Все прошло на высшем уровне!
+                </p>
+              </div>
               <p class="reviwer-info">
                 Дмитрий Будилович,
                 <br />
                 Организатор форума «Товарный бизнес в Беларуси»
-              </p>
-              <p class="reviwer-text">
-                Добрый день!
-                <br />
-                От лица всей нашей команды хочу поблагодарить вас и вашу
-                компанию
-                <br />
-                за предоставленную площадку! Все прошло на высшем уровне!
               </p>
             </div>
             <div class="reviews-slider-item">
@@ -871,23 +876,151 @@ const Main = () => {
                   alt=""
                 />
               </p>
+              <div className="reviwer-text-block">
+                <p class="reviwer-text">
+                  Тем, кто ищет локацию для поведения мероприятий: мастер
+                  классов,
+                  <br />
+                  семинаров и конференций, — рекомендую обратить внимание на
+                  <br />
+                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
+                  необходимым
+                  <br />
+                  для проведения подобных ивентов и вмещающее в себя
+                  <br />
+                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
+                  сюда снова!
+                </p>
+              </div>
+
               <p class="reviwer-info">
                 Алёна Романова
                 <br />
                 Партнёр IHCA, руководитель проекта iHackathon IT
               </p>
-              <p class="reviwer-text">
-                Тем, кто ищет локацию для поведения мероприятий: мастер классов,
+            </div>{" "}
+            <div class="reviews-slider-item">
+              <p>
+                <img
+                  class="reviews-slider-item-photo"
+                  src="img/reviews/reviews2.jpg"
+                  alt=""
+                />
+              </p>
+              <div className="reviwer-text-block">
+                <p class="reviwer-text">
+                  Тем, кто ищет локацию для поведения мероприятий: мастер
+                  классов,
+                  <br />
+                  семинаров и конференций, — рекомендую обратить внимание на
+                  <br />
+                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
+                  необходимым
+                  <br />
+                  для проведения подобных ивентов и вмещающее в себя
+                  <br />
+                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
+                  сюда снова!
+                </p>
+              </div>
+
+              <p class="reviwer-info">
+                Алёна Романова
                 <br />
-                семинаров и конференций, — рекомендую обратить внимание на
+                Партнёр IHCA, руководитель проекта iHackathon IT
+              </p>
+            </div>{" "}
+            <div class="reviews-slider-item">
+              <p>
+                <img
+                  class="reviews-slider-item-photo"
+                  src="img/reviews/reviews2.jpg"
+                  alt=""
+                />
+              </p>
+              <div className="reviwer-text-block">
+                <p class="reviwer-text">
+                  Тем, кто ищет локацию для поведения мероприятий: мастер
+                  классов,
+                  <br />
+                  семинаров и конференций, — рекомендую обратить внимание на
+                  <br />
+                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
+                  необходимым
+                  <br />
+                  для проведения подобных ивентов и вмещающее в себя
+                  <br />
+                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
+                  сюда снова!
+                </p>
+              </div>
+
+              <p class="reviwer-info">
+                Алёна Романова
                 <br />
-                OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
-                необходимым
+                Партнёр IHCA, руководитель проекта iHackathon IT
+              </p>
+            </div>{" "}
+            <div class="reviews-slider-item">
+              <p>
+                <img
+                  class="reviews-slider-item-photo"
+                  src="img/reviews/reviews2.jpg"
+                  alt=""
+                />
+              </p>
+              <div className="reviwer-text-block">
+                <p class="reviwer-text">
+                  Тем, кто ищет локацию для поведения мероприятий: мастер
+                  классов,
+                  <br />
+                  семинаров и конференций, — рекомендую обратить внимание на
+                  <br />
+                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
+                  необходимым
+                  <br />
+                  для проведения подобных ивентов и вмещающее в себя
+                  <br />
+                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
+                  сюда снова!
+                </p>
+              </div>
+
+              <p class="reviwer-info">
+                Алёна Романова
                 <br />
-                для проведения подобных ивентов и вмещающее в себя
+                Партнёр IHCA, руководитель проекта iHackathon IT
+              </p>
+            </div>{" "}
+            <div class="reviews-slider-item">
+              <p>
+                <img
+                  class="reviews-slider-item-photo"
+                  src="img/reviews/reviews2.jpg"
+                  alt=""
+                />
+              </p>
+              <div className="reviwer-text-block">
+                <p class="reviwer-text">
+                  Тем, кто ищет локацию для поведения мероприятий: мастер
+                  классов,
+                  <br />
+                  семинаров и конференций, — рекомендую обратить внимание на
+                  <br />
+                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
+                  необходимым
+                  <br />
+                  для проведения подобных ивентов и вмещающее в себя
+                  <br />
+                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
+                  сюда снова!
+                </p>
+              </div>
+
+              <p class="reviwer-info">
+                Алёна Романова
                 <br />
-                до 120 человек. Нам все понравилось, совсем скоро вернёмся сюда
-                снова!
+                Партнёр IHCA, руководитель проекта iHackathon IT
               </p>
             </div>
           </div>
