@@ -268,7 +268,7 @@ body {
 .main {
   /* header fixed */
   position: relative;
-  padding-top: 88px;
+  padding-top: 98px;
   /* header fixed */
   flex: 1 1 auto;
   /* transition: 5s; */
@@ -1281,6 +1281,75 @@ button:hover {
   background-color: #231f20;
 }
 
+/* .event-page */
+.event .events-feature {
+  padding: 54px 0 64px;
+}
+
+.event .events-feature *{
+  text-align: center;
+  justify-content: center;
+}
+
+.event .type-event-list-event{
+  justify-content: center;
+  gap: 74px;
+  width: unset;
+}
+
+.event .heading-event{
+  width: 469px;
+  margin: 0 auto;
+}
+
+.event .type-event-item{
+  width: unset;
+}
+
+.event .block-list-events{
+  padding: 0;
+}
+
+.event .main-text-event{
+  width: 813px;
+  padding-bottom: 0;
+}
+
+.event .main-text-event li{
+  /* text-align: right!important; */
+  /* display: flex; */
+  /* text-align: justify; */
+}
+/* 
+.event .main-text-event ol, .event .main-text-event ul{
+  margin: 0 auto;
+
+} */
+
+.event .about-specker .main-text-event{
+  width: 668px;
+}
+
+.event .events-item-info{
+  padding: 0;
+  text-align: center;
+}
+
+.event .about-specker .events-item-info *{
+  text-align: left;
+  margin: unset;
+}
+
+.event .event-button-left{
+  margin-top: 64px;
+}
+
+.event .about-specker{
+  padding: 44px 0 0;
+}
+.event .about-specker .events-item-info{
+  padding-top: 0;
+}
 /* events-feature */
 .events-feature {
   text-align: center;

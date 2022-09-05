@@ -53,14 +53,17 @@ const Event = () => {
                   eventsFeature[id - 1].mainText
                 )}
               ></div>
-              <div class="event-button-left">
-                {!eventsFeature[id - 1].was ? (
+
+              {!eventsFeature[id - 1].was ? (
+                <div class="event-button-left">
                   <a href={eventsFeature[id - 1].bezKassira} target="_blank">
                     <button class="btn-slider margin-none btn-black orange-button-hover event-button">
                       Купить билет
                     </button>
                   </a>
-                ) : eventsFeature[id - 1].video ? (
+                </div>
+              ) : eventsFeature[id - 1].video ? (
+                <div class="event-button-left">
                   <HashLink
                     scroll={(el) =>
                       el.scrollIntoView({ behavior: "smooth", block: "center" })
@@ -71,10 +74,10 @@ const Event = () => {
                       Видеоотчёт
                     </button>
                   </HashLink>
-                ) : (
-                  ""
-                )}
-              </div>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
@@ -127,6 +130,18 @@ const Event = () => {
             Отправить
           </button>
         </div>
+        <p id="email-acept-text">
+          *Отправляя свой email, вы даёте согласие на обработку персональных
+          данных согласно
+          <a
+            href="https://www.it-academy.by/politika-konfidentsialnosti-personalnykh-dannykh/"
+            target="_blank"
+          >
+            <br />
+            Политике обработки персональных данных&nbsp;
+          </a>
+          в ООО «Образовательный центр программирования и высоких технологий»
+        </p>
       </div>
     </main>
   );
