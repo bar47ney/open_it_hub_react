@@ -1,6 +1,109 @@
 import { useParams } from "react-router-dom";
 import { eventsFeature } from "./eventsFeature";
 import { HashLink } from "react-router-hash-link";
+import ImageGallery from "react-image-gallery";
+
+const images = [
+  {
+    original: "https://picsum.photos/id/1018/1000/600/",
+    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    description: "1",
+  },
+  {
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+  },
+];
 
 const Event = () => {
   const { id } = useParams();
@@ -108,15 +211,6 @@ const Event = () => {
       ) : (
         ""
       )}
-      {eventsFeature[id - 1].video ? (
-        <div
-          id="block-video"
-          class="block-video"
-          dangerouslySetInnerHTML={createMarkup(eventsFeature[id - 1].video)}
-        ></div>
-      ) : (
-        ""
-      )}
 
       <div class="subscribe-email">
         <h4 class="subscribe-email-heading">Будь в курсе!</h4>
@@ -143,6 +237,26 @@ const Event = () => {
           в ООО «Образовательный центр программирования и высоких технологий»
         </p>
       </div>
+
+      <div className="photo-block">
+        <h4 class="subscribe-email-heading">Фотоотчет</h4>
+        <ImageGallery
+          items={images}
+          showIndex={true}
+          showPlayButton={false}
+          showFullscreenButton={false}
+        />
+      </div>
+
+      {eventsFeature[id - 1].video ? (
+        <div
+          id="block-video"
+          class="block-video"
+          dangerouslySetInnerHTML={createMarkup(eventsFeature[id - 1].video)}
+        ></div>
+      ) : (
+        ""
+      )}
     </main>
   );
 };

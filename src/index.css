@@ -60,6 +60,8 @@
   src: url("fonts/montserrat-regular.ttf") format("truetype");
 }
 
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 *,
 *::before,
 *::after {
@@ -113,12 +115,12 @@ body {
   position: fixed;
   z-index: 5;
 
-  transition: .5s;
+  transition: 0.5s;
 
   /* header fixed */
 }
 
-.header-hidden{
+.header-hidden {
   transform: translateY(-98px);
 }
 
@@ -1286,39 +1288,62 @@ button:hover {
   padding: 54px 0 64px;
 }
 
-.event .events-feature *{
+.event .events-feature * {
   text-align: center;
   justify-content: center;
 }
 
-.event .type-event-list-event{
+.event .type-event-list-event {
   justify-content: center;
   gap: 74px;
   width: unset;
 }
 
-.event .heading-event{
+.event .heading-event {
   width: 469px;
   margin: 0 auto;
 }
 
-.event .type-event-item{
+.event .type-event-item {
   width: unset;
 }
 
-.event .block-list-events{
+.event .block-list-events {
   padding: 0;
 }
 
-.event .main-text-event{
+.event .main-text-event {
   width: 813px;
   padding-bottom: 0;
 }
 
-.event .main-text-event li{
-  /* text-align: right!important; */
-  /* display: flex; */
-  /* text-align: justify; */
+.event .main-text-event ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.event .main-text-event * {
+  margin-bottom: 35px;
+}
+.event .main-text-event li {
+  margin-bottom: 0px;
+}
+.event .main-text-event :last-child {
+  margin-bottom: 0px;
+}
+
+.event .main-text-event li:before {
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #000;
+  margin-right: 10px;
+}
+.event .about-specker li:before {
+  background-color: #fff;
 }
 /* 
 .event .main-text-event ol, .event .main-text-event ul{
@@ -1326,30 +1351,71 @@ button:hover {
 
 } */
 
-.event .about-specker .main-text-event{
+.event .about-specker .main-text-event {
   width: 668px;
 }
 
-.event .events-item-info{
+.event .events-item-info {
   padding: 0;
   text-align: center;
 }
 
-.event .about-specker .events-item-info *{
+.event .about-specker .events-item-info * {
   text-align: left;
   margin: unset;
 }
 
-.event .event-button-left{
+.event .event-button-left {
   margin-top: 64px;
 }
 
-.event .about-specker{
+.event .about-specker {
   padding: 44px 0 0;
 }
-.event .about-specker .events-item-info{
+.event .about-specker .events-item-info {
   padding-top: 0;
 }
+
+/* photo-block */
+.photo-block {
+  background: #231f20;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 48px 0 35px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.photo-block .subscribe-email-heading {
+  margin-bottom: 74px;
+}
+
+.image-gallery-index {
+  right: unset;
+  top: calc(-57px);
+  transform: translateX(calc(50vw - 50% - 10px));
+}
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus,
+.image-gallery-thumbnail:hover {
+  border: 4px solid #ff7f23;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.image-gallery-thumbnail+.image-gallery-thumbnail {
+  margin-left: 12px;
+}
+
+.image-gallery-thumbnails{
+  margin: 61px 58px 0;
+  padding: 0;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  height: 388px;
+  width: 567px;
+}
+
 /* events-feature */
 .events-feature {
   text-align: center;
