@@ -1380,7 +1380,7 @@ button:hover {
 .photo-block {
   background: #231f20;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 48px 0 35px;
+  padding: 48px 0 0px;
   color: #ffffff;
   text-align: center;
 }
@@ -1390,30 +1390,84 @@ button:hover {
 }
 
 .image-gallery-index {
-  right: unset;
   top: calc(-57px);
-  transform: translateX(calc(50vw - 50% - 10px));
+  background-color: unset;
+  font-family: "Noto Sans Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 29px;
+  text-align: center;
+  color: #8d8d8d;
+  width: 100%;
 }
 
 .image-gallery-thumbnail.active,
 .image-gallery-thumbnail:focus,
 .image-gallery-thumbnail:hover {
   border: 4px solid #ff7f23;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.image-gallery-thumbnail+.image-gallery-thumbnail {
-  margin-left: 12px;
+.image-gallery-thumbnail + .image-gallery-thumbnail {
+  margin-left: 12px !important;
+  width: 169px;
+  height: 118x;
+  min-height: 50px;
+  /* overflow: hidden; */
+}
+.image-gallery-thumbnail:first-child {
+  width: 169px;
+  height: 118x;
+  min-height: 50px;
+  /* overflow: hidden; */
 }
 
-.image-gallery-thumbnails{
+.image-gallery-thumbnails {
   margin: 61px 58px 0;
   padding: 0;
+  /* overflow-x: hidden; */
+  overflow-y: visible;
+  padding-bottom: 60px;
 }
 
 .image-gallery-content .image-gallery-slide .image-gallery-image {
-  height: 388px;
-  width: 567px;
+  max-height: calc(75vh - 80px);
+}
+
+.image-gallery-thumbnail-label {
+  font-family: "Noto Sans Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #8d8d8d;
+  position: absolute;
+  margin-top: 70px;
+}
+
+.fullscreen {
+  transform: translateY(10vh);
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  height: 60px;
+  width: 60px;
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  padding: 50px 114px;
+}
+
+.image-gallery-left-nav:hover,
+.image-gallery-svg:hover,
+.image-gallery-right-nav:hover,
+.image-gallery-svg:hover,
+.image-gallery-icon:hover,
+.image-gallery-fullscreen-button:hover {
+  color: #ff7f23;
 }
 
 /* events-feature */

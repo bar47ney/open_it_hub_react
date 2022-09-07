@@ -4,10 +4,27 @@ import { HashLink } from "react-router-hash-link";
 import ImageGallery from "react-image-gallery";
 
 const images = [
+ 
   {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
-    description: "1",
+    original:
+      "https://vsegda-pomnim.com/uploads/posts/2022-04/1649114004_96-vsegda-pomnim-com-p-priroda-sibiri-samie-krasivie-mesta-foto-103.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
+      thumbnailLabel: `1`
+  },
+  {
+    original:
+      "https://vsegda-pomnim.com/uploads/posts/2022-04/1649114004_96-vsegda-pomnim-com-p-priroda-sibiri-samie-krasivie-mesta-foto-103.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
+      thumbnailLabel: `1`
+  },
+  {
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
+      thumbnailLabel: `1`
   },
   {
     original:
@@ -16,92 +33,52 @@ const images = [
       "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
+    thumbnail:
+      "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
   },
 ];
 
@@ -244,7 +221,7 @@ const Event = () => {
           items={images}
           showIndex={true}
           showPlayButton={false}
-          showFullscreenButton={false}
+          // showFullscreenButton={false}
         />
       </div>
 
