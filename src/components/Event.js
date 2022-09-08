@@ -221,7 +221,7 @@ const Event = () => {
           items={images}
           showIndex={true}
           showPlayButton={false}
-          // showFullscreenButton={false}
+          showFullscreenButton={false}
         />
       </div>
 

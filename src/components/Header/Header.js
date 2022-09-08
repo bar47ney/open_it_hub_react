@@ -3,11 +3,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+let previousScroll = 0;
+
 const Header = () => {
-
-
-  const [oldScrollTopPosition, setOldScrollTopPosition] = useState(0);
-
   useEffect(() => {
     headerScript();
 
@@ -17,14 +15,16 @@ const Header = () => {
     };
   }, []);
 
-
   const isSticky = (e) => {
     const header = document.querySelectorAll(".header")[1];
     const scrollTop = window.scrollY;
     scrollTop <= 250
       ? header.classList.remove("header-hidden")
       : header.classList.add("header-hidden");
-      return scrollTop
+    previousScroll >= scrollTop
+      ? header.classList.remove("header-hidden")
+      : header.classList.add("header-hidden");
+    previousScroll = scrollTop;
   };
 
   const [viewSubMobileMenu, setViewSubMobileMenu] = useState(false);

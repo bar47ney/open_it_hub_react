@@ -1431,7 +1431,16 @@ button:hover {
 }
 
 .image-gallery-content .image-gallery-slide .image-gallery-image {
-  max-height: calc(75vh - 80px);
+  min-width: 388px;
+  max-width: 567px;
+  min-height: 388px;
+  max-height: 510px;
+}
+.image-gallery-slide-wrapper {
+  height: 510px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-gallery-thumbnail-label {
@@ -1454,6 +1463,10 @@ button:hover {
 .image-gallery-right-nav .image-gallery-svg {
   height: 60px;
   width: 60px;
+  stroke-width: 2px;
+  width: 50px;
+  height: 51px;
+  stroke-linecap: square;
 }
 
 .image-gallery-left-nav,
@@ -1737,6 +1750,11 @@ button:hover {
 .corporat-job .block-form {
   background-color: white;
   color: #231f20;
+  padding: 64px 0;
+}
+
+.corporat-job .book-block-form {
+  margin-top: 64px;
 }
 
 .corporat-job .block-form .book-block-form input {
@@ -1745,15 +1763,19 @@ button:hover {
 
 /* rent-page */
 .rent-page .advantage-block {
-  height: 341px;
-  padding-top: 46px;
-  background: linear-gradient(
-    126.93deg,
-    #f15a29 19.71%,
-    #ef6224 32.63%,
-    #e87917 64.24%,
-    #e67f13 88.66%
-  );
+  padding: 48px 127px 40px 146px;
+  margin-bottom: 0px;
+}
+
+.rent-page .block-form{
+  background: linear-gradient(126.93deg, #F15A29 19.71%, #EF6224 32.63%, #E87917 64.24%, #E67F13 88.66%);
+  padding: 35px 0 63px;
+}
+.rent-page .block-form button{
+  background: #231F20;
+}
+.rent-page .block-form .book-block-form input{
+  border: none;
 }
 
 .rent-page .book-block .slider-decoration {
@@ -1763,7 +1785,8 @@ button:hover {
 }
 
 .rent-page .about-events {
-  height: 453px;
+  /* height: 453px; */
+  padding-bottom: 63px;
 }
 
 .rent-page .what-we-list {
