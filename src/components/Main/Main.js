@@ -23,7 +23,7 @@ const Main = () => {
   const toRigthMainSlider = () => {
     setPositionMainSlider(positionMainSlider - 100);
     setCurrentSlider(currentSlider + 1);
-    console.log(currentSlider);
+    // console.log(currentSlider);
     // console.log("Right")
     if (currentSlider >= 3) {
       setCurrentSlider(1);
@@ -34,7 +34,7 @@ const Main = () => {
     setCurrentSlider(numberSlider);
     numberSlider -= 1;
     setPositionMainSlider(-numberSlider * 100);
-    console.log(currentSlider);
+    // console.log(currentSlider);
   };
   //
   useEffect(() => {
@@ -46,6 +46,41 @@ const Main = () => {
       clearInterval(interval);
     };
   }, [currentSlider]);
+
+  const [currentServiceSlider, setCurrentServiceSlider] = useState(2);
+  const [positionServiceSlider, setPositionServiceSlider] = useState(-208);
+
+  // const checkServiceSliderEnd = () => {
+  //   if (currentServiceSlider > 3) {
+  //     setCurrentServiceSlider(0);
+  //     return;
+  //   }
+  //   if (currentServiceSlider < 0) {
+  //     setCurrentServiceSlider(2);
+  //     return;
+  //   }
+  // };
+
+  // console.log(currentServiceSlider)
+
+  const serviceRight = () => {
+    setPositionServiceSlider(positionServiceSlider - 206);
+    setCurrentServiceSlider(currentServiceSlider + 1);
+    if (currentServiceSlider >= 3) {
+      setCurrentServiceSlider(1);
+      setPositionServiceSlider(0);
+    }
+    console.log(currentServiceSlider);
+  };
+  const serviceLeft = () => {
+    setPositionServiceSlider(positionServiceSlider + 206);
+    setCurrentServiceSlider(currentServiceSlider - 1);
+    if (currentServiceSlider <= 1) {
+      setCurrentServiceSlider(3);
+      setPositionServiceSlider(-412);
+    }
+    console.log(currentServiceSlider);
+  };
 
   return (
     <>
@@ -153,19 +188,79 @@ const Main = () => {
           </p>
           <p class="mobile-visibility">
             <img src="img/Horizontal-logo.png" alt="" />—
-            <span><br />новое пространство в
-            самом сердце делового
-            <br />
-            Минска. Никаких обшарпанных диванов и скрипучих кресел —
-            только новая мебель и свежее оборудование, чтобы
-          
-            ваше мероприятие<br />прошло на высшем уровне.
+            <span>
+              <br />
+              новое пространство в самом сердце делового
+              <br />
+              Минска. Никаких обшарпанных диванов и скрипучих кресел — только
+              новая мебель и свежее оборудование, чтобы ваше мероприятие
+              <br />
+              прошло на высшем уровне.
             </span>
           </p>
         </div>
         <div id="services-block" class="services-block">
           <h2 class="services-block-header">Наши услуги</h2>
-          <div class="services-items">
+          <div className="services-block-arrow-mobile">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              onClick={serviceLeft}
+            >
+              <path
+                opacity="0.5"
+                d="M26 30L22 23.7143L26 18"
+                stroke="url(#paint0_diamond_545_8791)"
+              />
+              <defs>
+                <radialGradient
+                  id="paint0_diamond_545_8791"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(24 24) rotate(-90) scale(6 2)"
+                >
+                  <stop />
+                  <stop offset="1" stop-color="#231F20" stop-opacity="0.76" />
+                </radialGradient>
+              </defs>
+            </svg>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              onClick={serviceRight}
+            >
+              <path
+                opacity="0.5"
+                d="M26 30L22 23.7143L26 18"
+                stroke="url(#paint0_diamond_545_8791)"
+              />
+              <defs>
+                <radialGradient
+                  id="paint0_diamond_545_8791"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(24 24) rotate(-90) scale(6 2)"
+                >
+                  <stop />
+                  <stop offset="1" stop-color="#231F20" stop-opacity="0.76" />
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
+          <div
+            class="services-items"
+            style={{ left: positionServiceSlider + "px" }}
+          >
             <div class="services-item">
               <HashLink to={"/events#top"}>
                 <div class="services-item-gray"></div>
