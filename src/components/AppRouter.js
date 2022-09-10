@@ -4,6 +4,7 @@ import Event from "./Event";
 import EventsList from "./EventsList";
 import Main from "./Main/Main";
 import Rent from "./Rent";
+import GalleryPhoto from "../components/GalleryPhoto/GalleryPhoto";
 
 import { useSpring, animated } from "react-spring";
 
@@ -46,6 +47,7 @@ const AppRouter = () => {
       <Route path="/events" element={<EventsList />} />
       <Route path="/event/:id" element={<Event />} />
       <Route path="/rent" element={<Rent />} />
+      <Route path="/gallery" element={<GalleryPhoto />} />
       <Route path="*" element={<Main />} /> */
     </Routes>
   );

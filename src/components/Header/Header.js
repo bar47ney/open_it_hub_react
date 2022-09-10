@@ -36,22 +36,34 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="header mobile-visibility">
-          <div class="burger-mobile">
-            <img src="/img/Mobile-Menu.svg" alt="logo" />
-          </div>
+        <div
+          id="header-mobile"
+          className="header mobile-visibility flex-mobile-header"
+        >
+            <svg class="burger-mobile"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="48" height="48" fill="#231F20" />
+              <path d="M13 19H35" stroke="white" stroke-width="2" />
+              <path d="M13 24L35 24" stroke="white" stroke-width="2" />
+              <path d="M13 29L35 29" stroke="white" stroke-width="2" />
+            </svg>
           <div class="header-logo">
             <HashLink to="/#top">
               <img src="/img/logo.svg" alt="logo" />
             </HashLink>
           </div>
-          <div class="">
+          {/* <div class="">
             <HashLink to="/rent#top">
               <button class="orange-button orange-button-hover">
                 Арендовать
               </button>
             </HashLink>
-          </div>
+          </div> */}
           <div class="scroll-mobile-menu">
             <div class="menu-exit">
               <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -262,9 +274,6 @@ const Header = () => {
               </ul>
             </div>
           </div>
-          <div class="menu-item">
-            <a href="index.html#reviews">Фотогалерея</a>
-          </div>
 
           <HashLink
             to="/#reviews"
@@ -282,6 +291,13 @@ const Header = () => {
           >
             <div class="menu-item">Контакты</div>
           </HashLink>
+          <HashLink
+            to="/gallery#top"
+            scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
+          >
+            <div class="menu-item">Фотоотчеты</div>
+          </HashLink>
+
           <div id="header-button" class="menu-item">
             <HashLink to="/rent#top">
               <button class="orange-button orange-button-hover">

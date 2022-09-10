@@ -24,11 +24,28 @@ const Main = () => {
     setPositionMainSlider(positionMainSlider - 100);
     setCurrentSlider(currentSlider + 1);
     console.log(currentSlider);
+    // console.log("Right")
     if (currentSlider >= 3) {
       setCurrentSlider(1);
       setPositionMainSlider(0);
     }
   };
+  const toSlider = (numberSlider) => {
+    setCurrentSlider(numberSlider);
+    numberSlider -= 1;
+    setPositionMainSlider(-numberSlider * 100);
+    console.log(currentSlider);
+  };
+  //
+  useEffect(() => {
+    const interval = setInterval(() => {
+      toRigthMainSlider();
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentSlider]);
 
   return (
     <>
@@ -112,20 +129,17 @@ const Main = () => {
         </div>
         <div class="hab-description">
           <div class="slider-nav">
-            <img
+            <span
               className={`${currentSlider === 1 ? "slider-nav-active" : ""}`}
-              src="img/slider-circle.svg"
-              alt=""
+              onClick={() => toSlider(1)}
             />
-            <img
+            <span
               className={`${currentSlider === 2 ? "slider-nav-active" : ""}`}
-              src="img/slider-circle.svg"
-              alt=""
+              onClick={() => toSlider(2)}
             />
-            <img
+            <span
               className={`${currentSlider === 3 ? "slider-nav-active" : ""}`}
-              src="img/slider-circle.svg"
-              alt=""
+              onClick={() => toSlider(3)}
             />
           </div>
           <p class="desktop-visibility">
@@ -138,13 +152,15 @@ const Main = () => {
             оборудование, чтобы ваше мероприятие прошло на высшем уровне.
           </p>
           <p class="mobile-visibility">
-            <img src="img/Horizontal-logo.png" alt="" />— новое пространство в
+            <img src="img/Horizontal-logo.png" alt="" />—
+            <span><br />новое пространство в
             самом сердце делового
             <br />
-            Минска. Никаких обшарпанных диванов и скрипучих кресел —<br />
+            Минска. Никаких обшарпанных диванов и скрипучих кресел —
             только новая мебель и свежее оборудование, чтобы
-            <br />
-            ваше мероприятие прошло на высшем уровне.
+          
+            ваше мероприятие<br />прошло на высшем уровне.
+            </span>
           </p>
         </div>
         <div id="services-block" class="services-block">
