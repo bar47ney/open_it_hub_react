@@ -79,7 +79,7 @@ a {
 html,
 body {
   height: 100%;
-  /* min-width: 320px; */
+  min-width: 320px;
 }
 
 body {
@@ -1434,7 +1434,7 @@ button:hover {
 .image-gallery-thumbnail + .image-gallery-thumbnail {
   margin-left: 12px !important;
   width: 169px;
-  height: 118x;
+  height: 118px;
   min-height: 50px;
   /* overflow: hidden; */
 }
@@ -2794,7 +2794,7 @@ button:hover {
   .menu-parameters {
     top: calc(100% - 0.5px);
   }
-  .sub-menu{
+  .sub-menu {
     width: 95px;
     min-width: unset;
   }
@@ -2856,6 +2856,55 @@ button:hover {
     text-align: center;
     width: 100%;
   }
+
+  .event .main-text-event {
+    width: unset;
+    padding-top: 42px;
+  }
+  .event .heading-event {
+    width: unset;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    width: 220px;
+  }
+  .event .type-event-list-event {
+    gap: 12.56px;
+    justify-content: flex-end;
+    top: 0;
+    left: 232px;
+    margin-top: 0;
+  }
+  .event .main-text-event li:before {
+    width: 4px;
+    height: 4px;
+    margin-right: 4px;
+  }
+  .event .event-button-left {
+    margin-top: 24px;
+  }
+  .event .about-specker {
+    padding: 20px 11px 30px 0 !important;
+  }
+  .event .type-event-item {
+    justify-content: end;
+  }
+  .event .block-list-events-item {
+    padding-top: 0;
+  }
+  .event .main-text-event {
+    width: 195px;
+  }
+  .event .main-text-event * {
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .event .about-specker .block-list-events-item {
+    width: 100%;
+  }
   .events-past .block-list-events-item .event-iamge {
     text-align: center;
   }
@@ -2888,7 +2937,7 @@ button:hover {
     margin-bottom: 20px;
   }
 
-  .event .events-feature{
+  .event .events-feature {
     padding: 16px 11px 24px;
   }
 
@@ -2925,17 +2974,69 @@ button:hover {
     padding-bottom: 42px;
   }
   .about-specker .event-iamge img {
-    width: 130px;
-    /* height: 124px; */
-    position: relative;
-    right: 21px;
+    /* width: 191px; */
+    height: 145px;
+    position: absolute;
+    z-index: 0;
+    right: 60%;
+    bottom: -29px;
   }
   .about-specker .event-gap {
     gap: 10px;
+    flex-direction: row;
+  }
+  .event .about-specker .main-text-event {
+    width: unset;
+    padding: 25px 0 0;
+    margin-left: calc(50% - 38px);
+  }
+  .event .about-specker .heading-event {
+    text-align: right;
+    width: unset;
+    left: calc(50% - 44px);
   }
   .block-video {
     height: 169px;
   }
+  /* .photo-block */
+  .photo-block {
+    padding: 16px 0px 24px;
+  }
+  .photo-block .subscribe-email-heading {
+    margin-bottom: 46px;
+  }
+  .image-gallery-index {
+    font-size: 10px;
+    line-height: 14px;
+    top: calc(-45px);
+  }
+  .image-gallery-slide-wrapper {
+    height: 291px;
+  }
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    min-width: 198px;
+    max-width: 300px;
+    min-height: 199px;
+    max-height: 291px;
+  }
+  .image-gallery-thumbnail + .image-gallery-thumbnail, .image-gallery-thumbnail:first-child  {
+    margin-left: 8px !important;
+    width: 48px;
+    height: 48px;
+}
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:focus, .image-gallery-thumbnail:hover{
+  border: 2px solid #ff7f23;
+}
+.image-gallery-thumbnails{
+  margin: 24px 0 0;
+  padding: 0;
+}
+.image-gallery-thumbnail-label{
+  display: none;
+}
+.image-gallery-left-nav, .image-gallery-right-nav{
+  display: none;
+}
   /* .corporat-job */
   .corporat-job {
     padding-top: 0;

@@ -193,7 +193,7 @@ const Event = () => {
         <h4 class="subscribe-email-heading">Будь в курсе!</h4>
         <p>
           Будем сообщать о предстоящих мероприятиях, делиться отчетами
-          <br />и другой полезной информацией
+          <br className="desktop-visibility"/>и другой полезной информацией
         </p>
         <div class="book-block-form">
           <input type="text" placeholder="Номер телефона" />
@@ -201,7 +201,7 @@ const Event = () => {
             Отправить
           </button>
         </div>
-        <p id="email-acept-text">
+        <p id="email-acept-text" className="desktop-visibility">
           *Отправляя свой email, вы даёте согласие на обработку персональных
           данных согласно
           <a
