@@ -42,8 +42,9 @@ const EventsList = () => {
           Добро пожаловать в раздел с нашими мероприятиями
         </h1>
         <p>
-          Здесь вы найдете информацию как о будущих,
-          <br />
+          Здесь вы найдете информацию
+          <br className="mobile-visibility" /> как о будущих,
+          <br className="desktop-visibility" />
           так и о прошедших ивентах
         </p>
         <div class="slider-decoration">
@@ -73,9 +74,8 @@ const EventsList = () => {
           высшего класса.
           <br />
           <br />
-          Вы можете ознакомиться с полным списком как будущих,
-          <br />
-          так и прошедших мероприятий.
+          Вы можете ознакомиться с полным списком как будущих, так и прошедших
+          мероприятий.
         </p>
       </div>
 
@@ -260,7 +260,94 @@ const EventsList = () => {
           </div>
         </div>
         <div class="block-list-events">
+
           <div class="block-list-events-item">
+            <div class="event-iamge">
+              <img src="img/speackers/Авраменко.jpg" alt="" />
+            </div>
+
+            <div class="events-item-info">
+              <div class="type-event-list">
+                <div class="type-event-item">
+                  <img src="img/events-feature/day.svg" alt="" />
+                  <p>03 августа</p>
+                </div>
+                <div class="type-event-item">
+                  <img src="img/events-feature/time.svg" alt="" />
+                  <p>18:30</p>
+                </div>
+                <div class="type-event-item">
+                  <img src="img/events-feature/price-price.svg" alt="" />
+                  <p>платное</p>
+                </div>
+                <div class="type-event-item">
+                  <img src="img/events-feature/info.svg" alt="" />
+                  <p>очно</p>
+                </div>
+              </div>
+              <p class="events-item-info-name">
+                Материальная мотивация
+                <br />и принципы ее построения
+              </p>
+              <p class="events-item-info-preview">
+                Чтобы сочетать в себе сильные качества
+                <br />и быть замотивированным, нужно...
+              </p>
+              <div class="events-buttons">
+                <a href={eventsFeature[0].bezKassira} target="_blank">
+                  <button class="btn-slider margin-none btn-black orange-button-hover">
+                    Регистрация
+                  </button>
+                </a>
+                <HashLink to={`/event/${eventsFeature[0].id}#top`}>
+                  <button class="more-info-event">О мероприятии</button>
+                </HashLink>
+              </div>
+            </div>
+          </div> <div class="block-list-events-item">
+            <div class="event-iamge">
+              <img src="img/speackers/Авраменко.jpg" alt="" />
+            </div>
+
+            <div class="events-item-info">
+              <div class="type-event-list">
+                <div class="type-event-item">
+                  <img src="img/events-feature/day.svg" alt="" />
+                  <p>03 августа</p>
+                </div>
+                <div class="type-event-item">
+                  <img src="img/events-feature/time.svg" alt="" />
+                  <p>18:30</p>
+                </div>
+                <div class="type-event-item">
+                  <img src="img/events-feature/price-price.svg" alt="" />
+                  <p>платное</p>
+                </div>
+                <div class="type-event-item">
+                  <img src="img/events-feature/info.svg" alt="" />
+                  <p>очно</p>
+                </div>
+              </div>
+              <p class="events-item-info-name">
+                Материальная мотивация
+                <br />и принципы ее построения
+              </p>
+              <p class="events-item-info-preview">
+                Чтобы сочетать в себе сильные качества
+                <br />и быть замотивированным, нужно...
+              </p>
+              <div class="events-buttons">
+                <a href={eventsFeature[0].bezKassira} target="_blank">
+                  <button class="btn-slider margin-none btn-black orange-button-hover">
+                    Регистрация
+                  </button>
+                </a>
+                <HashLink to={`/event/${eventsFeature[0].id}#top`}>
+                  <button class="more-info-event">О мероприятии</button>
+                </HashLink>
+              </div>
+            </div>
+          </div> <div class="block-list-events-item">
             <div class="event-iamge">
               <img src="img/speackers/Авраменко.jpg" alt="" />
             </div>

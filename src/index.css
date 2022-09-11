@@ -2622,12 +2622,12 @@ button:hover {
     height: 18px;
     overflow: scroll;
   }
-  .reviwer-text-block{
+  .reviwer-text-block {
     height: 132px;
     width: 198px;
     margin: 56px auto 0;
   }
-  .reviews-slider-item::after{
+  .reviews-slider-item::after {
     bottom: 25px;
   }
   .reviwer-text {
@@ -2668,7 +2668,6 @@ button:hover {
     font-size: 10px;
     line-height: 12px;
     font-family: "Montserrat-ExtraBold";
-
   }
   .contact {
     font-size: 10px;
@@ -2740,114 +2739,159 @@ button:hover {
   .block-list-events-item::after {
     bottom: -8px;
     left: -8px;
+    display: none;
   }
 
   .main-slider-events {
-    height: 168px;
-    padding-top: 60px;
+    height: 200px;
+    padding-top: 69px;
   }
 
   .main-slider-events .slider-title {
-    padding: 0 21px;
+    /* padding: 0 21px; */
   }
 
   .main-slider-events p {
-    font-size: 8px;
-    line-height: 10px;
-    margin-top: 4px;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 8px;
+    padding: 0 40px;
   }
   .about-events {
-    height: 112px;
-    padding: 16px 27px 0;
+    height: unset;
+    padding: 16px 7px 24px;
     word-wrap: normal;
   }
+  .about-events p {
+    padding: 0;
+  }
   .events-feature {
-    padding-top: 16px;
+    padding: 16px 0 24px;
   }
   .block-parameters {
-    margin: 12px 0 20px;
-    gap: 9px;
+    margin: 16px 0 28px;
+    gap: 8px;
   }
   .filter-item {
-    width: 68px;
-    height: 20px;
-    font-size: 5px;
-    line-height: 7px;
-    padding-left: 2px;
-    gap: 2px;
+    width: 95px;
+    height: 28px;
+    font-size: 8px;
+    line-height: 11px;
+    padding-left: 6px;
+    gap: 6.24px;
   }
   .event-arrow {
-    right: 4px;
+    right: 5.59px;
   }
   .filter-item svg {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
   }
   .filter-item .event-arrow {
-    width: 8px;
-    height: 8px;
+    width: 11.2px;
+    height: 11.2px;
   }
   .menu-parameters {
     top: calc(100% - 0.5px);
   }
+  .sub-menu{
+    width: 95px;
+    min-width: unset;
+  }
+
   .menu-parameters li {
-    height: 20px;
-    font-size: 5px;
-    line-height: 7px;
-    padding-left: 5px;
+    height: 28px;
+    font-size: 8px;
+    line-height: 11px;
+    padding-left: 6px;
+    margin-right: 0;
   }
   .block-list-events {
-    gap: 16px;
-    padding: 0 0 24px 10px;
+    gap: 24px;
+    padding: 0 10px 0px;
     /* align-items: unset; */
   }
   .block-list-events-item {
-    gap: 9px;
+    padding-top: 40px;
+    gap: 0px;
     width: 300px;
+    flex-direction: column;
+    position: relative;
+  }
+  .event-iamge {
+    text-align: left;
   }
   .event-iamge img {
-    width: 95px;
-    height: 60px;
-    margin-left: -4px;
+    width: 197px;
+    height: 124px;
+    margin-left: 0px;
   }
   .type-event-list {
-    gap: 8px;
+    gap: 7px;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 207px;
     /* justify-content: space-between; */
     /* width: 196px; */
   }
   .type-event-item {
-    font-size: 4px;
-    line-height: 5px;
-    width: 43px;
-    height: 12px;
+    font-size: 8px;
+    line-height: 11px;
+    width: 94px;
+    height: 26px;
+    gap: 11.51px;
+    flex-direction: row-reverse;
   }
   .type-event-item img {
-    width: 8px;
+    width: 17.49px;
   }
   .events-item-info-name {
-    font-size: 7px;
-    line-height: 9px;
+    font-size: 13px;
+    line-height: 16px;
     margin-top: 0px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+  }
+  .events-past .block-list-events-item .event-iamge {
+    text-align: center;
+  }
+  .events-past .block-list-events-item .events-item-info-name {
+    left: 0;
+    width: 100%;
+    padding: 0 32px;
+  }
+  .events-past .events-buttons {
+    justify-content: center;
   }
   .events-item-info-preview {
-    font-size: 6px;
-    line-height: 7px;
-    padding: 4px 0 16px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 16px 0 16px;
   }
   .events-buttons {
     gap: 8px;
   }
   .events-buttons button {
     margin: unset;
-    width: 94px;
-    height: 20px;
-    font-size: 8px;
-    line-height: 11px;
+    width: 146px;
+    height: 28px;
+    font-size: 11px;
+    line-height: 15px;
+    padding: unset;
   }
   .events-past .block-parameters {
     gap: 9px;
     margin-bottom: 20px;
   }
+
+  .event .events-feature{
+    padding: 16px 11px 24px;
+  }
+
   /* .events-feature */
   .heading-event {
     font-size: 10px;
