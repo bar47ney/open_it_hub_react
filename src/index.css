@@ -2601,9 +2601,11 @@ button:hover {
   }
   .reviews-slider {
     margin-top: 44px;
+    gap: 53px;
+    margin-left: calc(50% - 107px);
   }
   .reviews-slider-item {
-    padding: 0 0px 24px;
+    padding: 0 0px 8px;
     width: 214px;
     height: 244px;
   }
@@ -2617,11 +2619,16 @@ button:hover {
     font-size: 9px;
     line-height: 9px;
     margin-top: 30px;
+    height: 18px;
+    overflow: scroll;
   }
   .reviwer-text-block{
     height: 132px;
     width: 198px;
     margin: 56px auto 0;
+  }
+  .reviews-slider-item::after{
+    bottom: 25px;
   }
   .reviwer-text {
     font-size: 10px;
@@ -2645,55 +2652,61 @@ button:hover {
   }
   .mobile-flex {
     display: flex;
+    top: 175px;
+    height: 48px;
   }
   /* .contact */
   .contacts-block {
-    height: 174px;
-    padding-top: 16px;
+    /* height: 174px; */
+    padding: 21px 0 26px;
   }
   .contacts-list {
-    margin-top: 24px;
+    margin-top: 16px;
   }
   .contact-name {
     margin-top: 4px;
-    font-size: 8px;
-    line-height: 10px;
+    font-size: 10px;
+    line-height: 12px;
+    font-family: "Montserrat-ExtraBold";
+
   }
   .contact {
-    font-size: 8px;
-    line-height: 10px;
-    gap: 4.84px;
-    justify-content: start;
+    font-size: 10px;
+    line-height: 12px;
+    gap: 4px;
+    justify-content: center;
   }
   .contact img {
     width: 10px;
     height: 10px;
   }
   .contact-tel {
-    margin-top: 8px;
+    margin-top: 16px;
   }
   /* .footer */
   .footer {
-    height: 111px;
-    padding-top: 13px;
+    /* height: 111px; */
+    padding: 0px 10px 12px;
+    height: unset;
   }
   .social-item img {
     width: 24px;
   }
   .social-item {
     height: unset;
+    padding: 12px;
   }
   .footer-info {
-    margin-top: 16px;
+    margin-top: 4px;
   }
   .footer-info h6 {
-    font-size: 7px;
-    line-height: 10px;
-    margin-bottom: 4px;
+    font-size: 8px;
+    line-height: 11px;
+    margin-bottom: 0px;
   }
   .footer-second-info {
-    font-size: 6px;
-    line-height: 8px;
+    font-size: 8px;
+    line-height: 11px;
   }
   .copyright {
     margin-top: 8px;
@@ -2701,25 +2714,27 @@ button:hover {
     line-height: 123.6%;
   }
   .social {
-    gap: 38px;
+    justify-content: space-between;
   }
   .footer-first-head {
-    font-size: 7px;
-    line-height: 10px;
+    font-size: 8px;
+    line-height: 11px;
+    margin-bottom: 0;
   }
   .footer-second-head {
-    font-size: 6px;
-    line-height: 8px;
+    font-size: 8px;
+    line-height: 11px;
   }
   .footer-item-center {
     width: 100%;
   }
   .mobile-footer-flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
   .center-center {
-    margin: 0 56px 0 47px;
+    /* margin: 0 56px 0 47px; */
+    margin-right: 18px;
   }
   /* events */
   .block-list-events-item::after {

@@ -1000,10 +1000,12 @@ const Main = () => {
           </div>
           <div class="events-block-slider-nav reviews-nav mobile-flex">
             <div class="arrow-slider reviews-nav-left">
-              <img src="img/Mobile_Button_Nav-n Area.svg" alt="arrow" />
+              {/* <img src="img/Mobile_Button_Nav-n Area.svg" alt="arrow" /> */}
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mobile-visibility"><path opacity="0.5" d="M26 30L22 23.7143L26 18" stroke="url(#paint0_diamond_545_8970)"></path><defs><radialGradient id="paint0_diamond_545_8970" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24 24) rotate(-90) scale(6 2)"><stop></stop><stop offset="1" stop-color="#231F20" stop-opacity="0.76"></stop></radialGradient></defs></svg>
             </div>
             <div class="arrow-slider reviews-nav-right">
-              <img src="img/Mobile_Button_Nav-n Area.svg" alt="arrow" />
+              {/* <img src="img/Mobile_Button_Nav-n Area.svg" alt="arrow" /> */}
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mobile-visibility"><path opacity="0.5" d="M26 30L22 23.7143L26 18" stroke="url(#paint0_diamond_545_8970)"></path><defs><radialGradient id="paint0_diamond_545_8970" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24 24) rotate(-90) scale(6 2)"><stop></stop><stop offset="1" stop-color="#231F20" stop-opacity="0.76"></stop></radialGradient></defs></svg>
             </div>
           </div>
           <h4 class="subscribe-email-heading">Отзывы</h4>

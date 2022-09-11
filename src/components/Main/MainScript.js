@@ -172,15 +172,6 @@ const mainScript = () => {
   let reviewsSliderArrowLeft = document.querySelector(".reviews-nav-left");
   let reviewsSliderArrowRight = document.querySelector(".reviews-nav-right");
 
-  if (document.documentElement.clientWidth <= 480) {
-    reviewsSliderArrowLeft = document.querySelector(
-      ".mobile-flex .reviews-nav-left"
-    );
-    reviewsSliderArrowRight = document.querySelector(
-      ".mobile-flex .reviews-nav-right"
-    );
-  }
-
   // let eventsSliderPositionChange = 0;
   // const eventsSliderCenterItem = Math.round(masEventsSliderItems.length / 2);
   // let eventsSliderCurrentItem = eventsSliderCenterItem;
@@ -189,17 +180,44 @@ const mainScript = () => {
   let reviewsSliderPositionChange = 0;
   const reviewsSliderCenterItem = Math.round(masReviewsSliderItems.length / 2);
   let reviewsSliderCurrentItem = reviewsSliderCenterItem;
-  const reviewsSliderStep = 552;
+  let reviewsSliderStep = 552;
 
   const centerReviewsSlider = () => {
     reviewsSliderPositionChange =
       -reviewsSliderStep * (reviewsSliderCurrentItem - 1);
-      reviewsSlider.style = `left: ${reviewsSliderPositionChange}px`;
+    reviewsSlider.style = `left: ${reviewsSliderPositionChange}px`;
     reviewsSliderCurrentItem = reviewsSliderCurrentItem;
     return reviewsSliderPositionChange;
   };
 
-  reviewsSliderPositionChange = centerReviewsSlider()
+  if (document.documentElement.clientWidth <= 480) {
+    reviewsSliderArrowLeft = document.querySelector(
+      ".mobile-flex .reviews-nav-left"
+    );
+    reviewsSliderArrowRight = document.querySelector(
+      ".mobile-flex .reviews-nav-right"
+    );
+    reviewsSliderStep = 267;
+  }
+
+  // window.addEventListener("resize", () => {
+  //   if (document.documentElement.clientWidth <= 480) {
+  //     reviewsSliderArrowLeft = document.querySelector(
+  //       ".mobile-flex .reviews-nav-left"
+  //     );
+  //     reviewsSliderArrowRight = document.querySelector(
+  //       ".mobile-flex .reviews-nav-right"
+  //     );
+  //     reviewsSliderStep = 267;
+  //   }
+  //   if (document.documentElement.clientWidth > 480) {
+  //     reviewsSliderStep = 552;
+  //     reviewsSliderArrowLeft = document.querySelector(".reviews-nav-left");
+  //     reviewsSliderArrowRight = document.querySelector(".reviews-nav-right");
+  //   }
+  // });
+
+  reviewsSliderPositionChange = centerReviewsSlider();
 
   const startReviewsSlider = () => {
     if (reviewsSliderCurrentItem > masReviewsSliderItems.length) {
@@ -211,7 +229,8 @@ const mainScript = () => {
     }
 
     if (reviewsSliderCurrentItem < 1) {
-      reviewsSliderPositionChange = (-masReviewsSliderItems.length + 1) * reviewsSliderStep;
+      reviewsSliderPositionChange =
+        (-masReviewsSliderItems.length + 1) * reviewsSliderStep;
       reviewsSliderCurrentItem = masReviewsSliderItems.length;
       reviewsSlider.style = `left: ${reviewsSliderPositionChange}px; width: ${
         masReviewsSliderItems.length * reviewsSliderStep
