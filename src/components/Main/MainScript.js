@@ -48,13 +48,13 @@ const mainScript = () => {
   let eventsSliderStep = 554;
   let grayBorder = 350;
   if (document.documentElement.clientWidth <= 480) {
-    eventsSliderStep = 206;
+    eventsSliderStep = 310;
     grayBorder = 99;
   }
 
   window.addEventListener("resize", () => {
     if (document.documentElement.clientWidth <= 480) {
-      eventsSliderStep = 206;
+      eventsSliderStep = 310;
       grayBorder = 99;
     }
     if (document.documentElement.clientWidth > 480) {

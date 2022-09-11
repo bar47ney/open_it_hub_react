@@ -157,7 +157,7 @@ export const eventsFeature = [
     bezKassira: "",
     aboutSpeakerPhoto: "/img/speackers/evgeniy-galai — копия.png",
     photo: "/img/feature-events/event.jpg",
-    was: true,
+    was: false,
   },
   {
     id: 5,
@@ -227,7 +227,7 @@ export const eventsFeature = [
     bezKassira: "",
     aboutSpeakerPhoto: "/img/speackers/Студенты.jpg",
     photo: "/img/speackers/Студенты.jpg",
-    was: true,
+    was: false,
     video: ` 
     <iframe src="https://www.youtube.com/embed/5_mH4ulSxrw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
   },

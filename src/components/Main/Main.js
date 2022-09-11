@@ -201,7 +201,7 @@ const Main = () => {
         </div>
         <div id="services-block" class="services-block">
           <h2 class="services-block-header">Наши услуги</h2>
-          <div className="services-block-arrow-mobile">
+          <div className="services-block-arrow-mobile mobile-visibility ">
             <svg
               width="48"
               height="48"
@@ -256,6 +256,10 @@ const Main = () => {
                 </radialGradient>
               </defs>
             </svg>
+          </div>
+          <div className="white-blocks">
+            <div className="white-block"></div>
+            <div className="white-block"></div>
           </div>
           <div
             class="services-items"
@@ -815,6 +819,7 @@ const Main = () => {
         </div>
 
         <iframe
+          className="desktop-visibility"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A878e8d074def3145133a35e83fdce07a7b3aabe2127d213d5ee56a15d3bd50fa&amp;source=constructor"
           width="100%"
           height="397"
@@ -824,15 +829,10 @@ const Main = () => {
           <h3 class="advantage-block-header white-text">
             Забронируйте площадку сейчас
           </h3>
-          <p class="white-text desktop-visibility">
+          <p class="white-text">
             Оставьте свои контактные данные, и наш менеджер свяжется с вами,
             <br />
             чтобы рассказать все подробности
-          </p>
-          <p class="white-text mobile-visibility">
-            Оставьте свои контактные данные, и наш менеджер
-            <br />
-            свяжется с вами, чтобы рассказать все подробности
           </p>
           <div class="book-block-form">
             <input type="text" placeholder="Номер телефона" value="" />
@@ -860,14 +860,68 @@ const Main = () => {
           </p>
           <div class="events-block-slider-nav">
             <div class="arrow-slider arrow-slider-left">
-              <img src="img/arrow.png" alt="arrow" />
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mobile-visibility"
+              >
+                <path
+                  opacity="0.5"
+                  d="M26 30L22 23.7143L26 18"
+                  stroke="url(#paint0_diamond_545_8970)"
+                />
+                <defs>
+                  <radialGradient
+                    id="paint0_diamond_545_8970"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(24 24) rotate(-90) scale(6 2)"
+                  >
+                    <stop />
+                    <stop offset="1" stop-color="#231F20" stop-opacity="0.76" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <img className="desktop-visibility" src="img/arrow.png" alt="" />
             </div>
             <div class="arrow-slider arrow-slider-right">
-              <img src="img/arrow.png" alt="arrow" />
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mobile-visibility"
+              >
+                <path
+                  opacity="0.5"
+                  d="M26 30L22 23.7143L26 18"
+                  stroke="url(#paint0_diamond_545_8970)"
+                />
+                <defs>
+                  <radialGradient
+                    id="paint0_diamond_545_8970"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(24 24) rotate(-90) scale(6 2)"
+                  >
+                    <stop />
+                    <stop offset="1" stop-color="#231F20" stop-opacity="0.76" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <img className="desktop-visibility" src="img/arrow.png" alt="" />
             </div>
           </div>
           <div class="event-block-slider-center">
-            <div class="events-slider-gray-block">
+            <div class="events-slider-gray-block desktop-visibility">
               <div class="events-slider-gray-block-item events-slider-gray-block-item-left"></div>
               <div class="events-slider-gray-block-item events-slider-gray-block-item-right"></div>
             </div>
@@ -897,7 +951,7 @@ const Main = () => {
             </div>
           </div>
 
-          <button class="events-block-button button-black-hover">
+          <button class="events-block-button button-black-hover desktop-visibility">
             <HashLink to={"/events#top"}>Весь список мероприятий</HashLink>
           </button>
         </div>
@@ -908,9 +962,8 @@ const Main = () => {
             <br />и другой полезной информацией
           </p>
           <p class="mobile-visibility">
-            Будем сообщать о предстоящих мероприятиях,
-            <br />
-            делиться отчетами и другой полезной информацией
+            Оставьте свои контактные данные, и наш менеджер свяжется с вами,
+            чтобы рассказать все подробности
           </p>
           <div class="book-block-form">
             <input type="email" placeholder="Ваш Email*" />
@@ -918,7 +971,7 @@ const Main = () => {
               Отправить
             </button>
           </div>
-          <p id="email-acept-text">
+          <p id="email-acept-text" className="desktop-visibility">
             *Отправляя свой email, вы даёте согласие на обработку персональных
             данных согласно
             <a
@@ -932,8 +985,8 @@ const Main = () => {
           </p>
         </div>
         <div id="reviews" class="reviews">
-          <div className="reviews-block-white"></div>
-          <div className="reviews-block-white"></div>
+          <div className="reviews-block-white desktop-visibility"></div>
+          <div className="reviews-block-white desktop-visibility"></div>
           <div class="slider-decoration reviews-decoration">
             <img src="img/slider-decoration.png" alt="image-decoration" />
           </div>
