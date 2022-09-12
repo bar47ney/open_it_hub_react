@@ -16,7 +16,10 @@ const Header = () => {
   }, []);
 
   const isSticky = (e) => {
+
+    console.log(previousScroll)
     const header = document.querySelectorAll(".header")[1];
+    const headerMobile = document.querySelectorAll(".header")[0];
     const scrollTop = window.scrollY;
     scrollTop <= 250
       ? header.classList.remove("header-hidden")
@@ -24,13 +27,25 @@ const Header = () => {
     previousScroll >= scrollTop
       ? header.classList.remove("header-hidden")
       : header.classList.add("header-hidden");
+    scrollTop <= 150
+      ? headerMobile.classList.remove("header-hidden-mobile")
+      : headerMobile.classList.add("header-hidden-mobile");
+    previousScroll >= scrollTop
+      ? headerMobile.classList.remove("header-hidden-mobile")
+      : headerMobile.classList.add("header-hidden-mobile");
     previousScroll = scrollTop;
   };
 
   const [viewSubMobileMenu, setViewSubMobileMenu] = useState(false);
+  const [viewSubMobileMenuSecond, setViewSubMobileMenuSecond] = useState(false);
 
   const mobileMenuView = () => {
     setViewSubMobileMenu(!viewSubMobileMenu);
+    setViewSubMobileMenuSecond(false);
+  };
+  const mobileMenuViewSecond = () => {
+    setViewSubMobileMenuSecond(!viewSubMobileMenuSecond);
+    setViewSubMobileMenu(false);
   };
 
   return (
@@ -40,18 +55,19 @@ const Header = () => {
           id="header-mobile"
           className="header mobile-visibility flex-mobile-header"
         >
-            <svg class="burger-mobile"
-              width="48"
-              height="48"
-              viewBox="0 0 48 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="48" height="48" fill="#231F20" />
-              <path d="M13 19H35" stroke="white" stroke-width="2" />
-              <path d="M13 24L35 24" stroke="white" stroke-width="2" />
-              <path d="M13 29L35 29" stroke="white" stroke-width="2" />
-            </svg>
+          <svg
+            class="burger-mobile"
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="48" height="48" fill="#231F20" />
+            <path d="M13 19H35" stroke="white" stroke-width="2" />
+            <path d="M13 24L35 24" stroke="white" stroke-width="2" />
+            <path d="M13 29L35 29" stroke="white" stroke-width="2" />
+          </svg>
           <div class="header-logo">
             <HashLink to="/#top">
               <img src="/img/logo.svg" alt="logo" />
@@ -74,7 +90,12 @@ const Header = () => {
               </svg>
             </div>
             <div class="mobile-menu">
-              <div class="mobile-menu-item">
+              <div
+                class={`mobile-menu-item ${
+                  viewSubMobileMenu ? "mobile-menu-item-active" : ""
+                }`}
+                onClick={mobileMenuView}
+              >
                 <HashLink
                   to="/#services-block"
                   scroll={(el) =>
@@ -83,9 +104,6 @@ const Header = () => {
                 >
                   Услуги
                 </HashLink>
-              </div>
-              <div class="mobile-menu-item" onClick={mobileMenuView}>
-                <HashLink to={"/events#top"}>Мероприятия</HashLink>
                 <svg
                   className={`${
                     viewSubMobileMenu ? "mobile-menu-svg-rotate" : ""
@@ -102,6 +120,56 @@ const Header = () => {
               <div
                 class={`sub-mobile-items ${
                   viewSubMobileMenu ? "" : "sub-mobile-items-none"
+                }`}
+              >
+                <div class="mobile-menu-item sub-mobile-item">
+                  <HashLink to={"/events#top"}>Мероприятия </HashLink>
+                </div>
+                <div class="mobile-menu-item sub-mobile-item">
+                  <HashLink to="/rent#top">Аренда</HashLink>
+                </div>
+                <div class="mobile-menu-item sub-mobile-item">
+                  <HashLink to={"/corporat#top"}>Сотрудничество</HashLink>
+                </div>
+                {/* <div class="mobile-menu-item sub-mobile-item">
+                  <a href="form-page.html">Регистрация</a>
+                </div> */}
+              </div>
+
+              <div class="mobile-menu-item">
+                <HashLink
+                  to="/#advantage-block"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
+                >
+                  Преимущества
+                </HashLink>
+              </div>
+
+              <div
+                class={`mobile-menu-item ${
+                  viewSubMobileMenuSecond ? "mobile-menu-item-active" : ""
+                }`}
+                onClick={mobileMenuViewSecond}
+              >
+                <HashLink to={"/events#top"}>Мероприятия</HashLink>
+                <svg
+                  className={`${
+                    viewSubMobileMenuSecond ? "mobile-menu-svg-rotate" : ""
+                  }`}
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M15 11L11.8571 13L9 11" stroke="#8D8D8D" />
+                </svg>
+              </div>
+              <div
+                class={`sub-mobile-items ${
+                  viewSubMobileMenuSecond ? "" : "sub-mobile-items-none"
                 }`}
               >
                 <div class="mobile-menu-item sub-mobile-item">
@@ -165,6 +233,14 @@ const Header = () => {
                   }
                 >
                   Контакты
+                </HashLink>
+              </div>
+              <div class="mobile-menu-item">
+                <HashLink
+                  to="/gallery#top"
+                  scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Фотоотчеты
                 </HashLink>
               </div>
             </div>

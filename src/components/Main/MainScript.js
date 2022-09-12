@@ -47,17 +47,17 @@ const mainScript = () => {
   );
   let eventsSliderStep = 554;
   let grayBorder = 350;
-  if (document.documentElement.clientWidth <= 480) {
+  if (document.documentElement.clientWidth <= 768) {
     eventsSliderStep = 310;
     grayBorder = 99;
   }
 
   window.addEventListener("resize", () => {
-    if (document.documentElement.clientWidth <= 480) {
+    if (document.documentElement.clientWidth <= 768) {
       eventsSliderStep = 310;
       grayBorder = 99;
     }
-    if (document.documentElement.clientWidth > 480) {
+    if (document.documentElement.clientWidth > 768) {
       eventsSliderStep = 554;
       grayBorder = 350;
     }
@@ -190,7 +190,7 @@ const mainScript = () => {
     return reviewsSliderPositionChange;
   };
 
-  if (document.documentElement.clientWidth <= 480) {
+  if (document.documentElement.clientWidth <= 768) {
     reviewsSliderArrowLeft = document.querySelector(
       ".mobile-flex .reviews-nav-left"
     );

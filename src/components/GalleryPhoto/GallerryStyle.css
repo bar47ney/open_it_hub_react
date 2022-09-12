@@ -129,6 +129,17 @@
   color: #ff7f23;
 }
 
+.gallery-block .block-parameters .filter-item {
+  color: white;
+  border: 1px solid white;
+}
+.gallery-block .block-parameters .filter-item path {
+  fill: white;
+}
+.gallery-block .block-parameters .filter-item .event-arrow path {
+  stroke: white;
+  fill: none;
+}
 @media (max-width: 480px) {
   .gallery-block h1 {
     font-size: 14px;
@@ -164,10 +175,11 @@
     font-size: 16px;
     line-height: 22px;
   }
-  .pagination{
-      gap: 18px;
-      margin-top: 36px;
-  }.pages *{
-      margin-left: 22px;
+  .pagination {
+    gap: 18px;
+    margin-top: 36px;
+  }
+  .pages * {
+    margin-left: 22px;
   }
 }
