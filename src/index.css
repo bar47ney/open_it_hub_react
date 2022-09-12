@@ -364,8 +364,12 @@ body {
   background-image: url("/public/img/main-slider/3.jpg");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .slider-title {
-  font-family: "Montserrat SemiBold";
+  /* font-family: "Montserrat SemiBold"; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 28px;
   line-height: 34px;
   color: #ffffff;
@@ -2541,6 +2545,12 @@ button:hover {
     margin-top: 0;
     padding: 5px 0 8px;
     position: relative;
+    /* iphone button */
+    background: none;
+    border-image: none;
+    border: 1px solid #e67f13;
+    -webkit-text-fill-color: unset;
+    color: #e67f13;
   }
 
   .events-block-button {
@@ -3121,6 +3131,10 @@ button:hover {
   .rent-page .advantage-block {
     padding: 16px 10px 8px;
     height: unset;
+  }
+  /* iphone input */
+  input{
+    border-radius: 0;
   }
 }
 
