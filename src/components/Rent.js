@@ -6,7 +6,7 @@ const Rent = () => {
       <div class="events-feature corporat-job">
         <div class="main-slider-events">
           <h1 class="slider-title">
-            Арендуйте помещение
+            Арендуйте<br class="mobile-visibility" /> помещение
             <br class="mobile-visibility" /> под своё мероприятие
           </h1>
           <p>

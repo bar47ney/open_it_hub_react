@@ -3040,47 +3040,66 @@ button:hover {
   /* .corporat-job */
   .corporat-job {
     padding-top: 0;
+    padding-bottom: 0;
   }
   .corporat-job .main-slider-events {
-    padding-top: 45px;
+    padding-top: 36px;
   }
   .corporat-job .btn-slider-bottom {
-    bottom: 32px;
+    bottom: 24px;
   }
-
+  .corporat-job .block-form{
+    padding: 16px 10px 28px;
+  }
+  .rent-page .block-form{
+    padding: 18px 0px 35px;
+  }
+  .corporat-job .book-block-form{
+    margin-top: 28px;
+  }
   .corporat-job .slider-title {
-    padding: 0 64px;
+    padding: 0 34px;
+  }
+  .corporat-job .main-slider-events p{
+    padding: 0 10px;
   }
   .corporat-job .about-events {
     height: unset;
-    padding: 16px 34px 18px;
+    padding: 16px 10px 24px;
+  }
+  .corporat-job .about-events .advantage-block-header{
+    padding: 0 10px;
   }
   /* .rent-page */
+  .rent-page .slider-title{
+    padding: 0 10px;
+  }
   .rent-page .what-we-list {
     margin-top: 8px;
-    font-size: 8px;
-    line-height: 10px;
-  }
-  .rent-page .what-we-list li:before {
-    height: 1.25px;
-    width: 1.25px;
-    margin-right: 6px;
-  }
-  .rent-page .price-rent {
     font-size: 10px;
     line-height: 12px;
-    margin-top: 16px;
+  }
+  .rent-page .what-we-list li:before {
+    height: 4px;
+    width: 4px;
+    margin-right: 4px;
+  }
+  .rent-page .price-rent {
+    font-size: 13px;
+    line-height: 16px;
+    width: 133px;
+    margin: 20px auto 0;
   }
   .rent-page .price-nds {
-    font-size: 8px;
-    line-height: 10px;
-    margin-top: 0;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 2px;
   }
   .rent-page .about-events {
-    padding-bottom: 23px;
+    padding: 16px 10px 24px;
   }
   .rent-page .advantage-block {
-    padding: 19px 0 26px;
+    padding: 16px 10px 8px;
     height: unset;
   }
 }
