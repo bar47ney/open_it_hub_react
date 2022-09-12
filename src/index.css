@@ -93,6 +93,11 @@ body {
 
   /* header fixed */
 }
+  header{
+    background-color: #231f20;
+    width: 100%;
+    height: 98px;
+  }
 
 .header-hidden {
   transform: translateY(-98px);
@@ -247,7 +252,7 @@ body {
 .main {
   /* header fixed */
   position: relative;
-  padding-top: 98px;
+  /* padding-top: 98px; */
   /* header fixed */
   flex: 1 1 auto;
   /* transition: 5s; */
@@ -748,6 +753,7 @@ input::-moz-placeholder {
 }
 
 .events-block-slider-item {
+  position: relative;
   width: 536px;
   height: 100%;
   background-color: white;
@@ -891,7 +897,7 @@ input::-moz-placeholder {
   font-size: 18px;
   line-height: 25px;
   font-family: "NotoSansDisplay-Medium";
-  margin-top: 62.81px;
+  /* margin-top: 62.81px; */
   border: 1px solid transparent;
   border-image: linear-gradient(
     126.93deg,
@@ -904,6 +910,9 @@ input::-moz-placeholder {
   transition: none;
   padding-top: 10px;
   padding-bottom: 10.73px;
+  position: absolute;
+  left: calc(123px);
+  bottom: 30px;
 }
 
 .more-info-event:hover {
@@ -1655,6 +1664,9 @@ button:hover {
   line-height: 25px;
   padding-top: 14.46px;
   padding-bottom: 15.54px;
+  position: relative;
+  left: 0;
+  bottom: 0;
 }
 
 /* events-past */
@@ -2321,7 +2333,11 @@ button:hover {
   }
   /* main */
   .main {
-    padding-top: 48px;
+    /* padding-top: 48px; */
+  }
+
+  header{
+    height: 48px;
   }
 
   /* hab-description */
@@ -2527,8 +2543,8 @@ button:hover {
   }
   .events-block-slider-item {
     width: 300px;
-    height: unset;
-    padding: 17px 0 13px;
+    height: 170px;
+    padding: 17px 0 0px;
   }
   .event-info {
     gap: 8px;
@@ -2546,7 +2562,7 @@ button:hover {
     font-size: 10px;
     line-height: 12px;
     margin-top: 32.75px;
-    padding: 0 60px 33.25px 66px;
+    padding: 0 60px 0px 66px;
   }
   .more-info-event {
     width: 214px;
@@ -2555,13 +2571,15 @@ button:hover {
     line-height: 15px;
     margin-top: 0;
     padding: 5px 0 8px;
-    position: relative;
+    /* position: relative; */
     /* iphone button */
     background: none;
     border-image: none;
     border: 1px solid #e67f13;
     -webkit-text-fill-color: unset;
     color: #e67f13;
+    bottom: 13px;
+    left: 43px;
   }
 
   .events-block-button {

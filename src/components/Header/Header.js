@@ -27,12 +27,12 @@ const Header = () => {
     previousScroll >= scrollTop
       ? header.classList.remove("header-hidden")
       : header.classList.add("header-hidden");
-    scrollTop <= 150
-      ? headerMobile.classList.remove("header-hidden-mobile")
-      : headerMobile.classList.add("header-hidden-mobile");
-    previousScroll >= scrollTop
-      ? headerMobile.classList.remove("header-hidden-mobile")
-      : headerMobile.classList.add("header-hidden-mobile");
+    // scrollTop <= 150
+    //   ? headerMobile.classList.remove("header-hidden-mobile")
+    //   : headerMobile.classList.add("header-hidden-mobile");
+    // previousScroll >= scrollTop
+    //   ? headerMobile.classList.remove("header-hidden-mobile")
+    //   : headerMobile.classList.add("header-hidden-mobile");
     previousScroll = scrollTop;
   };
 

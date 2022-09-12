@@ -1293,7 +1293,7 @@ const Main = () => {
               <div class="contact contact-tel">
                 <img src="img/contact-tel.png" alt="" />
                 <p class="">
-                  <a class="button-black-hover" href="rel:+375291114578">
+                  <a class="button-black-hover" href="tel:+375291114578">
                     +375 29 111 45 78
                   </a>
                 </p>

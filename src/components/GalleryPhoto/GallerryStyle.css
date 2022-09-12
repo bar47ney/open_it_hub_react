@@ -8,8 +8,8 @@
 }
 
 .gallery-block h1 {
-  font-family: "Montserrat-SemiBold";
-  font-style: normal;
+  /* font-family: "Montserrat-SemiBold"; */
+  /* font-style: normal; */
   font-weight: 600;
   font-size: 34px;
   line-height: 41px;
@@ -58,8 +58,8 @@
 }
 
 .date {
-  font-family: "Montserrat-Medium";
-  font-style: normal;
+  /* font-family: "Montserrat-Medium"; */
+  /* font-style: normal; */
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -68,8 +68,8 @@
 }
 
 .gallery-phtoto .event-name {
-  font-family: "Montserrat-ExtraBold";
-  font-style: normal;
+  /* font-family: "Montserrat-ExtraBold"; */
+  /* font-style: normal; */
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -140,7 +140,7 @@
   stroke: white;
   fill: none;
 }
-@media (max-width: 480px) {
+@media (max-width: 768.5px) {
   .gallery-block h1 {
     font-size: 14px;
     line-height: 17px;
