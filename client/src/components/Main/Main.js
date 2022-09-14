@@ -178,21 +178,20 @@ const Main = () => {
             />
           </div>
           <p class="desktop-visibility">
-            <img src="img/Horizontal-logo.png" alt="" />— новое пространство в
-            самом сердце делового Минска.
+            <img src="img/Horizontal-logo.png" alt="" />—
             <br />
-            Никаких обшарпанных диванов и скрипучих кресел — только новая мебель
-            и свежее
+            новое ивент-пространство в самом центре делового Минска.
             <br />
-            оборудование, чтобы ваше мероприятие прошло на высшем уровне.
+            Площадка создана для того, чтобы ваше мероприятие прошло на высшем
+            уровне.
           </p>
           <p class="mobile-visibility">
             <img src="img/Horizontal-logo.png" alt="" />—
             <span>
               <br />
-              новое пространство в самом сердце делового Минска. Никаких
-              обшарпанных диванов и скрипучих кресел — только новая мебель и
-              свежее оборудование, чтобы ваше мероприятие прошло на высшем
+              новое ивент-пространство в самом центре делового Минска.
+              <br />
+              Площадка создана для того, чтобы ваше мероприятие прошло на высшем
               уровне.
             </span>
           </p>
@@ -353,7 +352,7 @@ const Main = () => {
                   </svg>
                 </div>
 
-                <p>Проводим мероприятия, ивенты, бизнес-обучение</p>
+                <p>Проводим мероприятия, встречи, бизнес-обучения</p>
               </HashLink>
             </div>
             <div class="services-item">
@@ -540,7 +539,7 @@ const Main = () => {
 
               <p className="advantage-item-fisrt">Мы в центре</p>
               <p className="advantage-item-fisrt advantage-item-second">
-                Скрыганова 14
+                Скрыганова, 14 | БЦ «Контур»
               </p>
             </div>
             <div className="advantage-item">
@@ -592,7 +591,7 @@ const Main = () => {
 
               <p className="advantage-item-fisrt">Рядом метро</p>
               <p className="advantage-item-fisrt advantage-item-second">
-                7 мин от ст. Спортивная
+                5 мин от ст.м. Молодежная
               </p>
             </div>
 
@@ -844,18 +843,19 @@ const Main = () => {
         </div>
         <div id="events-block" class="events-block">
           <h4 class="events-block-head">Посетите уникальные мероприятия</h4>
-          <p class="events-block-p desktop-visibility">
-            Мы проводим уникальные мероприятия в сфере бизнес-обучения,
+          <p class="events-block-p">
+            Мы проводим уникальные мероприятия в сфере IT, бизнеса, обучения,
+            карьеры и др.
             <br />
-            карьеры, и т.д. Запишитесь на одно из ближайших
+            Запишитесь на одно из ближайших
           </p>
-          <p class="events-block-p mobile-visibility">
+          {/* <p class="events-block-p mobile-visibility">
             Мы проводим уникальные мероприятия в сфере
             <br />
             бизнес-обучения, карьеры, и т.д.
             <br />
             Запишитесь на одно из ближайших
-          </p>
+          </p> */}
           <div class="events-block-slider-nav">
             <div class="arrow-slider arrow-slider-left">
               <svg

@@ -15,9 +15,22 @@ const Header = () => {
     };
   }, []);
 
-  const isSticky = (e) => {
+  const getInfo = () => {
+      fetch("http://localhost:8081/")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            console.log(result)
+          },
+          // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
+          // чтобы не перехватывать исключения из ошибок в самих компонентах.
+          (error) => {
+          }
+        )
+  };
 
-    console.log(previousScroll)
+  const isSticky = (e) => {
+    // console.log(previousScroll);
     const header = document.querySelectorAll(".header")[1];
     const headerMobile = document.querySelectorAll(".header")[0];
     const scrollTop = window.scrollY;
@@ -376,7 +389,10 @@ const Header = () => {
 
           <div id="header-button" class="menu-item">
             <HashLink to="/rent#top">
-              <button class="orange-button orange-button-hover">
+              <button
+                class="orange-button orange-button-hover"
+                onClick={() => getInfo()}
+              >
                 Арендовать
               </button>
             </HashLink>

@@ -45,10 +45,11 @@ const AppRouter = () => {
       <Route exact path="/" element={<Main />} />
       <Route path="/corporat" element={<Corporat />} />
       <Route path="/events" element={<EventsList />} />
-      <Route path="/event/:id" element={<Event />} />
+      <Route exact path="/event/:id" element={<Event />} />
       <Route path="/rent" element={<Rent />} />
       <Route path="/gallery" element={<GalleryPhoto />} />
-      <Route path="*" element={<Main />} /> */
+      {/* <Route path="/event/*" element={<EventsList />} />  */}
+      <Route path="*" element={<Main />} /> 
     </Routes>
   );
 };

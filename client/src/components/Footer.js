@@ -71,7 +71,7 @@ const Footer = () => {
           <div>
             <p class="footer-first-head">Мы работаем</p>
             <p class="footer-second-head">
-              10.00 - 20.00
+            10:00&ndash;20:00
               <br />
               пн-пт
             </p>
@@ -91,7 +91,7 @@ const Footer = () => {
       <div class="footer-item footer-item-r desktop-visibility">
         <p class="footer-first-head">Мы работаем</p>
         <p class="footer-second-head">
-          10.00 - 20.00
+        10:00&ndash;20:00
           <br />
           пн-пт
         </p>

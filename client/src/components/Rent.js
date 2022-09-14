@@ -6,12 +6,13 @@ const Rent = () => {
       <div class="events-feature corporat-job">
         <div class="main-slider-events">
           <h1 class="slider-title">
-            Арендуйте<br class="mobile-visibility" /> помещение
+            Арендуйте
+            <br class="mobile-visibility" /> помещение
             <br class="mobile-visibility" /> под своё мероприятие
           </h1>
           <p>
-            Идеальный вариант для студийной съемки,
-            <br class="mobile-visibility" /> мероприятий и онлайн-трансляций
+            Идеальный вариант для встреч и мероприятий, онлайн-трансляций,<br/>
+            студийных съемок и зональных фотосессий для наработки контента
           </p>{" "}
           <HashLink smooth to={"#advantage-block"}>
             <button class="btn-slider orange-button-hover btn-slider-bottom">
@@ -37,7 +38,6 @@ const Rent = () => {
           <p class="price-rent price-nds">*цена с учетом НДС</p>
         </div>
 
-        
         <div class="advantage-block">
           <h3 class="advantage-block-header">Наши преимущества</h3>
           <div className="advantage-items">
@@ -73,7 +73,7 @@ const Rent = () => {
 
               <p className="advantage-item-fisrt">Мы в центре</p>
               <p className="advantage-item-fisrt advantage-item-second">
-                Скрыганова 14
+                Скрыганова, 14 | БЦ «Контур»
               </p>
             </div>
             <div className="advantage-item">
@@ -125,7 +125,7 @@ const Rent = () => {
 
               <p className="advantage-item-fisrt">Рядом метро</p>
               <p className="advantage-item-fisrt advantage-item-second">
-                7 мин от ст. Спортивная
+                5 мин от ст.м. Молодежная
               </p>
             </div>
 

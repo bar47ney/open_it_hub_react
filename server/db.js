@@ -3,12 +3,11 @@ const mysql = require("mysql2");
 const db = mysql.createConnection({
 //   host: "93.125.9.73",
 //   port: "2083",
-  user: "openitby_hub",
-  password: "gfhjkmjgtybnpf,12[f,56",
+  user: "openitby_hubadmin",
+  password: "gfhjkm,ltyfneyy254",
   database: "openitby_hub",
-  host: '93.125.9.73',
-  port: '2083',
-  path: 'https://vh91.hoster.by:2083',
+  host: '93.125.99.73',
+  port: '2083'
 });
 
 db.connect(function(err){

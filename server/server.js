@@ -1,35 +1,77 @@
-// const express = require("express");
-// const path = require("path");
-
-// const PORT = process.env.PORT || 8080;
-
-// const app = express();
-// // app.use(express.static(__dirname));
-// app.use(express.static(path.resolve(__dirname, "build")));
-
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "build", "index.html"))
-// })
-
-// app.listen(PORT)
-
 const express = require("express");
-const db = require("./db");
+const path = require("path");
 const cors = require("cors");
 
+const PORT = process.env.PORT || 8080;
+
+let message = "";
+
 const app = express();
-const PORT = 3002;
+app.use(express.static(__dirname));
+app.use(express.static(path.resolve(__dirname, "../client/build")));
 app.use(cors());
-app.use(express.json());
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+  // res.send("Hello");
+});
+
+app.get("/event*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../client/build", "index.html"));
+  // res.send("Hello");
+});
+
+app.get("/api", (req, res) => {
+ res.send("Hello");
+});
+
+app.get("/event*",function (request, response) {
+    response.redirect("/")
+  });
+
+app.listen(PORT);
+
+const app2 = express();
+
+const PORT2 = process.env.PORT2 || 8081;
+// app2.use(express.static(__dirname));
+// app2.use(express.static(path.resolve(__dirname, "../client/build")));
+app2.use(cors());
+
+// app2.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/build", "index.html"))
+//   // res.send("Hello");
+// });
+
+app2.get("/", (req, res) => {
+  res.json({ a: 1, b: 2 });
+});
+
+app2.listen(PORT2);
+
+// const express = require("express");
+// const db = require("./db");
+// const cors = require("cors");
+
+// const app = express();
+// const PORT = 3002;
+// app.use(cors());
+// app.use(express.json());
 
 // Route to get all posts
-app.get("/", (req, res) => {
-    res.send(`Server is running on ＄{PORT}`);
-});
+// app.get("/api", (req, res) => {
+//   db.query("SELECT * FROM event ", (err, result) => {
+//     if (err) {
+//       console.log(err);
+//     }
+//     console.log(result);
+//     res.send(result);
+//   });
+// });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on ＄{PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on ＄{PORT}`);
+// });
 
 // Route to get one post
 // app.get("/api/getFromId/:id", (req,res)=>{

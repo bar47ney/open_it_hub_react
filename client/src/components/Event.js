@@ -4,27 +4,26 @@ import { HashLink } from "react-router-hash-link";
 import ImageGallery from "react-image-gallery";
 
 const images = [
- 
   {
     original:
       "https://vsegda-pomnim.com/uploads/posts/2022-04/1649114004_96-vsegda-pomnim-com-p-priroda-sibiri-samie-krasivie-mesta-foto-103.jpg",
     thumbnail:
       "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
-      thumbnailLabel: `1`
+    thumbnailLabel: `1`,
   },
   {
     original:
       "https://vsegda-pomnim.com/uploads/posts/2022-04/1649114004_96-vsegda-pomnim-com-p-priroda-sibiri-samie-krasivie-mesta-foto-103.jpg",
     thumbnail:
       "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
-      thumbnailLabel: `1`
+    thumbnailLabel: `1`,
   },
   {
     original:
       "https://pibig.info/uploads/posts/2021-05/1621348523_23-pibig_info-p-ostrov-vrangelya-priroda-krasivo-foto-24.jpg",
     thumbnail:
       "https://st.depositphotos.com/2383249/2683/i/170/depositphotos_26832613-stock-photo-fire-and-ice-fractal-lightning.jpg",
-      thumbnailLabel: `1`
+    thumbnailLabel: `1`,
   },
   {
     original:
@@ -83,7 +82,8 @@ const images = [
 ];
 
 const Event = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
+  const id = 2;
   {
     console.log(eventsFeature);
   }
@@ -193,7 +193,7 @@ const Event = () => {
         <h4 class="subscribe-email-heading">Будь в курсе!</h4>
         <p>
           Будем сообщать о предстоящих мероприятиях, делиться отчетами
-          <br className="desktop-visibility"/>и другой полезной информацией
+          <br className="desktop-visibility" />и другой полезной информацией
         </p>
         <div class="book-block-form">
           <input type="text" placeholder="Номер телефона" />
