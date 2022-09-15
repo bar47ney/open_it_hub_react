@@ -10,6 +10,9 @@ const Main = () => {
 
   const [positionMainSlider, setPositionMainSlider] = useState(0);
   const [currentSlider, setCurrentSlider] = useState(1);
+  const [featureEvents, setFeatureEvents] = useState(
+    [...eventsFeature].filter((event) => event.was === false)
+  );
 
   const toLeftMainSlider = () => {
     setPositionMainSlider(positionMainSlider + 100);
@@ -849,13 +852,6 @@ const Main = () => {
             <br />
             Запишитесь на одно из ближайших
           </p>
-          {/* <p class="events-block-p mobile-visibility">
-            Мы проводим уникальные мероприятия в сфере
-            <br />
-            бизнес-обучения, карьеры, и т.д.
-            <br />
-            Запишитесь на одно из ближайших
-          </p> */}
           <div class="events-block-slider-nav">
             <div class="arrow-slider arrow-slider-left">
               <svg
@@ -924,8 +920,8 @@ const Main = () => {
               <div class="events-slider-gray-block-item events-slider-gray-block-item-right"></div>
             </div>
             <div class="events-block-slider slider-to-center">
-              {eventsFeature.map((event) => {
-                if (!event.was) {
+              {featureEvents.length ? (
+                featureEvents.map((event) => {
                   return (
                     <div class="events-block-slider-item">
                       <div class="event-info">
@@ -944,8 +940,25 @@ const Main = () => {
                       </HashLink>
                     </div>
                   );
-                }
-              })}
+                })
+              ) : (
+                <div class="events-block-slider-item">
+                  {/* <div class="event-info">
+                    <div class="event-info-item">
+                      <p>Аренда</p>
+                    </div>
+                    <div class="event-info-item">
+                      <p>Сотрудничество</p>
+                    </div>
+                  </div> */}
+                  <h5 class="event-name no-events-slider">Пока нет новых мероприятий</h5>
+                  {/* <HashLink to={`/gallery#top`}>
+                    <button class="more-info-event">
+                      Наши фотоотчеты
+                    </button>
+                  </HashLink> */}
+                </div>
+              )}
             </div>
           </div>
 

@@ -1,45 +1,71 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { eventsFeature } from "./eventsFeature";
 import { HashLink } from "react-router-hash-link";
+import { useSortedAndSearchedPosts, useSortedAndSearchedPostsPast } from "../components/hooks/useFilter";
 
 const EventsList = () => {
-  const [month, setMonth] = useState("");
-  const [format, setFormat] = useState("Платные");
-  const [isPay, setIsPay] = useState("Очно");
+  const [month, setMonth] = useState("Все");
+  const [format, setFormat] = useState("Все");
+  const [isPay, setIsPay] = useState("Все");
 
-  const [pastMonth, setPastMonth] = useState("Месяц");
-  const [pastYear, setPastYear] = useState("Год");
+  const [pastMonth, setPastMonth] = useState("Все");
+  const [pastYear, setPastYear] = useState("Все");
 
   const [startEventsFeature, setStartEventsFeature] = useState(eventsFeature);
+  const [startEventsPast, setStartEventsPast] = useState(eventsFeature);
+
+  console.log(pastMonth)
+  console.log(pastYear)
+
+  useEffect(() => {
+    
+  }, [month, format, isPay, pastMonth, pastYear]);
+
+  const sortedEventsFeature = useSortedAndSearchedPosts(
+    startEventsFeature,
+    month,
+    format,
+    false,
+    isPay
+  );
+  
+  const sortedEventsPast = useSortedAndSearchedPostsPast(
+    startEventsPast,
+    pastMonth,
+    true,
+    pastYear
+  );
+
+  console.log(sortedEventsPast)
 
   // console.log(eventsFeature);
 
   const monthChoose = (e) => {
     setMonth(e.target.innerText);
-    setStartEventsFeature(
-      startEventsFeature.filter((event) => {
-        event.month.toLowerCase().includes(month.toLowerCase());
-      })
-    );
+    // setStartEventsFeature(
+    //   startEventsFeature.filter((event) => {
+    //     event.month.toLowerCase().includes(month.toLowerCase());
+    //   })
+    // );
     console.log(month);
   };
   const formatChoose = (e) => {
     setFormat(e.target.innerText);
-    console.log(format);
+    // console.log(format);
   };
   const isPayChoose = (e) => {
     setIsPay(e.target.innerText);
-    console.log(isPay);
+    // console.log(isPay);
   };
 
   const monthPastChoose = (e) => {
     setPastMonth(e.target.innerText);
-    console.log(pastMonth);
+    // console.log(pastMonth);
   };
   const yearPastChoose = (e) => {
     setPastYear(e.target.innerText);
-    console.log(pastYear);
+    // console.log(pastYear);
   };
 
   // const filtredEvents = useMemo(() => {
@@ -47,7 +73,7 @@ const EventsList = () => {
   //     event.month.toLowerCase().includes(month.toLowerCase())
   //   )
   // }, [month, startEventsFeature]);
-  console.log(month)
+  // console.log(month);
 
   return (
     <main class="main">
@@ -151,6 +177,7 @@ const EventsList = () => {
             </div>
             <div class="sub-menu menu-parameters">
               <ul>
+                <li>Все</li>
                 <li>Июль</li>
                 <li>Август</li>
                 <li>Сентябрь</li>
@@ -209,6 +236,7 @@ const EventsList = () => {
             </div>
             <div id="filter-format-list" class="sub-menu menu-parameters">
               <ul>
+                <li>Все</li>
                 <li>Очно и онлайн</li>
                 <li>Очно</li>
                 <li>Онлайн</li>
@@ -275,57 +303,53 @@ const EventsList = () => {
           </div>
         </div>
         <div class="block-list-events">
-          {startEventsFeature.length
-            ? startEventsFeature.map((event) => {
-                if (!event.was) {
-                  return (
-                    <div class="block-list-events-item">
-                      <div class="event-iamge">
-                        <img src={event.photo} alt="" />
-                      </div>
+          {sortedEventsFeature.length
+            ? sortedEventsFeature.map((event) => {
+                return (
+                  <div class="block-list-events-item">
+                    <div class="event-iamge">
+                      <img src={event.photo} alt="" />
+                    </div>
 
-                      <div class="events-item-info">
-                        <div class="type-event-list">
-                          <div class="type-event-item">
-                            <img src="img/events-feature/day.svg" alt="" />
-                            <p>{event.date}</p>
-                          </div>
-                          <div class="type-event-item">
-                            <img src="img/events-feature/time.svg" alt="" />
-                            <p>{event.time}</p>
-                          </div>
-                          <div class="type-event-item">
-                            <img
-                              src="img/events-feature/price-price.svg"
-                              alt=""
-                            />
-                            <p>{event.pay}</p>
-                          </div>
-                          <div class="type-event-item">
-                            <img src="img/events-feature/info.svg" alt="" />
-                            <p>{event.place}</p>
-                          </div>
+                    <div class="events-item-info">
+                      <div class="type-event-list">
+                        <div class="type-event-item">
+                          <img src="img/events-feature/day.svg" alt="" />
+                          <p>{event.date}</p>
                         </div>
-                        <p class="events-item-info-name">{event.name}</p>
-                        <p class="events-item-info-preview">{event.intro}</p>
-                        <div class="events-buttons">
-                          <a href={event.bezKassira} target="_blank">
-                            <button class="btn-slider margin-none btn-black orange-button-hover">
-                              Регистрация
-                            </button>
-                          </a>
-                          <HashLink to={`/event/${event.id}#top`}>
-                            <button class="more-info-event">
-                              О мероприятии
-                            </button>
-                          </HashLink>
+                        <div class="type-event-item">
+                          <img src="img/events-feature/time.svg" alt="" />
+                          <p>{event.time}</p>
                         </div>
+                        <div class="type-event-item">
+                          <img
+                            src="img/events-feature/price-price.svg"
+                            alt=""
+                          />
+                          <p>{event.pay}</p>
+                        </div>
+                        <div class="type-event-item">
+                          <img src="img/events-feature/info.svg" alt="" />
+                          <p>{event.place}</p>
+                        </div>
+                      </div>
+                      <p class="events-item-info-name">{event.name}</p>
+                      <p class="events-item-info-preview">{event.intro}</p>
+                      <div class="events-buttons">
+                        <a href={event.bezKassira} target="_blank">
+                          <button class="btn-slider margin-none btn-black orange-button-hover">
+                            Регистрация
+                          </button>
+                        </a>
+                        <HashLink to={`/event/${event.id}#top`}>
+                          <button class="more-info-event">О мероприятии</button>
+                        </HashLink>
                       </div>
                     </div>
-                  );
-                }
+                  </div>
+                );
               })
-            : "Нет мероприятий"}
+            : <p className="no-events">Нет мероприятий</p>}
         </div>
       </div>
 
@@ -388,6 +412,7 @@ const EventsList = () => {
             </div>
             <div class="sub-menu menu-parameters">
               <ul>
+                <li>Все</li>
                 <li>2022</li>
                 <li>2021</li>
                 <li>2020</li>
@@ -449,6 +474,7 @@ const EventsList = () => {
             </div>
             <div class="sub-menu menu-parameters">
               <ul>
+                <li>Все</li>
                 <li>Июль</li>
                 <li>Август</li>
                 <li>Сентябрь</li>
@@ -479,8 +505,8 @@ const EventsList = () => {
             </div> --> */}
         </div>
         <div class="block-list-events">
-          {eventsFeature.map((event) => {
-            if (event.was) {
+          {sortedEventsPast.length ? (sortedEventsPast.map((event) => {
+            
               return (
                 <div class="block-list-events-item">
                   <div class="event-iamge">
@@ -500,8 +526,7 @@ const EventsList = () => {
                   </div>
                 </div>
               );
-            }
-          })}
+          })) : <p className="no-events">Нет мероприятий</p> }
         </div>
       </div>
     </main>

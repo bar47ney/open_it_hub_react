@@ -93,11 +93,11 @@ body {
 
   /* header fixed */
 }
-  header{
-    background-color: #231f20;
-    width: 100%;
-    height: 98px;
-  }
+header {
+  background-color: #231f20;
+  width: 100%;
+  height: 98px;
+}
 
 .header-hidden {
   transform: translateY(-98px);
@@ -2162,6 +2162,14 @@ button:hover {
   height: 60px;
 } */
 
+.no-events {
+  font-size: 25px;
+}
+
+.no-events-slider{
+  margin-top: 115px;
+}
+
 @media (max-width: 768.5px) {
   /* header */
   #header-mobile {
@@ -2336,7 +2344,7 @@ button:hover {
     /* padding-top: 48px; */
   }
 
-  header{
+  header {
     height: 48px;
   }
 
@@ -3165,6 +3173,12 @@ button:hover {
   /* iphone input */
   input {
     border-radius: 0;
+  }
+  .no-events {
+    font-size: 12px;
+  }
+  .no-events-slider{
+    margin-top: 61px;
   }
 }
 

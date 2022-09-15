@@ -70,10 +70,13 @@ const mainScript = () => {
   let eventsSliderCurrentItem = eventsSliderCenterItem;
   console.log(masEventsSliderItems.length);
 
+  
   const centerEventsSlider = () => {
     eventsSliderPositionChange =
       -eventsSliderStep * (eventsSliderCenterItem - 1);
-    eventsSlider.style = `left: ${eventsSliderPositionChange}px`;
+      if(eventsSlider){
+        eventsSlider.style = `left: ${eventsSliderPositionChange}px`;
+      }
     eventsSliderCurrentItem = eventsSliderCenterItem;
     return eventsSliderPositionChange;
   };

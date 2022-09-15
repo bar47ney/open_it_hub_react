@@ -82,8 +82,8 @@ const images = [
 ];
 
 const Event = () => {
-  // const { id } = useParams();
-  const id = 2;
+  const { id } = useParams();
+  // const id = 2;
   {
     console.log(eventsFeature);
   }
