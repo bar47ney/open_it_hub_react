@@ -16,17 +16,16 @@ const Header = () => {
   }, []);
 
   const getInfo = () => {
-      fetch("http://localhost:8081/")
-        .then(res => res.json())
-        .then(
-          (result) => {
-            console.log(result)
-          },
-          // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
-          // чтобы не перехватывать исключения из ошибок в самих компонентах.
-          (error) => {
-          }
-        )
+    fetch("http://localhost:8081/")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+        },
+        // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
+        // чтобы не перехватывать исключения из ошибок в самих компонентах.
+        (error) => {}
+      );
   };
 
   const isSticky = (e) => {
@@ -40,6 +39,8 @@ const Header = () => {
     previousScroll >= scrollTop
       ? header.classList.remove("header-hidden")
       : header.classList.add("header-hidden");
+    if(scrollTop < 0) header.classList.remove("header-hidden")
+      
     // scrollTop <= 150
     //   ? headerMobile.classList.remove("header-hidden-mobile")
     //   : headerMobile.classList.add("header-hidden-mobile");
@@ -391,7 +392,7 @@ const Header = () => {
             <HashLink to="/rent#top">
               <button
                 class="orange-button orange-button-hover"
-                onClick={() => getInfo()}
+                // onClick={() => getInfo()}
               >
                 Арендовать
               </button>

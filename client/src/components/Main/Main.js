@@ -43,7 +43,7 @@ const Main = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       toRigthMainSlider();
-    }, 3000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
@@ -951,7 +951,7 @@ const Main = () => {
                       <p>Сотрудничество</p>
                     </div>
                   </div> */}
-                  <h5 class="event-name no-events-slider">Пока нет новых мероприятий</h5>
+                  <h5 class="event-name no-events-slider">Новых мероприятий пока нет!</h5>
                   {/* <HashLink to={`/gallery#top`}>
                     <button class="more-info-event">
                       Наши фотоотчеты

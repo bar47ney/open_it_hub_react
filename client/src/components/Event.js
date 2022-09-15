@@ -215,15 +215,19 @@ const Event = () => {
         </p>
       </div>
 
-      <div className="photo-block">
-        <h4 class="subscribe-email-heading">Фотоотчет</h4>
-        <ImageGallery
-          items={images}
-          showIndex={true}
-          showPlayButton={false}
-          showFullscreenButton={false}
-        />
-      </div>
+      {eventsFeature[id - 1].gallery ? (
+        <div id="gallery" className="photo-block">
+          <h4 class="subscribe-email-heading">Фотоотчет</h4>
+          <ImageGallery
+            items={eventsFeature[id - 1].gallery}
+            showIndex={true}
+            showPlayButton={false}
+            showFullscreenButton={false}
+          />
+        </div>
+      ) : (
+        ""
+      )}
 
       {eventsFeature[id - 1].video ? (
         <div

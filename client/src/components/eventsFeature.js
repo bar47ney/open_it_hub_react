@@ -38,10 +38,37 @@ export const eventsFeature = [
     month: "Август",
     bezKassira:
       "https://bezkassira.by/biznes-vstrecha-materialnaya-motivaciya-i-principy-ee-postroeniy-18347/",
-    photo: "/img/speackers/Авраменко.jpg",
-    aboutSpeakerPhoto: "/img/speackers/Авраменко.jpg",
+    photo: "/img/afisha/avramenko.jpg",
+    aboutSpeakerPhoto: "/img/speackersMain/avram.png",
     was: true,
     year: "2022",
+    gallery: [
+      {
+        original: "/img/gallery/avram/7K9A9895.jpg",
+        thumbnail: "/img/gallery/avram/7K9A9895.jpg",
+        thumbnailLabel: `1`,
+      },
+      {
+        original: "/img/gallery/avram/7K9A9972.jpg",
+        thumbnail: "/img/gallery/avram/7K9A9972.jpg",
+        thumbnailLabel: `2`,
+      },
+      {
+        original: "/img/gallery/avram/IMG_5988.jpg",
+        thumbnail: "/img/gallery/avram/IMG_5988.jpg",
+        thumbnailLabel: `3`,
+      },
+      {
+        original: "/img/gallery/avram/IMG_5989.jpg",
+        thumbnail: "/img/gallery/avram/IMG_5989.jpg",
+        thumbnailLabel: `4`,
+      },
+      {
+        original: "/img/gallery/avram/IMG_5990.jpg",
+        thumbnail: "/img/gallery/avram/IMG_5990.jpg",
+        thumbnailLabel: `5`,
+      },
+    ],
   },
   {
     id: 2,
@@ -73,11 +100,48 @@ export const eventsFeature = [
     pay: "Платные",
     place: "Очно и онлайн",
     bezKassira: "",
-    photo: "/img/speackers/Занкович.jpg",
-    aboutSpeakerPhoto: "/img/speackers/Занкович.jpg",
+    photo: "/img/afisha/zankovich.jpg",
+    aboutSpeakerPhoto: "/img/speackersMain/zank.png",
     was: true,
     month: "Июль",
     year: "2022",
+    gallery: [
+      {
+        original: "/img/gallery/zankovich/7K9A4932.jpg",
+        thumbnail: "/img/gallery/zankovich/7K9A4932.jpg",
+        thumbnailLabel: `1`,
+      },
+      {
+        original: "/img/gallery/zankovich/7K9A4948.jpg",
+        thumbnail: "/img/gallery/zankovich/7K9A4948.jpg",
+        thumbnailLabel: `2`,
+      },
+      {
+        original: "/img/gallery/zankovich/7K9A4972.jpg",
+        thumbnail: "/img/gallery/zankovich/7K9A4972.jpg",
+        thumbnailLabel: `3`,
+      },
+      {
+        original: "/img/gallery/zankovich/7K9A4984.jpg",
+        thumbnail: "/img/gallery/zankovich/7K9A4984.jpg",
+        thumbnailLabel: `4`,
+      },
+      {
+        original: "/img/gallery/zankovich/7K9A4987.jpg",
+        thumbnail: "/img/gallery/zankovich/7K9A4987.jpg",
+        thumbnailLabel: `5`,
+      },
+      {
+        original: "/img/gallery/zankovich/photo4999.jpg",
+        thumbnail: "/img/gallery/zankovich/photo4999.jpg",
+        thumbnailLabel: `6`,
+      },
+      {
+        original: "/img/gallery/zankovich/photo4990.jpg",
+        thumbnail: "/img/gallery/zankovich/photo4990.jpg",
+        thumbnailLabel: `7`,
+      },
+    ],
   },
   {
     id: 3,
@@ -91,22 +155,22 @@ export const eventsFeature = [
         👉🏻 Все необходимое оборудование для выступления спикеров, записи, съёмки,
         трансляции, репортажа, фото и видеоотчета может быть предоставлено площадкой OPEN IT
         ХАБ по запросу и обговорено между сторонами.</p>`,
-    aboutSpeacker: `  <ul>
-    <li>Лилия Борисова — организатор бизнес-завтраков и мастермайндов, руководитель
-        проекта для детей и подростков по обучению финансовой грамотности и
-        предпринимательскому мышлению, наставник личностного роста.</li>
-    <li>Дмитрий Будилович — организатов форума «Товарный бизнес в Беларуси», эксперт
-        в
-        онлайн-продажах, рекламе и SEO.</li>
-    <li>Ирина Агибалова — бизнес-консультант, основатель консалтингового агентства
-        ФИНPRO, собственница нескольких бизнесов и инвестор.</li>
-    <li>Никита Ярощик — специалист по поиску поставщика, специалист по доставке из
-        Садовода в Беларусь.</li>
-    <li>Владимир Стасевич — владелец франшизной сети химчисток обуви СНИКЕРСПА,
-        создатель
-        магазина СНИКЕРХЭД.</li>
-    <li>Сергей Круглик — специалист по запуску трафика и низким кликам.</li>
-</ul>`,
+    //     aboutSpeacker: `  <ul>
+    //     <li>Лилия Борисова — организатор бизнес-завтраков и мастермайндов, руководитель
+    //         проекта для детей и подростков по обучению финансовой грамотности и
+    //         предпринимательскому мышлению, наставник личностного роста.</li>
+    //     <li>Дмитрий Будилович — организатов форума «Товарный бизнес в Беларуси», эксперт
+    //         в
+    //         онлайн-продажах, рекламе и SEO.</li>
+    //     <li>Ирина Агибалова — бизнес-консультант, основатель консалтингового агентства
+    //         ФИНPRO, собственница нескольких бизнесов и инвестор.</li>
+    //     <li>Никита Ярощик — специалист по поиску поставщика, специалист по доставке из
+    //         Садовода в Беларусь.</li>
+    //     <li>Владимир Стасевич — владелец франшизной сети химчисток обуви СНИКЕРСПА,
+    //         создатель
+    //         магазина СНИКЕРХЭД.</li>
+    //     <li>Сергей Круглик — специалист по запуску трафика и низким кликам.</li>
+    // </ul>`,
     date: "10 июля",
     time: "13:00",
     pay: "Платные",
@@ -161,11 +225,107 @@ export const eventsFeature = [
     pay: "Платные",
     place: "Очно и онлайн",
     bezKassira: "",
-    aboutSpeakerPhoto: "/img/speackers/evgeniy-galai — копия.png",
-    photo: "/img/feature-events/event.jpg",
-    was: false,
+    aboutSpeakerPhoto: "/img/speackersMain/galai.png",
+    photo: "/img/afisha/galay.jpg",
+    was: true,
     month: "Июль",
     year: "2022",
+    gallery: [
+      {
+        original: "/img/gallery/galay/7K9A9020.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9020.jpg",
+        thumbnailLabel: `1`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9027.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9027.jpg",
+        thumbnailLabel: `2`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9030.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9030.jpg",
+        thumbnailLabel: `3`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9039.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9039.jpg",
+        thumbnailLabel: `4`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9045.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9045.jpg",
+        thumbnailLabel: `5`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9084.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9084.jpg",
+        thumbnailLabel: `6`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9095.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9095.jpg",
+        thumbnailLabel: `7`,
+      },
+      ,
+      {
+        original: "/img/gallery/galay/7K9A9116.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9116.jpg",
+        thumbnailLabel: `8`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9153.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9153.jpg",
+        thumbnailLabel: `9`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9177.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9177.jpg",
+        thumbnailLabel: `10`,
+      },
+      ,
+      {
+        original: "/img/gallery/galay/7K9A9193.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9193.jpg",
+        thumbnailLabel: `11`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9203.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9203.jpg",
+        thumbnailLabel: `12`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9208.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9208.jpg",
+        thumbnailLabel: `13`,
+      },
+      ,
+      {
+        original: "/img/gallery/galay/7K9A9219.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9219.jpg",
+        thumbnailLabel: `14`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9248.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9248.jpg",
+        thumbnailLabel: `15`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9275.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9275.jpg",
+        thumbnailLabel: `16`,
+      },
+      ,
+      {
+        original: "/img/gallery/galay/7K9A9283.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9283.jpg",
+        thumbnailLabel: `17`,
+      },
+      {
+        original: "/img/gallery/galay/7K9A9358.jpg",
+        thumbnail: "/img/gallery/galay/7K9A9358.jpg",
+        thumbnailLabel: `18`,
+      },
+    ],
   },
   {
     id: 5,
@@ -192,8 +352,8 @@ export const eventsFeature = [
     place: "Очно и онлайн",
     bezKassira: "",
     aboutSpeakerPhoto: "/img/speackers/ITalk.jpg",
-    photo: "/img/speackers/ITalk.jpg",
-    was: false,
+    photo: "/img/afisha/ITalk.jpg",
+    was: true,
     month: "Май",
     year: "2022",
     video: `  <iframe src="https://www.youtube.com/embed/OxoCRjl0_iY?controls=0" title="YouTube video player"
@@ -236,12 +396,143 @@ export const eventsFeature = [
     place: "Очно",
     bezKassira: "",
     aboutSpeakerPhoto: "/img/speackers/Студенты.jpg",
-    photo: "/img/speackers/Студенты.jpg",
-    was: false,
+    photo: "/img/afisha/openbsu.jpg",
+    was: true,
     month: "Июль",
     year: "2022",
     video: ` 
     <iframe src="https://www.youtube.com/embed/5_mH4ulSxrw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    gallery: [
+      {
+        original: "/img/gallery/bsu/3L2A4594.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A4594.jpg",
+        thumbnailLabel: `1`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A4762.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A4762.jpg",
+        thumbnailLabel: `2`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A4790.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A4790.jpg",
+        thumbnailLabel: `3`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A4867.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A4867.jpg",
+        thumbnailLabel: `4`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A4903.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A4903.jpg",
+        thumbnailLabel: `5`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A4937.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A4937.jpg",
+        thumbnailLabel: `6`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A5191.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5191.jpg",
+        thumbnailLabel: `7`,
+      },
+      ,
+      {
+        original: "/img/gallery/bsu/3L2A5226.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5226.jpg",
+        thumbnailLabel: `8`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A5233.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5233.jpg",
+        thumbnailLabel: `9`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A5255.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5255.jpg",
+        thumbnailLabel: `10`,
+      },
+      ,
+      {
+        original: "/img/gallery/bsu/3L2A5315.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5315.jpg",
+        thumbnailLabel: `11`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A5321.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5321.jpg",
+        thumbnailLabel: `12`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A5331.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5331.jpg",
+        thumbnailLabel: `13`,
+      },
+      ,
+      {
+        original: "/img/gallery/bsu/3L2A5333.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5333.jpg",
+        thumbnailLabel: `14`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A5386.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A5386.jpg",
+        thumbnailLabel: `15`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6268.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6268.jpg",
+        thumbnailLabel: `16`,
+      },
+      ,
+      {
+        original: "/img/gallery/bsu/3L2A6283.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6283.jpg",
+        thumbnailLabel: `17`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6328.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6328.jpg",
+        thumbnailLabel: `18`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6437.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6437.jpg",
+        thumbnailLabel: `19`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6447.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6447.jpg",
+        thumbnailLabel: `20`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6454.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6454.jpg",
+        thumbnailLabel: `21`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6463.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6463.jpg",
+        thumbnailLabel: `22`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6908.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6908.jpg",
+        thumbnailLabel: `23`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6920.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6920.jpg",
+        thumbnailLabel: `24`,
+      },
+      {
+        original: "/img/gallery/bsu/3L2A6955.jpg",
+        thumbnail: "/img/gallery/bsu/3L2A6955.jpg",
+        thumbnailLabel: `25`,
+      },
+    ],
   },
   {
     id: 7,
@@ -270,7 +561,7 @@ export const eventsFeature = [
     place: "Очно и онлайн",
     bezKassira: "",
     aboutSpeakerPhoto: "/img/speackers/Дизайн движуха.jpg",
-    photo: "/img/speackers/Дизайн движуха.jpg",
+    photo: "/img/afisha/DESIGN.jpg",
     was: true,
     month: "Апрель",
     year: "2022",
@@ -279,6 +570,83 @@ export const eventsFeature = [
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>`,
+    gallery: [
+      {
+        original: "/img/gallery/design/3L2A5415.jpg",
+        thumbnail: "/img/gallery/design/3L2A5415.jpg",
+        thumbnailLabel: `1`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5418.jpg",
+        thumbnail: "/img/gallery/design/3L2A5418.jpg",
+        thumbnailLabel: `2`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5433.jpg",
+        thumbnail: "/img/gallery/design/3L2A5433.jpg",
+        thumbnailLabel: `3`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5465.jpg",
+        thumbnail: "/img/gallery/design/3L2A5465.jpg",
+        thumbnailLabel: `4`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5474.jpg",
+        thumbnail: "/img/gallery/design/3L2A5474.jpg",
+        thumbnailLabel: `5`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5476.jpg",
+        thumbnail: "/img/gallery/design/3L2A5476.jpg",
+        thumbnailLabel: `6`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5499.jpg",
+        thumbnail: "/img/gallery/design/3L2A5499.jpg",
+        thumbnailLabel: `7`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5501.jpg",
+        thumbnail: "/img/gallery/design/3L2A5501.jpg",
+        thumbnailLabel: `8`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5614.jpg",
+        thumbnail: "/img/gallery/design/3L2A5614.jpg",
+        thumbnailLabel: `9`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5899.jpg",
+        thumbnail: "/img/gallery/design/3L2A5899.jpg",
+        thumbnailLabel: `10`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5928.jpg",
+        thumbnail: "/img/gallery/design/3L2A5928.jpg",
+        thumbnailLabel: `11`,
+      },
+      {
+        original: "/img/gallery/design/3L2A5931.jpg",
+        thumbnail: "/img/gallery/design/3L2A5931.jpg",
+        thumbnailLabel: `12`,
+      },
+      {
+        original: "/img/gallery/design/3L2A6030.jpg",
+        thumbnail: "/img/gallery/design/3L2A6030.jpg",
+        thumbnailLabel: `13`,
+      },
+      {
+        original: "/img/gallery/design/3L2A6127.jpg",
+        thumbnail: "/img/gallery/design/3L2A6127.jpg",
+        thumbnailLabel: `14`,
+      },
+      {
+        original: "/img/gallery/design/3L2A6202.jpg",
+        thumbnail: "/img/gallery/design/3L2A6202.jpg",
+        thumbnailLabel: `15`,
+      },
+    ],
   },
   {
     id: 8,
@@ -318,10 +686,52 @@ export const eventsFeature = [
     place: "Очно и онлайн",
     bezKassira: "",
     aboutSpeakerPhoto: "/img/speackers/Стоп паника.jpg",
-    photo: "/img/speackers/Стоп паника.jpg",
+    photo: "/img/afisha/STOP.jpg",
     was: true,
     month: "Март",
     year: "2022",
     video: ``,
+    gallery: [
+      {
+        original: "/img/gallery/stop/IMG_4626.jpg",
+        thumbnail: "/img/gallery/stop/IMG_4626.jpg",
+        thumbnailLabel: `1`,
+      },
+      {
+        original: "/img/gallery/stop/IMG_4654.jpg",
+        thumbnail: "/img/gallery/stop/IMG_4654.jpg",
+        thumbnailLabel: `2`,
+      },
+      {
+        original: "/img/gallery/stop/IMG_4675.jpg",
+        thumbnail: "/img/gallery/stop/IMG_4675.jpg",
+        thumbnailLabel: `3`,
+      },
+      {
+        original: "/img/gallery/stop/IMG_4679.jpg",
+        thumbnail: "/img/gallery/stop/IMG_4679.jpg",
+        thumbnailLabel: `4`,
+      },
+      {
+        original: "/img/gallery/stop/IMG_4716.jpg",
+        thumbnail: "/img/gallery/stop/IMG_4716.jpg",
+        thumbnailLabel: `5`,
+      },
+      {
+        original: "/img/gallery/stop/IMG_4844.jpg",
+        thumbnail: "/img/gallery/stop/IMG_4844.jpg",
+        thumbnailLabel: `6`,
+      },
+      {
+        original: "/img/gallery/stop/IMG_4852.jpg",
+        thumbnail: "/img/gallery/stop/IMG_4852.jpg",
+        thumbnailLabel: `7`,
+      },
+      {
+        original: "/img/gallery/stop/IMG_4882.jpg",
+        thumbnail: "/img/gallery/stop/IMG_4882.jpg",
+        thumbnailLabel: `8`,
+      },
+    ],
   },
 ];

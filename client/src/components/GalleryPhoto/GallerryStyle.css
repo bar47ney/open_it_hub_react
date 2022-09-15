@@ -140,6 +140,9 @@
   stroke: white;
   fill: none;
 }
+.gallery-block .no-events{
+  color: white;
+}
 @media (max-width: 768.5px) {
   .gallery-block h1 {
     font-size: 14px;

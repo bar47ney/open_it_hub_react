@@ -23,12 +23,13 @@ const EventsList = () => {
 
   useEffect(() => {}, [month, format, isPay, pastMonth, pastYear]);
 
-  const sortedEventsFeature = useSortedAndSearchedPosts(startEventsFeature, {
-    month: month,
-    format: format,
-    was: false,
-    isPay: isPay,
-  });
+  const sortedEventsFeature = useSortedAndSearchedPosts(
+    startEventsFeature,
+    month,
+    format,
+    false,
+    isPay
+  );
 
   const sortedEventsPast = useSortedAndSearchedPostsPast(
     startEventsPast,
@@ -413,8 +414,6 @@ const EventsList = () => {
               <ul>
                 <li>Все</li>
                 <li>2022</li>
-                <li>2021</li>
-                <li>2020</li>
               </ul>
             </div>
           </div>

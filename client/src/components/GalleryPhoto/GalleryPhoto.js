@@ -1,18 +1,28 @@
 import "./GallerryStyle.css";
 import { useState } from "react";
+import { eventsFeature } from "../eventsFeature";
+import { useSortedAndSearchedPostsPast } from "../hooks/useFilter";
+import { HashLink } from "react-router-hash-link";
 
 const GalleryPhoto = () => {
-  const [month, setMonth] = useState("Сентябрь");
-  const [year, setYear] = useState(2022);
+  const [month, setMonth] = useState("Все");
+  const [year, setYear] = useState("Все");
+  const [startEventsPast, setStartEventsPast] = useState(eventsFeature.filter((event)=> event.gallery));
 
   const monthChoose = (e) => {
     setMonth(e.target.innerText);
   };
 
-  
   const yearChoose = (e) => {
     setYear(e.target.innerText);
   };
+
+  const gallery = useSortedAndSearchedPostsPast(
+    startEventsPast,
+    month,
+    true,
+    year
+  );
 
   return (
     <main class="main gallery-phtoto">
@@ -74,9 +84,8 @@ const GalleryPhoto = () => {
             </div>
             <div class="sub-menu menu-parameters">
               <ul>
+                <li>Все</li>
                 <li>2022</li>
-                <li>2021</li>
-                <li>2020</li>
               </ul>
             </div>
           </div>
@@ -134,6 +143,7 @@ const GalleryPhoto = () => {
             </div>
             <div class="sub-menu menu-parameters">
               <ul>
+                <li>Все</li>
                 <li>Июль</li>
                 <li>Август</li>
                 <li>Сентябрь</li>
@@ -143,89 +153,32 @@ const GalleryPhoto = () => {
         </div>
 
         <div class="gallery-block-items">
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
-          <div class="gallery-block-item">
-            <img src="img/Mask group.jpg" alt="" />
-            <div class="gallery-block-item-info">
-              <p class="date">14.07.2022</p>
-              <p class="event-name">
-                От идеи к стратегии: с чего начать свой бизнес
-              </p>
-            </div>
-          </div>
+          {gallery.length ? (
+            gallery.map((event) => {
+              return (
+                <HashLink
+                  to={`/event/${event.id}#gallery`}
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
+                >
+                  <div class="gallery-block-item">
+                    <img src={event.photo} alt="" />
+                    <div class="gallery-block-item-info">
+                      <p class="date">14.07.2022</p>
+                      <p class="event-name">
+                        От идеи к стратегии: с чего начать свой бизнес
+                      </p>
+                    </div>
+                  </div>
+                </HashLink>
+              );
+            })
+          ) : (
+            <p className="no-events">Фотоотчеты не найдены</p>
+          )}
         </div>
-        <div class="pagination">
+        {/* <div class="pagination">
           <div class="arrow">
             <svg
               width="24"
@@ -269,6 +222,7 @@ const GalleryPhoto = () => {
             </svg>
           </div>
         </div>
+      */}
       </div>
     </main>
   );
