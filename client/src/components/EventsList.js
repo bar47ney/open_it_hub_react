@@ -2,7 +2,10 @@ import { useState, useMemo, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { eventsFeature } from "./eventsFeature";
 import { HashLink } from "react-router-hash-link";
-import { useSortedAndSearchedPosts, useSortedAndSearchedPostsPast } from "../components/hooks/useFilter";
+import {
+  useSortedAndSearchedPosts,
+  useSortedAndSearchedPostsPast,
+} from "../components/hooks/useFilter";
 
 const EventsList = () => {
   const [month, setMonth] = useState("Все");
@@ -15,21 +18,18 @@ const EventsList = () => {
   const [startEventsFeature, setStartEventsFeature] = useState(eventsFeature);
   const [startEventsPast, setStartEventsPast] = useState(eventsFeature);
 
-  console.log(pastMonth)
-  console.log(pastYear)
+  console.log(pastMonth);
+  console.log(pastYear);
 
-  useEffect(() => {
-    
-  }, [month, format, isPay, pastMonth, pastYear]);
+  useEffect(() => {}, [month, format, isPay, pastMonth, pastYear]);
 
-  const sortedEventsFeature = useSortedAndSearchedPosts(
-    startEventsFeature,
-    month,
-    format,
-    false,
-    isPay
-  );
-  
+  const sortedEventsFeature = useSortedAndSearchedPosts(startEventsFeature, {
+    month: month,
+    format: format,
+    was: false,
+    isPay: isPay,
+  });
+
   const sortedEventsPast = useSortedAndSearchedPostsPast(
     startEventsPast,
     pastMonth,
@@ -37,7 +37,7 @@ const EventsList = () => {
     pastYear
   );
 
-  console.log(sortedEventsPast)
+  console.log(sortedEventsPast);
 
   // console.log(eventsFeature);
 
@@ -303,53 +303,52 @@ const EventsList = () => {
           </div>
         </div>
         <div class="block-list-events">
-          {sortedEventsFeature.length
-            ? sortedEventsFeature.map((event) => {
-                return (
-                  <div class="block-list-events-item">
-                    <div class="event-iamge">
-                      <img src={event.photo} alt="" />
-                    </div>
+          {sortedEventsFeature.length ? (
+            sortedEventsFeature.map((event) => {
+              return (
+                <div class="block-list-events-item">
+                  <div class="event-iamge">
+                    <img src={event.photo} alt="" />
+                  </div>
 
-                    <div class="events-item-info">
-                      <div class="type-event-list">
-                        <div class="type-event-item">
-                          <img src="img/events-feature/day.svg" alt="" />
-                          <p>{event.date}</p>
-                        </div>
-                        <div class="type-event-item">
-                          <img src="img/events-feature/time.svg" alt="" />
-                          <p>{event.time}</p>
-                        </div>
-                        <div class="type-event-item">
-                          <img
-                            src="img/events-feature/price-price.svg"
-                            alt=""
-                          />
-                          <p>{event.pay}</p>
-                        </div>
-                        <div class="type-event-item">
-                          <img src="img/events-feature/info.svg" alt="" />
-                          <p>{event.place}</p>
-                        </div>
+                  <div class="events-item-info">
+                    <div class="type-event-list">
+                      <div class="type-event-item">
+                        <img src="img/events-feature/day.svg" alt="" />
+                        <p>{event.date}</p>
                       </div>
-                      <p class="events-item-info-name">{event.name}</p>
-                      <p class="events-item-info-preview">{event.intro}</p>
-                      <div class="events-buttons">
-                        <a href={event.bezKassira} target="_blank">
-                          <button class="btn-slider margin-none btn-black orange-button-hover">
-                            Регистрация
-                          </button>
-                        </a>
-                        <HashLink to={`/event/${event.id}#top`}>
-                          <button class="more-info-event">О мероприятии</button>
-                        </HashLink>
+                      <div class="type-event-item">
+                        <img src="img/events-feature/time.svg" alt="" />
+                        <p>{event.time}</p>
                       </div>
+                      <div class="type-event-item">
+                        <img src="img/events-feature/price-price.svg" alt="" />
+                        <p>{event.pay}</p>
+                      </div>
+                      <div class="type-event-item">
+                        <img src="img/events-feature/info.svg" alt="" />
+                        <p>{event.place}</p>
+                      </div>
+                    </div>
+                    <p class="events-item-info-name">{event.name}</p>
+                    <p class="events-item-info-preview">{event.intro}</p>
+                    <div class="events-buttons">
+                      <a href={event.bezKassira} target="_blank">
+                        <button class="btn-slider margin-none btn-black orange-button-hover">
+                          Регистрация
+                        </button>
+                      </a>
+                      <HashLink to={`/event/${event.id}#top`}>
+                        <button class="more-info-event">О мероприятии</button>
+                      </HashLink>
                     </div>
                   </div>
-                );
-              })
-            : <p className="no-events">Нет мероприятий</p>}
+                </div>
+              );
+            })
+          ) : (
+            <p className="no-events">Нет мероприятий</p>
+          )}
         </div>
       </div>
 
@@ -505,8 +504,8 @@ const EventsList = () => {
             </div> --> */}
         </div>
         <div class="block-list-events">
-          {sortedEventsPast.length ? (sortedEventsPast.map((event) => {
-            
+          {sortedEventsPast.length ? (
+            sortedEventsPast.map((event) => {
               return (
                 <div class="block-list-events-item">
                   <div class="event-iamge">
@@ -526,7 +525,10 @@ const EventsList = () => {
                   </div>
                 </div>
               );
-          })) : <p className="no-events">Нет мероприятий</p> }
+            })
+          ) : (
+            <p className="no-events">Нет мероприятий</p>
+          )}
         </div>
       </div>
     </main>
