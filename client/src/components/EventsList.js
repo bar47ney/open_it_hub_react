@@ -515,7 +515,7 @@ const EventsList = () => {
                     <p class="events-item-info-name black-text">{event.name}</p>
                     <p class="events-item-info-preview">{event.intro}</p>
                     <div class="events-buttons">
-                      <HashLink to={`/event/${event.id}#top`}>
+                      <HashLink to={`/event${event.id}#top`}>
                         <button class="events-block-button button-black-hover">
                           О мероприятии
                         </button>

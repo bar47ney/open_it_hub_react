@@ -1,10 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
+const nodemailer = require("nodemailer");
 
 const PORT = process.env.PORT || 8080;
-
-let message = "";
 
 const app = express();
 app.use(express.static(__dirname));
@@ -13,41 +13,45 @@ app.use(cors());
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-  // res.send("Hello");
 });
-
-app.get("/event*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../client/build", "index.html"));
-  // res.send("Hello");
-});
-
-app.get("/api", (req, res) => {
- res.send("Hello");
-});
-
-app.get("/event*",function (request, response) {
-    response.redirect("/")
-  });
 
 app.listen(PORT);
 
 const app2 = express();
 
 const PORT2 = process.env.PORT2 || 8081;
-// app2.use(express.static(__dirname));
-// app2.use(express.static(path.resolve(__dirname, "../client/build")));
+
+const transporter = nodemailer.createTransport({
+  host: "smtp.yandex.ru",
+  port: 465,
+  secure: true, // true for 465, false for other ports
+  auth: {
+    user: `${process.env.MAIL}`, // generated ethereal user
+    pass: `${process.env.PASS_MAIL}` // generated ethereal password
+  }
+});
+
 app2.use(cors());
+app2.post("/api", (req, res) => {
+  transporter.sendMail({
+    from: `"Marmelade-store" <${process.env.MAIL}>`,
+    to: `bar47ney@gmail.com, bar47ney@gmail.com`,
+    subject: "Marmelade-store: сведения о заказе",
+    text: "Ваш заказ был успешно оформлен!",
+    html: `<p><strong>bar47ney@gmail.com</strong>, ваш заказ был сформирован!<br/>Вы заказали <strong>bar47ney@gmail.com
+    }</strong> в количестве <strong>bar47ney@gmail.com</strong>.<br/>
+    Общая стоимсость составила: <strong>$bar47ney@gmail.comBYN</strong>.<br/>Спасибо, что выбрали нас!</p>`,
+  });
+
+  res.json({ a: 1, b: 2 });
+});
+
+app2.listen(PORT2);
 
 // app2.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../client/build", "index.html"))
 //   // res.send("Hello");
 // });
-
-app2.get("/", (req, res) => {
-  res.json({ a: 1, b: 2 });
-});
-
-app2.listen(PORT2);
 
 // const express = require("express");
 // const db = require("./db");

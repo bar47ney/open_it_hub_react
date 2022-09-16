@@ -2,6 +2,7 @@ import mainScript from "./MainScript";
 import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { eventsFeature } from "../eventsFeature";
+import axios from "axios";
 
 const Main = () => {
   useEffect(() => {
@@ -13,6 +14,17 @@ const Main = () => {
   const [featureEvents, setFeatureEvents] = useState(
     [...eventsFeature].filter((event) => event.was === false)
   );
+  const [email, setEmail] = useState("");
+
+  const emailSet = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const sendEmail = () => {
+    axios.post(`//localhost:8081/api`, email).then((response) => {
+      console.log(response.data);
+    });
+  };
 
   const toLeftMainSlider = () => {
     setPositionMainSlider(positionMainSlider + 100);
@@ -951,7 +963,9 @@ const Main = () => {
                       <p>Сотрудничество</p>
                     </div>
                   </div> */}
-                  <h5 class="event-name no-events-slider">Новых мероприятий пока нет!</h5>
+                  <h5 class="event-name no-events-slider">
+                    Новых мероприятий пока нет!
+                  </h5>
                   {/* <HashLink to={`/gallery#top`}>
                     <button class="more-info-event">
                       Наши фотоотчеты
@@ -977,8 +991,8 @@ const Main = () => {
             чтобы рассказать все подробности
           </p>
           <div class="book-block-form">
-            <input type="email" placeholder="Ваш Email*" />
-            <button class="btn-slider margin-none btn-black button-black-hover">
+            <input type="email" placeholder="Ваш Email*" onChange={emailSet} />
+            <button class="btn-slider margin-none btn-black button-black-hover" onClick={sendEmail}>
               Отправить
             </button>
           </div>

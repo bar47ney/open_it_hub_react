@@ -157,7 +157,7 @@ const GalleryPhoto = () => {
             gallery.map((event) => {
               return (
                 <HashLink
-                  to={`/event/${event.id}#gallery`}
+                  to={`/event${event.id}#gallery`}
                   scroll={(el) =>
                     el.scrollIntoView({ behavior: "smooth", block: "center" })
                   }
