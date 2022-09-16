@@ -10,6 +10,7 @@ const app = express();
 app.use(express.static(__dirname));
 app.use(express.static(path.resolve(__dirname, "../client/build")));
 app.use(cors());
+app.use(express.json());
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
@@ -27,23 +28,28 @@ const transporter = nodemailer.createTransport({
   secure: true, // true for 465, false for other ports
   auth: {
     user: `${process.env.MAIL}`, // generated ethereal user
-    pass: `${process.env.PASS_MAIL}` // generated ethereal password
-  }
+    pass: `${process.env.PASS_MAIL}`, // generated ethereal password
+  },
 });
 
 app2.use(cors());
+app2.use(express.json());
 app2.post("/api", (req, res) => {
-  transporter.sendMail({
-    from: `"Marmelade-store" <${process.env.MAIL}>`,
-    to: `bar47ney@gmail.com, bar47ney@gmail.com`,
-    subject: "Marmelade-store: сведения о заказе",
-    text: "Ваш заказ был успешно оформлен!",
-    html: `<p><strong>bar47ney@gmail.com</strong>, ваш заказ был сформирован!<br/>Вы заказали <strong>bar47ney@gmail.com
-    }</strong> в количестве <strong>bar47ney@gmail.com</strong>.<br/>
-    Общая стоимсость составила: <strong>$bar47ney@gmail.comBYN</strong>.<br/>Спасибо, что выбрали нас!</p>`,
-  });
+  try {
+    console.log(req.body)
+    const { email } = req.body;
+    transporter.sendMail({
+      from: `"Marmelade-store" <${process.env.MAIL}>`,
+      to: `bar47ney@gmail.com, bar47ney@gmail.com`,
+      subject: "Marmelade-store: сведения о заказе",
+      text: "Ваш заказ был успешно оформлен!",
+      html: `<p><strong>${email}</strong>`,
+    });
+  } catch (err) {
+    console.log(err);
+  }
 
-  res.json({ a: 1, b: 2 });
+  // res.json({ a: 1, b: 2 });
 });
 
 app2.listen(PORT2);

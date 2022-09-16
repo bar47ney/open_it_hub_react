@@ -6,12 +6,12 @@ const Rent = () => {
       <div class="events-feature corporat-job">
         <div class="main-slider-events">
           <h1 class="slider-title">
-            Арендуйте
-            <br class="mobile-visibility" /> помещение
+            Арендуйте помещение
             <br class="mobile-visibility" /> под своё мероприятие
           </h1>
           <p>
-            Идеальный вариант для встреч и мероприятий, онлайн-трансляций,<br/>
+            Идеальный вариант для встреч и мероприятий, онлайн-трансляций,
+            <br />
             студийных съемок и зональных фотосессий для наработки контента
           </p>{" "}
           <HashLink smooth to={"#advantage-block"}>

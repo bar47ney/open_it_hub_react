@@ -30,7 +30,7 @@ const GalleryPhoto = () => {
         <h1>Фотоотчеты</h1>
 
         <div class="block-parameters">
-          <div class="block-parameters-item" onClick={yearChoose}>
+          <div class="block-parameters-item" >
             <div class="filter-item">
               <svg
                 width="52"
@@ -83,13 +83,13 @@ const GalleryPhoto = () => {
               </svg>
             </div>
             <div class="sub-menu menu-parameters">
-              <ul>
+              <ul onClick={yearChoose}>
                 <li>Все</li>
                 <li>2022</li>
               </ul>
             </div>
           </div>
-          <div class="block-parameters-item" onClick={monthChoose}>
+          <div class="block-parameters-item" >
             <div class="filter-item">
               <svg
                 width="52"
@@ -142,7 +142,7 @@ const GalleryPhoto = () => {
               </svg>
             </div>
             <div class="sub-menu menu-parameters">
-              <ul>
+              <ul onClick={monthChoose}>
                 <li>Все</li>
                 <li>Июль</li>
                 <li>Август</li>

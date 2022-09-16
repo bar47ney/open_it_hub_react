@@ -17,7 +17,7 @@ const EventsList = () => {
 
   const [startEventsFeature, setStartEventsFeature] = useState(eventsFeature);
   const [startEventsPast, setStartEventsPast] = useState(eventsFeature);
-
+  
   console.log(pastMonth);
   console.log(pastYear);
 
@@ -38,7 +38,9 @@ const EventsList = () => {
     pastYear
   );
 
-  console.log(sortedEventsPast);
+
+
+  // console.log(sortedEventsPast);
 
   // console.log(eventsFeature);
 
@@ -84,7 +86,7 @@ const EventsList = () => {
         </h1>
         <p>
           Здесь вы найдете информацию
-          <br className="mobile-visibility" /> как о будущих,
+          <br className="mobile-visibility" /> как о будущих,&nbsp;
           <br className="desktop-visibility" />
           так и о прошедших ивентах
         </p>
@@ -100,10 +102,10 @@ const EventsList = () => {
         <p class="white-text">
           В OPEN IT ХАБ на постоянной основе проводятся обучающие мероприятия и
           ивенты
-          <br />
+          {/* <br /> */}
           самой разной тематики. В числе спикеров — айтишники, блогеры, тренеры,
           коучи,
-          <br />
+          {/* <br /> */}
           собственники бизнеса и другие эксперты в своей области.
           <br />
           <br />
@@ -124,7 +126,7 @@ const EventsList = () => {
       <div id="events-feature" class="events-feature">
         <h3 class="advantage-block-header">Будущие мероприятия</h3>
         <div class="block-parameters">
-          <div class="block-parameters-item" onClick={monthChoose}>
+          <div class="block-parameters-item" >
             <div class="filter-item">
               <svg
                 width="52"
@@ -177,7 +179,7 @@ const EventsList = () => {
               </svg>
             </div>
             <div class="sub-menu menu-parameters">
-              <ul>
+              <ul onClick={monthChoose}>
                 <li>Все</li>
                 <li>Июль</li>
                 <li>Август</li>
@@ -185,7 +187,7 @@ const EventsList = () => {
               </ul>
             </div>
           </div>
-          <div class="block-parameters-item" onClick={formatChoose}>
+          <div class="block-parameters-item" >
             <div id="filter-format" class="filter-item">
               {/* <img src="img/events-feature/format.svg" alt="" /> */}
               <svg
@@ -236,7 +238,7 @@ const EventsList = () => {
               </svg>
             </div>
             <div id="filter-format-list" class="sub-menu menu-parameters">
-              <ul>
+              <ul onClick={formatChoose}>
                 <li>Все</li>
                 <li>Очно и онлайн</li>
                 <li>Очно</li>
@@ -244,7 +246,7 @@ const EventsList = () => {
               </ul>
             </div>
           </div>
-          <div class="block-parameters-item" onClick={isPayChoose}>
+          <div class="block-parameters-item" >
             <div class="filter-item">
               {/* <img src="img/events-feature/price.svg" alt="" /> */}
               <svg
@@ -295,7 +297,7 @@ const EventsList = () => {
               </svg>
             </div>
             <div class="sub-menu menu-parameters">
-              <ul>
+              <ul onClick={isPayChoose}>
                 <li>Все</li>
                 <li>Платные</li>
                 <li>Бесплатные</li>
@@ -357,7 +359,7 @@ const EventsList = () => {
       <div class="events-feature events-past">
         <h3 class="advantage-block-header">Прошедшие мероприятия</h3>
         <div id="events-past" class="block-parameters">
-          <div class="block-parameters-item" onClick={yearPastChoose}>
+          <div class="block-parameters-item">
             <div class="filter-item">
               {/* <img src="img/events-feature/date.svg" alt="" /> */}
               <svg
@@ -411,13 +413,13 @@ const EventsList = () => {
               </svg>
             </div>
             <div class="sub-menu menu-parameters">
-              <ul>
+              <ul onClick={yearPastChoose}>
                 <li>Все</li>
                 <li>2022</li>
               </ul>
             </div>
           </div>
-          <div class="block-parameters-item" onClick={monthPastChoose}>
+          <div class="block-parameters-item" >
             <div class="filter-item">
               {/* <img src="img/events-feature/date.svg" alt="" /> */}
               <svg
@@ -471,7 +473,7 @@ const EventsList = () => {
               </svg>
             </div>
             <div class="sub-menu menu-parameters">
-              <ul>
+              <ul onClick={monthPastChoose}>
                 <li>Все</li>
                 <li>Июль</li>
                 <li>Август</li>

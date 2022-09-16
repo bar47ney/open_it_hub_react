@@ -14,15 +14,20 @@ const Main = () => {
   const [featureEvents, setFeatureEvents] = useState(
     [...eventsFeature].filter((event) => event.was === false)
   );
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState();
 
   const emailSet = (e) => {
     setEmail(e.target.value);
+    console.log(email);
   };
 
   const sendEmail = () => {
-    axios.post(`//localhost:8081/api`, email).then((response) => {
-      console.log(response.data);
+    console.log(email);
+    const headers = {
+      "Content-type": "application/json; charset=UTF-8",
+    };
+    axios.post(`//localhost:8081/api`, { email: email }).then((response) => {
+      console.log(response);
     });
   };
 
@@ -859,8 +864,9 @@ const Main = () => {
         <div id="events-block" class="events-block">
           <h4 class="events-block-head">Посетите уникальные мероприятия</h4>
           <p class="events-block-p">
-            Мы проводим уникальные мероприятия в сфере IT, бизнеса, обучения,
-            карьеры и др.
+            Мы проводим уникальные мероприятия в сфере IT,
+            <br />
+            бизнеса, обучения, карьеры и др.
             <br />
             Запишитесь на одно из ближайших
           </p>
@@ -955,16 +961,18 @@ const Main = () => {
                 })
               ) : (
                 <div class="events-block-slider-item">
-                  {/* <div class="event-info">
+                  <div class="event-info">
                     <div class="event-info-item">
-                      <p>Аренда</p>
+                      <p>17 сентября</p>
                     </div>
                     <div class="event-info-item">
-                      <p>Сотрудничество</p>
+                      <p>очно</p>
                     </div>
-                  </div> */}
+                  </div>
                   <h5 class="event-name no-events-slider">
-                    Новых мероприятий пока нет!
+                    Официальное открытие OPEN IT ХАБ
+                    <br />
+                    18:30
                   </h5>
                   {/* <HashLink to={`/gallery#top`}>
                     <button class="more-info-event">
@@ -982,21 +990,24 @@ const Main = () => {
         </div>
         <div id="subscribe-email" class="subscribe-email">
           <h4 class="subscribe-email-heading">Будь в курсе!</h4>
-          <p class="desktop-visibility">
+          <p class="">
             Будем сообщать о предстоящих мероприятиях, делиться отчетами
             <br />и другой полезной информацией
           </p>
-          <p class="mobile-visibility">
-            Оставьте свои контактные данные, и наш менеджер свяжется с вами,
-            чтобы рассказать все подробности
-          </p>
+          {/* <p class="mobile-visibility">
+          Будем сообщать о предстоящих мероприятиях, делиться отчетами
+            <br />и другой полезной информацией
+          </p> */}
           <div class="book-block-form">
             <input type="email" placeholder="Ваш Email*" onChange={emailSet} />
-            <button class="btn-slider margin-none btn-black button-black-hover" onClick={sendEmail}>
+            <button
+              class="btn-slider margin-none btn-black button-black-hover"
+              onClick={() => sendEmail()}
+            >
               Отправить
             </button>
           </div>
-          <p id="email-acept-text" className="desktop-visibility">
+          <p id="email-acept-text" className="">
             *Отправляя свой email, вы даёте согласие на обработку персональных
             данных согласно
             <a
@@ -1129,8 +1140,8 @@ const Main = () => {
               </p>
               <div className="reviwer-text-block">
                 <p class="reviwer-text">
-                  Тем, кто ищет локацию для поведения мероприятий: мастер
-                  классов,
+                  Тем, кто ищет локацию для проведения мероприятий:
+                  мастер-классов,
                   <br />
                   семинаров и конференций, — рекомендую обратить внимание на
                   <br />
@@ -1154,126 +1165,24 @@ const Main = () => {
               <p>
                 <img
                   class="reviews-slider-item-photo"
-                  src="img/reviews/reviews2.jpg"
+                  src="img/reviews/reviews3.jpg"
                   alt=""
                 />
               </p>
               <div className="reviwer-text-block">
                 <p class="reviwer-text">
-                  Тем, кто ищет локацию для поведения мероприятий: мастер
-                  классов,
-                  <br />
-                  семинаров и конференций, — рекомендую обратить внимание на
-                  <br />
-                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
-                  необходимым
-                  <br />
-                  для проведения подобных ивентов и вмещающее в себя
-                  <br />
-                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
-                  сюда снова!
+                  Хочу выразить огромную благодарность за помещение, помощь в
+                  организации ивента и оперативную реакцию сотрудников. Все
+                  прошло хорошо)
                 </p>
               </div>
 
               <p class="reviwer-info">
-                Алёна Романова
+                Максимилиан Антипенко
                 <br />
-                Партнёр IHCA, руководитель проекта iHackathon IT
+                Lead designer @ GoFanz, тренер IT-Academy
               </p>
             </div>{" "}
-            <div class="reviews-slider-item">
-              <p>
-                <img
-                  class="reviews-slider-item-photo"
-                  src="img/reviews/reviews2.jpg"
-                  alt=""
-                />
-              </p>
-              <div className="reviwer-text-block">
-                <p class="reviwer-text">
-                  Тем, кто ищет локацию для поведения мероприятий: мастер
-                  классов,
-                  <br />
-                  семинаров и конференций, — рекомендую обратить внимание на
-                  <br />
-                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
-                  необходимым
-                  <br />
-                  для проведения подобных ивентов и вмещающее в себя
-                  <br />
-                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
-                  сюда снова!
-                </p>
-              </div>
-
-              <p class="reviwer-info">
-                Алёна Романова
-                <br />
-                Партнёр IHCA, руководитель проекта iHackathon IT
-              </p>
-            </div>{" "}
-            <div class="reviews-slider-item">
-              <p>
-                <img
-                  class="reviews-slider-item-photo"
-                  src="img/reviews/reviews2.jpg"
-                  alt=""
-                />
-              </p>
-              <div className="reviwer-text-block">
-                <p class="reviwer-text">
-                  Тем, кто ищет локацию для поведения мероприятий: мастер
-                  классов,
-                  <br />
-                  семинаров и конференций, — рекомендую обратить внимание на
-                  <br />
-                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
-                  необходимым
-                  <br />
-                  для проведения подобных ивентов и вмещающее в себя
-                  <br />
-                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
-                  сюда снова!
-                </p>
-              </div>
-
-              <p class="reviwer-info">
-                Алёна Романова
-                <br />
-                Партнёр IHCA, руководитель проекта iHackathon IT
-              </p>
-            </div>{" "}
-            <div class="reviews-slider-item">
-              <p>
-                <img
-                  class="reviews-slider-item-photo"
-                  src="img/reviews/reviews2.jpg"
-                  alt=""
-                />
-              </p>
-              <div className="reviwer-text-block">
-                <p class="reviwer-text">
-                  Тем, кто ищет локацию для поведения мероприятий: мастер
-                  классов,
-                  <br />
-                  семинаров и конференций, — рекомендую обратить внимание на
-                  <br />
-                  OPEN IT ХАБ. Это комфортное пространство, оборудованное всем
-                  необходимым
-                  <br />
-                  для проведения подобных ивентов и вмещающее в себя
-                  <br />
-                  до 120 человек. Нам все понравилось, совсем скоро вернёмся
-                  сюда снова!
-                </p>
-              </div>
-
-              <p class="reviwer-info">
-                Алёна Романова
-                <br />
-                Партнёр IHCA, руководитель проекта iHackathon IT
-              </p>
-            </div>
           </div>
         </div>
         <div id="contacts-block" class="contacts-block">

@@ -220,7 +220,7 @@ export const eventsFeature = [
     aboutSpeacker: ` <p>Евгений Галай — профессиональный менеджер, сертифицированный бизнес-тренер с опытом
     более 15 лет, квалифицированный консультант «Европейского банка реконструкции и
     развития» в области маркетинга и организационного развития.</p>`,
-    date: "13 июля",
+    date: "23 июня",
     time: "18:30",
     pay: "Платные",
     place: "Очно и онлайн",
@@ -228,7 +228,7 @@ export const eventsFeature = [
     aboutSpeakerPhoto: "/img/speackersMain/galai.png",
     photo: "/img/afisha/galay.jpg",
     was: true,
-    month: "Июль",
+    month: "Июнь",
     year: "2022",
     gallery: [
       {
@@ -398,7 +398,7 @@ export const eventsFeature = [
     aboutSpeakerPhoto: "/img/speackers/Студенты.jpg",
     photo: "/img/afisha/openbsu.jpg",
     was: true,
-    month: "Июль",
+    month: "Апрель",
     year: "2022",
     video: ` 
     <iframe src="https://www.youtube.com/embed/5_mH4ulSxrw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
@@ -438,7 +438,6 @@ export const eventsFeature = [
         thumbnail: "/img/gallery/bsu/3L2A5191.jpg",
         thumbnailLabel: `7`,
       },
-      ,
       {
         original: "/img/gallery/bsu/3L2A5226.jpg",
         thumbnail: "/img/gallery/bsu/3L2A5226.jpg",
@@ -454,7 +453,6 @@ export const eventsFeature = [
         thumbnail: "/img/gallery/bsu/3L2A5255.jpg",
         thumbnailLabel: `10`,
       },
-      ,
       {
         original: "/img/gallery/bsu/3L2A5315.jpg",
         thumbnail: "/img/gallery/bsu/3L2A5315.jpg",
@@ -470,7 +468,6 @@ export const eventsFeature = [
         thumbnail: "/img/gallery/bsu/3L2A5331.jpg",
         thumbnailLabel: `13`,
       },
-      ,
       {
         original: "/img/gallery/bsu/3L2A5333.jpg",
         thumbnail: "/img/gallery/bsu/3L2A5333.jpg",
@@ -486,7 +483,6 @@ export const eventsFeature = [
         thumbnail: "/img/gallery/bsu/3L2A6268.jpg",
         thumbnailLabel: `16`,
       },
-      ,
       {
         original: "/img/gallery/bsu/3L2A6283.jpg",
         thumbnail: "/img/gallery/bsu/3L2A6283.jpg",

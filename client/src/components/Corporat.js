@@ -9,7 +9,7 @@ const Corporat = () => {
             Предлагаем IT-компаниям корпоративное сотрудничество{" "}
           </h1>
           <p>
-            Идеальный вариант для проведения ивента в любой удобный для вас день
+            Идеальный вариант для проведения<br className="mobile-visibility"/>ивента в любой удобный для вас день
             и время
             <br />
             Вы можете выбрать одну из опций или несколько
@@ -30,11 +30,11 @@ const Corporat = () => {
             Как мы можем быть вам полезны
           </h3>
           <p class="white-text">
-            Мы предоставим площадку и все необходимое оборудование для
+            Мы предоставим площадку и все необходимое<br className="mobile-visibility"/> оборудование для
             выступления
-            <br />
-            ваших спикеров. По дополнительному запросу поможем сделать запись,
-            <br />
+            <br className="desktop-visibility"/>
+            ваших спикеров. <br className="mobile-visibility"/>По дополнительному запросу поможем сделать запись,<br className="mobile-visibility"/>
+            <br className="desktop-visibility"/>
             провести онлайн-трансляцию, съёмку или фотосъемку ивента.
           </p>
           {/* <p class="white-text mobile-visibility">
@@ -54,15 +54,10 @@ const Corporat = () => {
 
         <div class="book-block block-form">
           <h3 class="advantage-block-header">Закажите звонок</h3>
-          <p class="desktop-visibility">
-            Оставьте свои контактные данные, и наш менеджер свяжется с вами,
+          <p class="">
+            Оставьте свои контактные данные, <br className="mobile-visibility"/>и наш менеджер свяжется с вами,
             <br />
             чтобы рассказать все подробности
-          </p>
-          <p class="mobile-visibility">
-            Оставьте свои контактные данные, и наш менеджер
-            <br />
-            свяжется с вами, чтобы рассказать все подробности
           </p>
           <div id="book-block-form" class="book-block-form">
             <input type="text" placeholder="Номер телефона" value="" />

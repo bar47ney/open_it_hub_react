@@ -211,6 +211,10 @@ header {
   display: block;
 }
 
+/* .menu-item:active .sub-menu{
+  display: none;
+} */
+
 #header-button::after {
   display: none;
 }
@@ -2168,7 +2172,7 @@ button:hover {
 }
 
 .no-events-slider{
-  margin-top: 115px;
+  margin-top: 82px;
 }
 .image-gallery-thumbnail .image-gallery-thumbnail-image{
   width: unset;
@@ -2658,9 +2662,12 @@ button:hover {
     padding-left: 0;
   }
   #email-acept-text {
-    font-size: 0.3em;
-    width: 300px;
+    font-size: 0.4em;
+    /* width: 300px; */
+    line-height: 1.5;
     margin-top: 10px;
+    width: 320px;
+    padding: 0;
   }
   /* reviews */
   .reviews {
@@ -3132,7 +3139,7 @@ button:hover {
     margin-top: 28px;
   }
   .corporat-job .slider-title {
-    padding: 0 34px;
+    padding: 0 0px;
   }
   .corporat-job .main-slider-events p {
     padding: 0 10px;
@@ -3184,7 +3191,7 @@ button:hover {
     font-size: 12px;
   }
   .no-events-slider{
-    margin-top: 61px;
+    margin-top: 31px;
   }
   .image-gallery-thumbnail .image-gallery-thumbnail-image{
     width: unset;
